@@ -1,0 +1,16 @@
+Sample Input: Contract PDF (placeholder)
+==========================================
+
+This is a placeholder description. No actual PDF is stored.
+
+Document type:    Digital contract (created from Word)
+Pages:            3
+File size:        ~200 KB
+Content:          Standard service agreement with text, a logo, and a signature block
+Text selectable:  Yes (digital PDF — no OCR needed)
+Images:           1 company logo (PNG, ~30 KB)
+
+Typical use cases:
+- Sign the contract using the Sign PDF tool
+- Compress after signing if the portal has a size limit
+- Convert to Word if edits are needed before signing

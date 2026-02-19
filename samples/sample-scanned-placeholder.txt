@@ -1,0 +1,16 @@
+Sample Input: Scanned Receipt PDF (placeholder)
+=================================================
+
+This is a placeholder description. No actual PDF is stored.
+
+Document type:    Scanned receipts (flatbed scanner, 300 DPI)
+Pages:            5
+File size:        ~8 MB
+Content:          Five grocery/pharmacy receipts scanned as images
+Text selectable:  No (scanned PDF — OCR needed)
+Images:           5 full-page JPEG images (~1.5 MB each)
+
+Typical use cases:
+- OCR the PDF to make text searchable and copyable
+- Compress after OCR if the file is still too large for email
+- Convert to Excel (OCR) to extract line items

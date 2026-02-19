@@ -1,0 +1,19 @@
+Expected Output: Compress PDF (placeholder)
+=============================================
+
+This is a placeholder description. No actual PDF is stored.
+
+Tool used:        Compress PDF (Compact mode)
+Input:            5-page scanned receipt PDF (~8 MB)
+Output:           Compressed PDF (~2.1 MB)
+Reduction:        ~74%
+
+What changed:
+- JPEG images on each page were re-encoded at lower quality
+- Image dimensions were scaled down proportionally
+- PDF structure (metadata, fonts, streams) was preserved
+- Text (if any) remained selectable
+
+Notes:
+- If 2.1 MB is still too large, Rasterize mode can push it below 1 MB
+- Rasterize mode would convert all pages to JPEG images, making text non-selectable

@@ -1,0 +1,23 @@
+Expected Output: OCR PDF (placeholder)
+========================================
+
+This is a placeholder description. No actual PDF is stored.
+
+Tool used:        OCR PDF (English)
+Input:            5-page scanned receipt PDF (~8 MB, no selectable text)
+Output:           Searchable PDF (~8.1 MB — minimal size increase from text layer)
+
+What changed:
+- An invisible text layer was added on top of each scanned page
+- Each recognized word is positioned to match its location in the scan
+- Ctrl+F (Find) now works across all 5 pages
+- Copy/paste now works — you can select and copy text
+
+What stayed the same:
+- The visual appearance is identical (original scan images are preserved)
+- File size increased only marginally (text layer is lightweight)
+
+Accuracy notes:
+- Clear, high-resolution scans at 300 DPI yield 95%+ accuracy
+- Blurry or skewed pages may have lower accuracy
+- Selecting the correct language improves recognition of accented characters

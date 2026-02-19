@@ -1,0 +1,23 @@
+Expected Output: Signed PDF (placeholder)
+===========================================
+
+This is a placeholder description. No actual PDF is stored.
+
+Tool used:        Sign PDF
+Input:            3-page digital contract (~200 KB)
+Output:           Signed contract (~220 KB)
+
+What changed:
+- A drawn signature image was embedded on page 3, positioned above the "Signature" line
+- The signature was rasterized as a PNG and placed as an overlay on the page
+- File size increased slightly due to the embedded signature image
+
+What stayed the same:
+- All original text remains selectable and searchable
+- Layout and formatting are unchanged
+- No watermark was added
+
+Notes:
+- The signature is permanently embedded — it cannot be removed from the exported PDF
+- If the signed file needs to be smaller for a portal upload, compress it afterward
+- Multiple signatures can be placed across different pages if required
