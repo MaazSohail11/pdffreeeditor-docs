@@ -21,6 +21,54 @@
 
 ---
 
+## 📂 Repository Structure
+
+```
+pdffreeeditor-docs/
+├── README.md              ← you are here
+├── LICENSE                ← MIT
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── SECURITY.md
+│
+├── docs/
+│   ├── architecture.md
+│   ├── security-privacy.md
+│   ├── performance.md
+│   ├── faq.md
+│   ├── roadmap.md
+│   ├── api-contracts.md
+│   └── workflows/
+│       ├── compress-pdf.md
+│       ├── compress-to-1mb.md
+│       ├── compress-for-email.md
+│       ├── sign-pdf.md
+│       ├── sign-private.md
+│       ├── ocr-pdf.md
+│       └── make-pdf-searchable.md
+│
+├── samples/
+│   ├── README.md
+│   ├── sample-contract-placeholder.txt
+│   ├── sample-scanned-placeholder.txt
+│   └── expected-output/
+│       ├── compress-example.txt
+│       ├── ocr-example.txt
+│       └── signed-pdf-example.txt
+│
+└── assets/
+    ├── README.md
+    ├── images/
+    │   ├── compress-hero.png
+    │   ├── sign-hero.png
+    │   └── ocr-hero.png
+    └── diagrams/
+        └── system-overview.png
+```
+
+---
+
 ## 🚀 Start Here
 
 New to the tools? Pick a workflow guide:
@@ -861,55 +909,6 @@ Signing runs entirely in the browser using Fabric.js for canvas placement and pd
 
 *These examples are for illustration purposes only. Internal implementations may differ.*
 
----
-
-## 📂 Repository Structure
-
-```
-pdffreeeditor-docs/
-├── README.md              ← you are here
-├── LICENSE                ← MIT
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-├── SECURITY.md
-│
-├── docs/
-│   ├── architecture.md
-│   ├── security-privacy.md
-│   ├── performance.md
-│   ├── faq.md
-│   ├── roadmap.md
-│   ├── api-contracts.md
-│   └── workflows/
-│       ├── compress-pdf.md
-│       ├── compress-to-1mb.md
-│       ├── compress-for-email.md
-│       ├── sign-pdf.md
-│       ├── sign-private.md
-│       ├── ocr-pdf.md
-│       └── make-pdf-searchable.md
-│
-├── samples/
-│   ├── README.md
-│   ├── sample-contract-placeholder.txt
-│   ├── sample-scanned-placeholder.txt
-│   └── expected-output/
-│       ├── compress-example.txt
-│       ├── ocr-example.txt
-│       └── signed-pdf-example.txt
-│
-└── assets/
-    ├── README.md
-    ├── images/
-    │   ├── compress-hero.png
-    │   ├── sign-hero.png
-    │   └── ocr-hero.png
-    └── diagrams/
-        └── system-overview.png
-```
-
----
 
 ## ⚠️ Disclaimer
 
