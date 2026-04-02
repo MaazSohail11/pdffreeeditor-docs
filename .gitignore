@@ -1,2 +1,22 @@
-.stitch
+# Logs
+logs
+*.log
+
 node_modules
+dist
+*.local
+
+# Editor directories and files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+/.agents/
+/.codex/
+/.cursor/
+/.stitch
+/.stitch/
+.stitch
+agents
+rules
