@@ -190,7 +190,7 @@ function AddImagePDF() {
   };
 
   return (
-    <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
@@ -225,27 +225,27 @@ function AddImagePDF() {
       <SiteNav />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 lg:py-24">
+      <section className="digital-obsidian text-on-surface py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-start">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
               Add Image to PDF Online Free
               <br />
-              <span className="text-blue-600">
+              <span className="text-primary-600">
                 Insert Logo, Stamp, Photo (PNG/JPG) • No Signup • No Watermark
               </span>
             </h1>
 
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-on-surface-variant mb-4">
               Need to <strong>insert an image into a PDF</strong>? Upload your PDF, add a logo or stamp to any page,
               position it precisely, and download instantly.
             </p>
 
-            <div className="bg-white/80 backdrop-blur border border-blue-100 rounded-2xl p-5 shadow-sm mb-6">
-              <p className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-                <Zap className="h-4 w-4 text-blue-600" aria-hidden="true" /> Quick answer
+            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5/80 backdrop-blur border border-primary-100 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)] mb-6">
+              <p className="text-sm font-semibold text-on-surface font-headline flex items-center gap-2">
+                <Zap className="h-4 w-4 text-primary-600" aria-hidden="true" /> Quick answer
               </p>
-              <ul className="mt-2 text-sm text-gray-700 space-y-1">
+              <ul className="mt-2 text-sm text-on-surface-variant space-y-1">
                 <li>• Upload PDF → insert PNG/JPG/WebP → place & resize → download</li>
                 <li>• Best for: logos, stamps, signature images, photos, letterheads</li>
                 <li>• Works on mobile and desktop</li>
@@ -255,7 +255,7 @@ function AddImagePDF() {
             <div className="flex flex-col gap-3 md:items-start items-center">
               <a
                 href="#image-tool"
-                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:bg-blue-700"
+                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
               >
                 <ImageIcon className="h-4 w-4" aria-hidden="true" />
                 <span>Open Image Tool</span>
@@ -263,14 +263,14 @@ function AddImagePDF() {
 
               <a
                 href="#how-to"
-                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
               >
                 <FileText className="h-4 w-4" aria-hidden="true" />
                 <span>How it works</span>
               </a>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center md:justify-start gap-5 text-sm text-gray-600">
+            <div className="mt-6 flex flex-wrap items-center justify-center md:justify-start gap-5 text-sm text-on-surface-variant">
               <span className="inline-flex items-center gap-2">
                 <BadgeCheck className="h-4 w-4" aria-hidden="true" /> Watermark-free exports
               </span>
@@ -282,13 +282,13 @@ function AddImagePDF() {
               </span>
             </div>
 
-            <p className="mt-5 text-sm text-gray-700">
+            <p className="mt-5 text-sm text-on-surface-variant">
               Need to change text first? Try{" "}
-              <a href="/edit-pdf/" className="text-blue-700 underline hover:text-blue-900">
+              <a href="/edit-pdf/" className="text-primary-700 underline hover:text-primary-900">
                 Edit PDF
               </a>
               . Need to sign after inserting a logo? Use{" "}
-              <a href="/sign-pdf/" className="text-blue-700 underline hover:text-blue-900">
+              <a href="/sign-pdf/" className="text-primary-700 underline hover:text-primary-900">
                 Sign PDF
               </a>
               .
@@ -297,15 +297,15 @@ function AddImagePDF() {
 
           {/* Upload card (visible to bots + users) */}
           <aside aria-label="Upload PDF to add image">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-[0_12px_30px_-12px_rgba(0,0,0,0.18)] p-4">
+            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl border border-white/5 shadow-[0_12px_30px_-12px_rgba(0,0,0,0.18)] p-4">
               <div className="flex items-center gap-2 mb-2">
-                <Layers className="h-5 w-5 text-blue-600" aria-hidden="true" />
-                <p className="font-semibold text-gray-900">Upload PDF to start</p>
+                <Layers className="h-5 w-5 text-primary-600" aria-hidden="true" />
+                <p className="font-semibold text-on-surface font-headline">Upload PDF to start</p>
               </div>
               <InlineDropBox minHeight={420} maxWidth={560} label="Choose a PDF" />
-              <p className="mt-3 text-xs text-gray-500">
+              <p className="mt-3 text-xs text-outline">
                 Tip: If your final PDF becomes large after adding images, run{" "}
-                <a href="/compress-pdf/" className="underline hover:text-gray-700">
+                <a href="/compress-pdf/" className="underline hover:text-on-surface-variant">
                   Compress PDF
                 </a>{" "}
                 after exporting.
@@ -319,26 +319,26 @@ function AddImagePDF() {
       <section
         id="image-tool"
         ref={toolRef}
-        className="py-10 bg-white"
+        className="py-10 bg-[#091328]/50 backdrop-blur-xl border border-white/5"
         style={{ minHeight: isWorkspace ? "calc(100vh - 100px)" : undefined }}
         aria-label="Add image tool"
       >
         <div className="max-w-6xl mx-auto px-6 space-y-4">
-          <h2 className="text-3xl font-bold text-gray-900">Add images to your PDF (logo, stamp, photo)</h2>
-          <p className="text-gray-700">
+          <h2 className="text-3xl font-bold text-on-surface font-headline">Add images to your PDF (logo, stamp, photo)</h2>
+          <p className="text-on-surface-variant">
             Upload your PDF, insert images, and position them with precision. Resize with locked aspect ratio, rotate,
             duplicate, align, nudge with arrow keys, and place the image exactly where it belongs.
           </p>
 
           {isBrowser ? (
-            <Suspense fallback={<div className="py-8 text-gray-600">Loading image tool…</div>}>
+            <Suspense fallback={<div className="py-8 text-on-surface-variant">Loading image tool…</div>}>
               <ImageStampTool
                 fullHeight
                 onPdfLoaded={() => setIsWorkspace(true)}
               />
             </Suspense>
           ) : (
-            <div className="bg-gray-50 border rounded-2xl p-6 text-gray-700">
+            <div className="bg-[#091328]/50 border rounded-2xl p-6 text-on-surface-variant">
               <p className="font-semibold mb-2">Tool loads in the browser</p>
               <p className="text-sm">
                 The interactive editor loads on the client to avoid server-side rendering issues. The page content
@@ -351,11 +351,11 @@ function AddImagePDF() {
 
       <main className="flex-1">
         {/* BENEFITS */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl font-bold mb-4">Why use TechRex to add images to a PDF?</h2>
-              <p className="text-gray-700 mb-6">
+              <p className="text-on-surface-variant mb-6">
                 This page focuses on one high-intent job: <strong>insert an image into a PDF</strong> cleanly and fast.
                 It’s ideal for branding, stamps, approvals, and form workflows.
               </p>
@@ -364,23 +364,23 @@ function AddImagePDF() {
                 {benefits.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" aria-hidden="true" />
-                    <span className="text-gray-800">{item}</span>
+                    <span className="text-on-surface">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-6 bg-gray-50 border rounded-2xl p-5">
-                <p className="font-semibold text-gray-900 flex items-center gap-2">
-                  <ShieldCheck className="h-5 w-5 text-blue-600" aria-hidden="true" /> Privacy & trust
+              <div className="mt-6 bg-[#091328]/50 border rounded-2xl p-5">
+                <p className="font-semibold text-on-surface font-headline flex items-center gap-2">
+                  <ShieldCheck className="h-5 w-5 text-primary-600" aria-hidden="true" /> Privacy & trust
                 </p>
-                <p className="mt-2 text-sm text-gray-700">
+                <p className="mt-2 text-sm text-on-surface-variant">
                   The workflow is designed to run in your browser so your file stays on your device by default. For full details,
                   review{" "}
-                  <a href="/privacy/" className="text-blue-700 underline hover:text-blue-900">
+                  <a href="/privacy/" className="text-primary-700 underline hover:text-primary-900">
                     Privacy Policy
                   </a>{" "}
                   and{" "}
-                  <a href="/terms/" className="text-blue-700 underline hover:text-blue-900">
+                  <a href="/terms/" className="text-primary-700 underline hover:text-primary-900">
                     Terms
                   </a>
                   .
@@ -390,13 +390,13 @@ function AddImagePDF() {
 
             {/* USE CASES */}
             <div className="space-y-4">
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 text-center shadow border">
-                <Zap className="h-14 w-14 text-blue-600 mx-auto mb-3" aria-hidden="true" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Insert pictures in seconds</h3>
-                <p className="text-gray-700 mb-5">Upload → insert → download. Works on desktop and mobile.</p>
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 text-center shadow-[0_0_25px_rgba(139,92,246,0.2)] border">
+                <Zap className="h-14 w-14 text-primary-600 mx-auto mb-3" aria-hidden="true" />
+                <h3 className="text-2xl font-bold text-on-surface font-headline mb-2">Insert pictures in seconds</h3>
+                <p className="text-on-surface-variant mb-5">Upload → insert → download. Works on desktop and mobile.</p>
                 <a
                   href="#image-tool"
-                  className="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold shadow inline-flex items-center gap-2 transition"
+                  className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all px-6 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] inline-flex items-center gap-2 transition"
                 >
                   <ImageIcon className="h-5 w-5" aria-hidden="true" />
                   <span>Open Image Tool</span>
@@ -405,9 +405,9 @@ function AddImagePDF() {
 
               <div className="grid gap-4">
                 {useCases.map((u) => (
-                  <div key={u.title} className="bg-white border rounded-2xl p-6 shadow-sm">
-                    <p className="font-semibold text-gray-900">{u.title}</p>
-                    <p className="mt-2 text-sm text-gray-700 leading-relaxed">{u.body}</p>
+                  <div key={u.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                    <p className="font-semibold text-on-surface font-headline">{u.title}</p>
+                    <p className="mt-2 text-sm text-on-surface-variant leading-relaxed">{u.body}</p>
                   </div>
                 ))}
               </div>
@@ -416,11 +416,11 @@ function AddImagePDF() {
         </section>
 
         {/* LONG-TAIL SECTIONS */}
-        <section className="py-10 bg-white">
+        <section className="py-10 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-4xl mx-auto px-6 space-y-10">
             <div>
               <h2 className="text-2xl font-bold mb-3">Add JPG/PNG/WebP to a PDF (clean export)</h2>
-              <p className="text-gray-700">
+              <p className="text-on-surface-variant">
                 Insert JPG, PNG, or WebP images and place them anywhere on a page. For logos and stamps, PNG is ideal
                 because it supports transparent backgrounds.
               </p>
@@ -428,7 +428,7 @@ function AddImagePDF() {
 
             <div>
               <h2 className="text-2xl font-bold mb-3">Insert a logo or stamp into a PDF</h2>
-              <p className="text-gray-700">
+              <p className="text-on-surface-variant">
                 Add a company logo to invoices, proposals, and letterheads—or insert a stamp like APPROVED/PAID/RECEIVED
                 on forms. Resize, rotate, and align so it matches the document layout.
               </p>
@@ -436,7 +436,7 @@ function AddImagePDF() {
 
             <div>
               <h2 className="text-2xl font-bold mb-3">Add a photo to one page or multiple pages</h2>
-              <p className="text-gray-700">
+              <p className="text-on-surface-variant">
                 Place an ID photo or product image on a single page, or repeat the image across multiple pages when you
                 need consistency for branding or stamping workflows.
               </p>
@@ -445,28 +445,28 @@ function AddImagePDF() {
         </section>
 
         {/* HOW-TO */}
-        <section id="how-to" className="py-16 bg-gray-50">
+        <section id="how-to" className="py-16 bg-[#091328]/50">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-6 text-center">How to add an image to a PDF (3 steps)</h2>
-            <ol className="space-y-6 list-decimal ml-6 text-gray-800">
+            <ol className="space-y-6 list-decimal ml-6 text-on-surface">
               <li id="step-upload">
                 <h3 className="font-semibold">1) Upload your PDF</h3>
-                <p className="text-gray-700">
+                <p className="text-on-surface-variant">
                   Upload your PDF to open it in the image tool. Then move to the page where you want to insert the image.
                 </p>
               </li>
               <li id="step-insert">
                 <h3 className="font-semibold">2) Insert and position the image</h3>
-                <p className="text-gray-700">
+                <p className="text-on-surface-variant">
                   Select an image (PNG/JPG/WebP), drop it on the page, resize from corners, and rotate for perfect placement.
                   Use precise positioning to align logos and stamps.
                 </p>
               </li>
               <li id="step-download">
                 <h3 className="font-semibold">3) Download the updated PDF</h3>
-                <p className="text-gray-700">
+                <p className="text-on-surface-variant">
                   Export and download your updated PDF. If you need to sign after inserting a logo, go to{" "}
-                  <a href="/sign-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                  <a href="/sign-pdf/" className="text-primary-700 underline hover:text-primary-900">
                     Sign PDF
                   </a>
                   .
@@ -477,26 +477,26 @@ function AddImagePDF() {
         </section>
 
         {/* PRO TIPS */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
               <Wrench className="h-6 w-6" aria-hidden="true" /> Pro tips (better results)
             </h2>
-            <p className="text-gray-700 mb-6">
+            <p className="text-on-surface-variant mb-6">
               These best practices improve quality and reduce common issues like blurry logos or oversized files.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4">
               {proTips.map((t) => (
-                <div key={t.title} className="bg-gray-50 border rounded-2xl p-6">
-                  <p className="font-semibold text-gray-900">{t.title}</p>
-                  <p className="mt-2 text-sm text-gray-700 leading-relaxed">
+                <div key={t.title} className="bg-[#091328]/50 border rounded-2xl p-6">
+                  <p className="font-semibold text-on-surface font-headline">{t.title}</p>
+                  <p className="mt-2 text-sm text-on-surface-variant leading-relaxed">
                     {t.body}
                     {t.title.includes("File too large") && (
                       <>
                         {" "}
                         Try{" "}
-                        <a href="/compress-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                        <a href="/compress-pdf/" className="text-primary-700 underline hover:text-primary-900">
                           Compress PDF
                         </a>
                         .
@@ -510,7 +510,7 @@ function AddImagePDF() {
         </section>
 
         {/* FAQ */}
-        <section className="py-12 bg-gray-50" aria-label="Add Image to PDF FAQs">
+        <section className="py-12 bg-[#091328]/50" aria-label="Add Image to PDF FAQs">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
               <HelpCircle className="h-6 w-6" aria-hidden="true" /> FAQs
@@ -518,9 +518,9 @@ function AddImagePDF() {
 
             <div className="space-y-4">
               {faqs.map((item, i) => (
-                <details key={i} className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
-                  <summary className="font-semibold cursor-pointer text-gray-900">{item.q}</summary>
-                  <p className="mt-2 text-gray-700">{item.a}</p>
+                <details key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-5 rounded-2xl border border-white/5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                  <summary className="font-semibold cursor-pointer text-on-surface font-headline">{item.q}</summary>
+                  <p className="mt-2 text-on-surface-variant">{item.a}</p>
                 </details>
               ))}
             </div>
@@ -528,23 +528,23 @@ function AddImagePDF() {
         </section>
 
         {/* RELATED TOOLS */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-[#091328]/50">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
               <LinkIcon className="h-5 w-5" aria-hidden="true" />
               Related tools
             </h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-on-surface-variant mb-4">
               Complete your workflow with these related pages:
             </p>
 
-            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-              <li><a href="/edit-pdf/" className="underline hover:text-blue-900">Edit PDF</a></li>
-              <li><a href="/add-logo-to-pdf-online/" className="underline hover:text-blue-900">Add Logo to PDF</a></li>
-              <li><a href="/sign-pdf/" className="underline hover:text-blue-900">Sign PDF</a></li>
-              <li><a href="/merge-pdf/" className="underline hover:text-blue-900">Merge PDF</a></li>
-              <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split PDF</a></li>
-              <li><a href="/compress-pdf/" className="underline hover:text-blue-900">Compress PDF</a></li>
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+              <li><a href="/edit-pdf/" className="underline hover:text-primary-900">Edit PDF</a></li>
+              <li><a href="/add-logo-to-pdf-online/" className="underline hover:text-primary-900">Add Logo to PDF</a></li>
+              <li><a href="/sign-pdf/" className="underline hover:text-primary-900">Sign PDF</a></li>
+              <li><a href="/merge-pdf/" className="underline hover:text-primary-900">Merge PDF</a></li>
+              <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split PDF</a></li>
+              <li><a href="/compress-pdf/" className="underline hover:text-primary-900">Compress PDF</a></li>
             </ul>
           </div>
         </section>
@@ -552,7 +552,7 @@ function AddImagePDF() {
         {/* CTA */}
         <section className="py-16 bg-slate-900 text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-on-primary">
               Add your logo or stamp to a PDF now
             </h2>
             <p className="mt-3 text-slate-200">
@@ -560,9 +560,9 @@ function AddImagePDF() {
             </p>
             <a
               href="#image-tool"
-              className="mt-7 inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-xl font-bold shadow hover:bg-slate-100 transition"
+              className="mt-7 inline-flex items-center gap-2 bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-slate-900 px-8 py-4 rounded-full font-bold shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:bg-slate-100 transition"
             >
-              <Download className="h-5 w-5 text-blue-600" aria-hidden="true" />
+              <Download className="h-5 w-5 text-primary-600" aria-hidden="true" />
               <span>Open Image Tool</span>
             </a>
           </div>
@@ -572,10 +572,10 @@ function AddImagePDF() {
       <footer className="bg-gray-900 text-gray-400 py-8 text-center">
         <p>© {new Date().getFullYear()} Free PDF Editor by TechRex. All rights reserved.</p>
         <div className="mt-4 space-x-4">
-          <a href="/tools/" className="hover:text-white">Tools</a>
-          <a href="/privacy/" className="hover:text-white">Privacy</a>
-          <a href="/terms/" className="hover:text-white">Terms</a>
-          <a href="/contact/" className="hover:text-white">Contact</a>
+          <a href="/tools/" className="hover:text-on-primary">Tools</a>
+          <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+          <a href="/terms/" className="hover:text-on-primary">Terms</a>
+          <a href="/contact/" className="hover:text-on-primary">Contact</a>
         </div>
       </footer>
     </div>

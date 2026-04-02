@@ -83,35 +83,35 @@ function HighlightTextInPdfFree() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
             <SiteNav />
 
             {/* Hero */}
-            <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24">
+            <section className="digital-obsidian text-on-surface py-16 md:py-24">
                 <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                             Highlight Text in PDF Free
                             <br />
-                            <span className="text-blue-600">Online PDF highlighter — no signup</span>
+                            <span className="text-primary-600">Online PDF highlighter — no signup</span>
                         </h1>
 
-                        <p className="text-lg text-gray-700 mb-3">
+                        <p className="text-lg text-on-surface-variant mb-3">
                             Highlight key lines, mark paragraphs, and keep your PDF readable — right in your browser.
                             Perfect for studying, reviewing contracts, and reading research papers.
                         </p>
 
-                        <p className="text-base text-gray-700 mb-8">
+                        <p className="text-base text-on-surface-variant mb-8">
                             Fast + trusted: <strong>free</strong>, <strong>no watermark</strong>, and your file stays on your device by default.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-3 sm:justify-center lg:justify-start">
                             <a
                                 href="#start"
-                                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:bg-blue-700"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                             >
                                 <Upload className="h-5 w-5" />
                                 <span>Start — Highlight PDF</span>
@@ -119,14 +119,14 @@ function HighlightTextInPdfFree() {
 
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                             >
                                 <FileText className="h-5 w-5" />
                                 <span>How it works (3 steps)</span>
                             </a>
                         </div>
 
-                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant">
                             {trustBullets.map((t) => (
                                 <li key={t} className="flex items-center gap-2">
                                     <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -134,7 +134,7 @@ function HighlightTextInPdfFree() {
                                 </li>
                             ))}
                             <li className="flex items-center gap-2">
-                                <Lock className="h-4 w-4 text-gray-600" />
+                                <Lock className="h-4 w-4 text-on-surface-variant" />
                                 <span>Privacy-first highlighting</span>
                             </li>
                         </ul>
@@ -147,7 +147,7 @@ function HighlightTextInPdfFree() {
                             maxWidth={720}
                             label="Choose PDF to Highlight"
                         />
-                        <p className="text-xs text-gray-500 mt-3 flex items-center gap-2 justify-center lg:justify-start">
+                        <p className="text-xs text-outline mt-3 flex items-center gap-2 justify-center lg:justify-start">
                             <Lock className="h-4 w-4" />
                             Your PDF stays on your device by default.
                         </p>
@@ -157,18 +157,18 @@ function HighlightTextInPdfFree() {
 
             <main className="flex-1">
                 {/* Scenarios */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <h2 className="text-3xl font-bold mb-4">When people search “highlight PDF”</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             Most users want one thing: highlight fast, download fast, no signup. This page is built for that exact flow.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {scenarios.map((s) => (
-                                <div key={s.title} className="bg-gray-50 border border-gray-200 rounded-xl p-5">
+                                <div key={s.title} className="bg-[#091328]/50 border border-white/5 rounded-xl p-5">
                                     <h3 className="font-semibold mb-2">{s.title}</h3>
-                                    <p className="text-gray-700 text-sm">{s.body}</p>
+                                    <p className="text-on-surface-variant text-sm">{s.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -176,37 +176,37 @@ function HighlightTextInPdfFree() {
                 </section>
 
                 {/* Guidance */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-4">
                         {doThisNotThat.map((t) => (
-                            <div key={t.title} className="bg-white rounded-xl border border-gray-200 p-5">
+                            <div key={t.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl border border-white/5 p-5">
                                 <h3 className="font-semibold mb-2">{t.title}</h3>
-                                <p className="text-gray-700 text-sm">{t.body}</p>
+                                <p className="text-on-surface-variant text-sm">{t.body}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* How to */}
-                <section id="how-to" className="py-12 bg-white">
+                <section id="how-to" className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">How to highlight text in a PDF (3 steps)</h2>
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-upload">
                                 <h3 className="font-semibold">1) Upload your PDF</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Upload your file in the box above. The editor opens and your pages are ready to mark.
                                 </p>
                             </li>
                             <li id="step-highlight">
                                 <h3 className="font-semibold">2) Highlight the text</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Choose the highlight tool and drag across the lines you want to mark. Zoom in for accuracy on mobile.
                                 </p>
                             </li>
                             <li id="step-download">
                                 <h3 className="font-semibold">3) Download the updated PDF</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Export instantly — your highlighted PDF downloads clean with no watermark.
                                 </p>
                             </li>
@@ -215,14 +215,14 @@ function HighlightTextInPdfFree() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">Highlight PDF — FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-white p-4 rounded-lg border border-gray-200">
+                                <details key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg border border-white/5">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <p className="mt-2 text-gray-700">{item.a}</p>
+                                    <p className="mt-2 text-on-surface-variant">{item.a}</p>
                                 </details>
                             ))}
                         </div>
@@ -230,22 +230,22 @@ function HighlightTextInPdfFree() {
                 </section>
 
                 {/* Related tools */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" />
                             More tools people use after highlighting
                         </h2>
-                        <p className="text-gray-700 mb-3">
+                        <p className="text-on-surface-variant mb-3">
                             Common next steps:
                         </p>
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/draw-on-pdf-online/" className="underline hover:text-blue-900">Draw on PDF online</a></li>
-                            <li><a href="/add-image-to-pdf-no-watermark/" className="underline hover:text-blue-900">Add image/logo to PDF</a></li>
-                            <li><a href="/annotate-pdf/" className="underline hover:text-blue-900">Annotate PDF</a></li>
-                            <li><a href="/compress-pdf/" className="underline hover:text-blue-900">Compress PDF</a></li>
-                            <li><a href="/merge-pdf/" className="underline hover:text-blue-900">Merge PDFs</a></li>
-                            <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split PDF pages</a></li>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/draw-on-pdf-online/" className="underline hover:text-primary-900">Draw on PDF online</a></li>
+                            <li><a href="/add-image-to-pdf-no-watermark/" className="underline hover:text-primary-900">Add image/logo to PDF</a></li>
+                            <li><a href="/annotate-pdf/" className="underline hover:text-primary-900">Annotate PDF</a></li>
+                            <li><a href="/compress-pdf/" className="underline hover:text-primary-900">Compress PDF</a></li>
+                            <li><a href="/merge-pdf/" className="underline hover:text-primary-900">Merge PDFs</a></li>
+                            <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split PDF pages</a></li>
                         </ul>
                     </div>
                 </section>
@@ -254,10 +254,10 @@ function HighlightTextInPdfFree() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center">
                 <p>© {new Date().getFullYear()} PDF Free Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

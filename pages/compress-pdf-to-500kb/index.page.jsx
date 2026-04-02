@@ -224,7 +224,7 @@ function Page() {
     };
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
             <Helmet>
                 <title>{metaTitle}</title>
                 <meta name="description" content={metaDescription} />
@@ -263,28 +263,28 @@ function Page() {
             <SiteNav />
 
             {/* HERO + TOOL */}
-            <section className="bg-gradient-to-br from-indigo-50 to-blue-50 py-12 lg:py-16">
+            <section className="digital-obsidian text-on-surface py-12 lg:py-16">
                 <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                             Compress PDF to 500KB Free Online
                             <br />
-                            <span className="text-blue-600">Built for strict upload limits</span>
+                            <span className="text-primary-600">Built for strict upload limits</span>
                         </h1>
 
-                        <p className="text-lg text-gray-700 mb-5">
+                        <p className="text-lg text-on-surface-variant mb-5">
                             Need a PDF under <strong>500KB</strong> for a portal upload? Start with{" "}
                             <strong>Compact</strong> to keep text sharp, then use <strong>Rasterize</strong>{" "}
                             when you must hit the smallest file size.
                         </p>
 
-                        <div className="bg-white border rounded-2xl p-5 shadow-sm mb-6">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)] mb-6">
                             <h2 className="text-lg font-bold mb-3 flex items-center gap-2">
-                                <Gauge className="h-5 w-5 text-blue-600" />
+                                <Gauge className="h-5 w-5 text-primary-600" />
                                 What this page is best for
                             </h2>
 
-                            <ul className="space-y-2 text-gray-700">
+                            <ul className="space-y-2 text-on-surface-variant">
                                 {bullets.map((b, i) => (
                                     <li key={i} className="flex items-start gap-3">
                                         <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -296,7 +296,7 @@ function Page() {
                             <div className="mt-4 flex flex-wrap gap-3 justify-center lg:justify-start">
                                 <a
                                     href="#tool"
-                                    className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow hover:bg-blue-700"
+                                    className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                                 >
                                     <Upload className="h-5 w-5" />
                                     Compress to 500KB
@@ -304,7 +304,7 @@ function Page() {
 
                                 <a
                                     href="#how-to"
-                                    className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                    className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                                 >
                                     <ArrowRight className="h-5 w-5" />
                                     How it works
@@ -312,43 +312,43 @@ function Page() {
 
                                 <a
                                     href="/compress-pdf/"
-                                    className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                    className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                                 >
                                     <LinkIcon className="h-5 w-5" />
                                     All compression options
                                 </a>
                             </div>
 
-                            <p className="text-sm text-gray-600 mt-4">
+                            <p className="text-sm text-on-surface-variant mt-4">
                                 Prefer better readability and a less strict limit?{" "}
-                                <a href="/compress-pdf-to-1mb/" className="text-blue-700 underline hover:text-blue-900">
+                                <a href="/compress-pdf-to-1mb/" className="text-primary-700 underline hover:text-primary-900">
                                     Compress to 1MB
                                 </a>
                                 .
                             </p>
                         </div>
 
-                        <div className="bg-white border rounded-2xl p-5 shadow-sm">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                             <h3 className="font-bold mb-3">Jump to:</h3>
-                            <ul className="grid sm:grid-cols-2 gap-2 text-blue-700">
-                                <li><a className="underline hover:text-blue-900" href="#tool">Tool</a></li>
-                                <li><a className="underline hover:text-blue-900" href="#how-to">How to compress to 500KB</a></li>
-                                <li><a className="underline hover:text-blue-900" href="#decision">Compact vs Rasterize</a></li>
-                                <li><a className="underline hover:text-blue-900" href="#troubleshoot">Troubleshooting</a></li>
-                                <li><a className="underline hover:text-blue-900" href="#faq">FAQ</a></li>
+                            <ul className="grid sm:grid-cols-2 gap-2 text-primary-700">
+                                <li><a className="underline hover:text-primary-900" href="#tool">Tool</a></li>
+                                <li><a className="underline hover:text-primary-900" href="#how-to">How to compress to 500KB</a></li>
+                                <li><a className="underline hover:text-primary-900" href="#decision">Compact vs Rasterize</a></li>
+                                <li><a className="underline hover:text-primary-900" href="#troubleshoot">Troubleshooting</a></li>
+                                <li><a className="underline hover:text-primary-900" href="#faq">FAQ</a></li>
                             </ul>
                         </div>
                     </div>
 
                     {/* TOOL */}
                     <aside id="tool" className="lg:sticky lg:top-6">
-                        <div className="bg-white border rounded-2xl shadow p-4">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl shadow-[0_0_25px_rgba(139,92,246,0.2)] p-4">
                             <div className="flex items-center gap-2 mb-3">
-                                <Gauge className="h-5 w-5 text-blue-600" />
+                                <Gauge className="h-5 w-5 text-primary-600" />
                                 <p className="font-semibold">Compress to ~500KB</p>
                             </div>
 
-                            <p className="text-sm text-gray-600 mb-4">
+                            <p className="text-sm text-on-surface-variant mb-4">
                                 Upload your PDF and choose the mode that matches your goal:
                                 <strong> Compact</strong> for readability, <strong>Rasterize</strong> for the smallest size.
                             </p>
@@ -356,23 +356,23 @@ function Page() {
                             {/* No ads here */}
                             <CompressDropBox variant="500kb" />
 
-                            <div className="mt-4 bg-gray-50 border rounded-xl p-4">
-                                <p className="font-semibold text-gray-900 mb-1">Strict limit tips</p>
-                                <p className="text-sm text-gray-600">
+                            <div className="mt-4 bg-[#091328]/50 border rounded-xl p-4">
+                                <p className="font-semibold text-on-surface font-headline mb-1">Strict limit tips</p>
+                                <p className="text-sm text-on-surface-variant">
                                     If you can’t reach 500KB, try Rasterize and reduce DPI/quality gradually.
                                     For long files, split first:{" "}
-                                    <a href="/split-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                                    <a href="/split-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                         Split PDF
                                     </a>
                                     .
                                 </p>
                             </div>
 
-                            <div className="mt-3 text-xs text-gray-500 flex items-start gap-2">
+                            <div className="mt-3 text-xs text-outline flex items-start gap-2">
                                 <ShieldCheck className="h-4 w-4 mt-0.5 flex-shrink-0" />
                                 <span>
                                     Files are transferred securely (TLS). Avoid uploading extremely sensitive documents.{" "}
-                                    <a href="/privacy/" className="underline hover:text-gray-700">Privacy Policy</a>.
+                                    <a href="/privacy/" className="underline hover:text-on-surface-variant">Privacy Policy</a>.
                                 </span>
                             </div>
                         </div>
@@ -382,28 +382,28 @@ function Page() {
 
             <main className="flex-1">
                 {/* HOW TO */}
-                <section id="how-to" className="py-12 bg-white">
+                <section id="how-to" className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">How to compress a PDF to 500KB (3 steps)</h2>
 
                         <ol className="space-y-4">
-                            <li id="step-upload" className="bg-gray-50 border rounded-xl p-5">
-                                <h3 className="font-semibold text-gray-900 mb-1">1) Upload your PDF</h3>
-                                <p className="text-gray-700">
+                            <li id="step-upload" className="bg-[#091328]/50 border rounded-xl p-5">
+                                <h3 className="font-semibold text-on-surface font-headline mb-1">1) Upload your PDF</h3>
+                                <p className="text-on-surface-variant">
                                     Upload the PDF you need under 500KB. If it’s long, consider splitting it first so you compress only what you must upload.
                                 </p>
                             </li>
 
-                            <li id="step-choose" className="bg-gray-50 border rounded-xl p-5">
-                                <h3 className="font-semibold text-gray-900 mb-1">2) Start with Compact (then use Rasterize if needed)</h3>
-                                <p className="text-gray-700">
+                            <li id="step-choose" className="bg-[#091328]/50 border rounded-xl p-5">
+                                <h3 className="font-semibold text-on-surface font-headline mb-1">2) Start with Compact (then use Rasterize if needed)</h3>
+                                <p className="text-on-surface-variant">
                                     Compact preserves readability. If the output is still above 500KB, switch to Rasterize and reduce quality/DPI gradually until the portal accepts it.
                                 </p>
                             </li>
 
-                            <li id="step-download" className="bg-gray-50 border rounded-xl p-5">
-                                <h3 className="font-semibold text-gray-900 mb-1">3) Download and verify the final size</h3>
-                                <p className="text-gray-700">
+                            <li id="step-download" className="bg-[#091328]/50 border rounded-xl p-5">
+                                <h3 className="font-semibold text-on-surface font-headline mb-1">3) Download and verify the final size</h3>
+                                <p className="text-on-surface-variant">
                                     Download the compressed PDF and verify the file size before uploading to your portal or form.
                                 </p>
                             </li>
@@ -415,13 +415,13 @@ function Page() {
                                 <AlertTriangle className="h-5 w-5 text-amber-700" />
                                 500KB feasibility (important)
                             </h3>
-                            <p className="text-gray-800">
+                            <p className="text-on-surface">
                                 If your PDF is a <strong>scan</strong> or <strong>photo-based</strong> document, 500KB can be difficult without quality loss.
                                 In that case, Rasterize is usually required, and you may need to split pages or reduce image resolution.
                             </p>
-                            <p className="text-gray-800 mt-3">
+                            <p className="text-on-surface mt-3">
                                 If readability is more important than a strict cap, use{" "}
-                                <a href="/compress-pdf-to-1mb/" className="text-blue-700 underline hover:text-blue-900">
+                                <a href="/compress-pdf-to-1mb/" className="text-primary-700 underline hover:text-primary-900">
                                     Compress to 1MB
                                 </a>{" "}
                                 instead.
@@ -431,29 +431,29 @@ function Page() {
                 </section>
 
                 {/* DECISION TABLE */}
-                <section id="decision" className="py-12 bg-gray-50">
+                <section id="decision" className="py-12 bg-[#091328]/50">
                     <div className="max-w-6xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">Compact vs Rasterize (when to use which)</h2>
 
-                        <div className="overflow-x-auto bg-white border rounded-2xl shadow-sm">
+                        <div className="overflow-x-auto bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                             <table className="min-w-full text-left">
                                 <thead className="bg-gray-100">
                                     <tr>
-                                        <th className="p-4 text-sm font-semibold text-gray-700">Situation</th>
-                                        <th className="p-4 text-sm font-semibold text-gray-700">Recommended</th>
-                                        <th className="p-4 text-sm font-semibold text-gray-700">Why</th>
+                                        <th className="p-4 text-sm font-semibold text-on-surface-variant">Situation</th>
+                                        <th className="p-4 text-sm font-semibold text-on-surface-variant">Recommended</th>
+                                        <th className="p-4 text-sm font-semibold text-on-surface-variant">Why</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {decisionRows.map((r, i) => (
                                         <tr key={i} className="border-t">
-                                            <td className="p-4 text-gray-800">{r.situation}</td>
+                                            <td className="p-4 text-on-surface">{r.situation}</td>
                                             <td className="p-4">
-                                                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-blue-50 text-blue-700">
+                                                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-primary-50 text-primary-700">
                                                     {r.mode}
                                                 </span>
                                             </td>
-                                            <td className="p-4 text-gray-700">{r.why}</td>
+                                            <td className="p-4 text-on-surface-variant">{r.why}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -462,12 +462,12 @@ function Page() {
 
                         <div className="mt-6 grid md:grid-cols-3 gap-4">
                             {useCases.map((u, i) => (
-                                <div key={i} className="bg-white border rounded-2xl p-5 shadow-sm">
+                                <div key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                     <h3 className="font-bold mb-2 flex items-center gap-2">
-                                        <FileText className="h-5 w-5 text-blue-600" />
+                                        <FileText className="h-5 w-5 text-primary-600" />
                                         {u.title}
                                     </h3>
-                                    <p className="text-gray-700">{u.body}</p>
+                                    <p className="text-on-surface-variant">{u.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -475,21 +475,21 @@ function Page() {
                 </section>
 
                 {/* TROUBLESHOOT */}
-                <section id="troubleshoot" className="py-12 bg-white">
+                <section id="troubleshoot" className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">Troubleshooting (when you still can’t hit 500KB)</h2>
 
                         <div className="space-y-4">
                             {troubleshooting.map((t, i) => (
-                                <div key={i} className="bg-gray-50 border rounded-2xl p-6">
-                                    <h3 className="text-lg font-bold text-gray-900 mb-2">{t.title}</h3>
-                                    <p className="text-gray-700 mb-3">{t.body}</p>
+                                <div key={i} className="bg-[#091328]/50 border rounded-2xl p-6">
+                                    <h3 className="text-lg font-bold text-on-surface font-headline mb-2">{t.title}</h3>
+                                    <p className="text-on-surface-variant mb-3">{t.body}</p>
                                     <div className="flex flex-wrap gap-3">
                                         {t.links.map((l, idx) => (
                                             <a
                                                 key={idx}
                                                 href={l.href}
-                                                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border bg-white text-blue-700 font-semibold hover:shadow-sm"
+                                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-700 font-semibold hover:shadow-[0_0_15px_rgba(139,92,246,0.1)]"
                                             >
                                                 <LinkIcon className="h-4 w-4" />
                                                 {l.text}
@@ -501,26 +501,26 @@ function Page() {
                         </div>
 
                         {/* Quick answers */}
-                        <div className="mt-10 bg-white border rounded-2xl p-6 shadow-sm">
+                        <div className="mt-10 bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                             <h3 className="text-xl font-bold mb-4">Common questions (quick answers)</h3>
-                            <div className="space-y-4 text-gray-700">
+                            <div className="space-y-4 text-on-surface-variant">
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">How do I reduce a PDF to 500KB?</h4>
+                                    <h4 className="font-semibold text-on-surface font-headline">How do I reduce a PDF to 500KB?</h4>
                                     <p>
                                         Use Compact first. If it’s still too large, use Rasterize and reduce quality/DPI gradually. Scanned PDFs often require Rasterize.
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">How do I resize a PDF file to 500KB?</h4>
+                                    <h4 className="font-semibold text-on-surface font-headline">How do I resize a PDF file to 500KB?</h4>
                                     <p>
                                         “Resize” usually means reducing image resolution and removing extra data. Rasterize rebuilds pages as compressed images to hit strict limits.
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">How do I keep quality while compressing?</h4>
+                                    <h4 className="font-semibold text-on-surface font-headline">How do I keep quality while compressing?</h4>
                                     <p>
                                         For quality-first compression, use Compact mode and see{" "}
-                                        <a href="/compress-pdf-without-losing-quality/" className="text-blue-700 underline hover:text-blue-900">
+                                        <a href="/compress-pdf-without-losing-quality/" className="text-primary-700 underline hover:text-primary-900">
                                             compress without losing quality
                                         </a>
                                         .
@@ -532,38 +532,38 @@ function Page() {
                 </section>
 
                 {/* FAQ */}
-                <section id="faq" className="py-12 bg-gray-50">
+                <section id="faq" className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">FAQ</h2>
 
                         <div className="space-y-3">
                             {faqs.map((f, i) => (
-                                <details key={i} className="bg-white border rounded-2xl p-5 shadow-sm">
-                                    <summary className="cursor-pointer font-semibold text-gray-900">
+                                <details key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                                    <summary className="cursor-pointer font-semibold text-on-surface font-headline">
                                         {f.q}
                                     </summary>
-                                    <p className="mt-3 text-gray-700">{f.a}</p>
+                                    <p className="mt-3 text-on-surface-variant">{f.a}</p>
                                 </details>
                             ))}
                         </div>
 
-                        <div className="mt-8 bg-white border rounded-2xl p-6 shadow-sm">
+                        <div className="mt-8 bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                             <h3 className="text-xl font-bold mb-2">Related tools</h3>
-                            <ul className="grid sm:grid-cols-2 gap-2 text-blue-700">
-                                <li><a className="underline hover:text-blue-900" href="/compress-pdf/">Compress PDF (hub)</a></li>
-                                <li><a className="underline hover:text-blue-900" href="/compress-pdf-to-1mb/">Compress PDF to 1MB</a></li>
-                                <li><a className="underline hover:text-blue-900" href="/compress-pdf-for-portal-upload/">Compress for portal upload</a></li>
-                                <li><a className="underline hover:text-blue-900" href="/compress-scanned-pdf-online/">Compress scanned PDF</a></li>
-                                <li><a className="underline hover:text-blue-900" href="/split-pdf/">Split PDF</a></li>
-                                <li><a className="underline hover:text-blue-900" href="/ocr/">OCR (make scans searchable)</a></li>
+                            <ul className="grid sm:grid-cols-2 gap-2 text-primary-700">
+                                <li><a className="underline hover:text-primary-900" href="/compress-pdf/">Compress PDF (hub)</a></li>
+                                <li><a className="underline hover:text-primary-900" href="/compress-pdf-to-1mb/">Compress PDF to 1MB</a></li>
+                                <li><a className="underline hover:text-primary-900" href="/compress-pdf-for-portal-upload/">Compress for portal upload</a></li>
+                                <li><a className="underline hover:text-primary-900" href="/compress-scanned-pdf-online/">Compress scanned PDF</a></li>
+                                <li><a className="underline hover:text-primary-900" href="/split-pdf/">Split PDF</a></li>
+                                <li><a className="underline hover:text-primary-900" href="/ocr/">OCR (make scans searchable)</a></li>
                             </ul>
                         </div>
                     </div>
                 </section>
             </main>
 
-            <footer className="border-t bg-white">
-                <div className="max-w-7xl mx-auto px-6 py-8 text-sm text-gray-600">
+            <footer className="border-t bg-[#091328]/50 backdrop-blur-xl border border-white/5">
+                <div className="max-w-7xl mx-auto px-6 py-8 text-sm text-on-surface-variant">
                     <p>TechRex Free PDF Editor — Compress PDF to 500KB. Free, no signup, no watermark.</p>
                 </div>
             </footer>

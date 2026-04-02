@@ -112,40 +112,40 @@ function PhotoToTextPage() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
             <SiteNav />
 
             {/* Hero */}
-            <section className="bg-gradient-to-br from-indigo-50 to-blue-50 py-14 lg:py-20">
+            <section className="digital-obsidian text-on-surface py-14 lg:py-20">
                 <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                             Photo to Text (OCR)
                             <br />
-                            <span className="text-blue-600">
+                            <span className="text-primary-600">
                                 Scan Photo Text from Your Phone • Copy Instantly
                             </span>
                         </h1>
 
-                        <p className="text-lg text-gray-600 mb-3">
+                        <p className="text-lg text-on-surface-variant mb-3">
                             Turn a phone photo into editable text. Upload a clear picture of a document, note,
                             receipt, or sign and extract the text using OCR—no retyping.
                         </p>
 
-                        <p className="text-base text-gray-600 mb-6">
+                        <p className="text-base text-on-surface-variant mb-6">
                             For screenshots use{" "}
-                            <a href="/png-to-text/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/png-to-text/" className="text-primary-700 underline hover:text-primary-900">
                                 PNG to Text
                             </a>{" "}
                             (best for screenshots). For PDFs use{" "}
-                            <a href="/ocr-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/ocr-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                 OCR PDF
                             </a>{" "}
                             or{" "}
-                            <a href="/make-pdf-searchable/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/make-pdf-searchable/" className="text-primary-700 underline hover:text-primary-900">
                                 Make PDF Searchable
                             </a>
                             .
@@ -154,7 +154,7 @@ function PhotoToTextPage() {
                         <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
                             <a
                                 href="#upload"
-                                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:bg-blue-700"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                             >
                                 <Camera className="h-5 w-5" />
                                 Upload Photo
@@ -162,7 +162,7 @@ function PhotoToTextPage() {
 
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                             >
                                 <ScanText className="h-5 w-5" />
                                 How it works (3 steps)
@@ -176,7 +176,7 @@ function PhotoToTextPage() {
                                 Why people use Photo → Text OCR
                             </h2>
 
-                            <ul className="space-y-2 text-gray-700">
+                            <ul className="space-y-2 text-on-surface-variant">
                                 {benefits.map((b, i) => (
                                     <li key={i} className="flex items-start gap-3">
                                         <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -189,14 +189,14 @@ function PhotoToTextPage() {
                                 {supportedLanguages.map((l) => (
                                     <span
                                         key={l}
-                                        className="text-xs font-semibold px-3 py-1 rounded-full bg-white border text-gray-700"
+                                        className="text-xs font-semibold px-3 py-1 rounded-full bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-on-surface-variant"
                                     >
                                         {l}
                                     </span>
                                 ))}
                             </div>
 
-                            <p className="text-xs text-gray-500 mt-3 flex items-center gap-2 justify-center lg:justify-start">
+                            <p className="text-xs text-outline mt-3 flex items-center gap-2 justify-center lg:justify-start">
                                 <Languages className="h-4 w-4" />
                                 Tip: selecting the correct language usually improves OCR accuracy.
                             </p>
@@ -205,30 +205,30 @@ function PhotoToTextPage() {
 
                     {/* Tool */}
                     <aside id="upload" className="lg:sticky lg:top-6">
-                        <div className="bg-white border rounded-2xl shadow p-4">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl shadow-[0_0_25px_rgba(139,92,246,0.2)] p-4">
                             <div className="flex items-center gap-2 mb-3">
-                                <ScanText className="h-5 w-5 text-blue-600" />
+                                <ScanText className="h-5 w-5 text-primary-600" />
                                 <p className="font-semibold">Upload a photo and extract text</p>
                             </div>
 
                             <OCRTool minimal={true} />
 
                             {/* Quick tips */}
-                            <div className="mt-4 bg-gray-50 border rounded-xl p-4">
+                            <div className="mt-4 bg-[#091328]/50 border rounded-xl p-4">
                                 <div className="flex items-start gap-3">
-                                    <Copy className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                                    <Copy className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
                                     <div>
-                                        <p className="font-semibold text-gray-900 mb-1">Fastest way to get clean text</p>
-                                        <p className="text-sm text-gray-600">
+                                        <p className="font-semibold text-on-surface font-headline mb-1">Fastest way to get clean text</p>
+                                        <p className="text-sm text-on-surface-variant">
                                             Use good light, keep the camera steady, and crop to the text area. Then choose the correct language.
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="mt-3 text-xs text-gray-500">
+                            <div className="mt-3 text-xs text-outline">
                                 If your PDF has a page limit, split it first using{" "}
-                                <a href="/split-pdf/" className="underline hover:text-gray-700">
+                                <a href="/split-pdf/" className="underline hover:text-on-surface-variant">
                                     Split PDF
                                 </a>
                                 .
@@ -240,34 +240,34 @@ function PhotoToTextPage() {
 
             <main className="flex-1">
                 {/* Use cases */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">Common reasons people scan photo text</h2>
-                        <p className="text-gray-700 mb-5">
+                        <p className="text-on-surface-variant mb-5">
                             “Photo to text” searches usually mean: you can see the text, but you can’t copy it. OCR fixes that.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-4">
                             {useCases.map((u) => (
-                                <div key={u.title} className="bg-gray-50 border rounded-xl p-5">
+                                <div key={u.title} className="bg-[#091328]/50 border rounded-xl p-5">
                                     <div className="flex items-start gap-3">
-                                        <u.icon className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                        <u.icon className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-2">{u.title}</h3>
-                                            <p className="text-gray-600">{u.text}</p>
+                                            <h3 className="font-semibold text-on-surface font-headline mb-2">{u.title}</h3>
+                                            <p className="text-on-surface-variant">{u.text}</p>
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <p className="text-gray-700 mt-6">
+                        <p className="text-on-surface-variant mt-6">
                             Need a searchable document (not just copied text)? Convert photos to PDF using{" "}
-                            <a href="/image-to-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/image-to-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                 Image to PDF
                             </a>{" "}
                             then run{" "}
-                            <a href="/ocr-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/ocr-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                 OCR PDF
                             </a>
                             .
@@ -276,34 +276,34 @@ function PhotoToTextPage() {
                 </section>
 
                 {/* How-to */}
-                <section id="how-to" className="py-12 bg-gray-50">
+                <section id="how-to" className="py-12 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">How to scan photo text (3 steps)</h2>
 
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-upload">
                                 <h4 className="font-semibold">1) Upload your photo</h4>
-                                <p className="text-gray-600">
+                                <p className="text-on-surface-variant">
                                     Upload a clear photo from your phone camera. If possible, crop to the text area first.
                                 </p>
                             </li>
 
                             <li id="step-language">
                                 <h4 className="font-semibold">2) Select the correct language (recommended)</h4>
-                                <p className="text-gray-600">
+                                <p className="text-on-surface-variant">
                                     Choosing the right language improves OCR accuracy—especially for accents and special characters.
                                 </p>
                             </li>
 
                             <li id="step-copy">
                                 <h4 className="font-semibold">3) Run OCR and copy the extracted text</h4>
-                                <p className="text-gray-600">
+                                <p className="text-on-surface-variant">
                                     Copy the result into Word/Docs/email. For PDFs, use{" "}
-                                    <a href="/pdf-to-text/" className="text-blue-700 underline hover:text-blue-900">
+                                    <a href="/pdf-to-text/" className="text-primary-700 underline hover:text-primary-900">
                                         PDF to Text
                                     </a>{" "}
                                     or{" "}
-                                    <a href="/make-pdf-searchable/" className="text-blue-700 underline hover:text-blue-900">
+                                    <a href="/make-pdf-searchable/" className="text-primary-700 underline hover:text-primary-900">
                                         Make PDF Searchable
                                     </a>
                                     .
@@ -314,21 +314,21 @@ function PhotoToTextPage() {
                 </section>
 
                 {/* Photo quality tips (ranking + conversion section) */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">Get better OCR from phone photos (quick tips)</h2>
-                        <p className="text-gray-700 mb-5">
+                        <p className="text-on-surface-variant mb-5">
                             OCR accuracy depends heavily on your photo quality. These 3 fixes solve most “photo to text” failures.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-4">
                             {photoTips.map((t) => (
-                                <div key={t.title} className="bg-gray-50 border rounded-xl p-5">
+                                <div key={t.title} className="bg-[#091328]/50 border rounded-xl p-5">
                                     <div className="flex items-start gap-3">
-                                        <t.icon className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                        <t.icon className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-2">{t.title}</h3>
-                                            <p className="text-gray-600">{t.text}</p>
+                                            <h3 className="font-semibold text-on-surface font-headline mb-2">{t.title}</h3>
+                                            <p className="text-on-surface-variant">{t.text}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -339,8 +339,8 @@ function PhotoToTextPage() {
                             <div className="flex items-start gap-3">
                                 <AlertTriangle className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" />
                                 <div>
-                                    <h3 className="font-semibold text-gray-900 mb-1">Reality check (no hype)</h3>
-                                    <p className="text-gray-700">
+                                    <h3 className="font-semibold text-on-surface font-headline mb-1">Reality check (no hype)</h3>
+                                    <p className="text-on-surface-variant">
                                         Printed text in a sharp photo usually OCRs well. Handwriting and blurry images may produce errors—always proofread important text.
                                     </p>
                                 </div>
@@ -350,15 +350,15 @@ function PhotoToTextPage() {
                 </section>
 
                 {/* Troubleshooting */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">Fix common “scan photo text” problems</h2>
 
                         <div className="grid md:grid-cols-3 gap-4">
                             {fixes.map((f) => (
-                                <div key={f.title} className="bg-white border rounded-xl p-5">
-                                    <h3 className="font-semibold text-gray-900 mb-2">{f.title}</h3>
-                                    <p className="text-gray-600">{f.text}</p>
+                                <div key={f.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-5">
+                                    <h3 className="font-semibold text-on-surface font-headline mb-2">{f.title}</h3>
+                                    <p className="text-on-surface-variant">{f.text}</p>
                                 </div>
                             ))}
                         </div>
@@ -366,33 +366,33 @@ function PhotoToTextPage() {
                 </section>
 
                 {/* Internal linking */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">Turn photo OCR into a full workflow</h2>
-                        <p className="text-gray-700 mb-5">
+                        <p className="text-on-surface-variant mb-5">
                             If you’re doing more than copying text, these tools help you convert, OCR, and reuse content:
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
-                            <div className="bg-gray-50 border rounded-xl p-6">
+                            <div className="bg-[#091328]/50 border rounded-xl p-6">
                                 <div className="flex items-start gap-3">
-                                    <FileImage className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                    <FileImage className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                     <div>
                                         <h3 className="font-semibold mb-1">Photo(s) → PDF</h3>
-                                        <p className="text-gray-600">
+                                        <p className="text-on-surface-variant">
                                             Convert phone photos into a PDF using{" "}
-                                            <a href="/image-to-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/image-to-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                                 Image to PDF
                                             </a>{" "}
                                             then make it searchable with{" "}
-                                            <a href="/make-pdf-searchable/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/make-pdf-searchable/" className="text-primary-700 underline hover:text-primary-900">
                                                 Make PDF Searchable
                                             </a>
                                             .
                                         </p>
                                         <a
                                             href="/image-to-pdf/"
-                                            className="inline-flex items-center gap-2 mt-3 text-sm font-semibold text-blue-700 hover:text-blue-900"
+                                            className="inline-flex items-center gap-2 mt-3 text-sm font-semibold text-primary-700 hover:text-primary-900"
                                         >
                                             Convert images to PDF <ArrowRight className="h-4 w-4" />
                                         </a>
@@ -400,25 +400,25 @@ function PhotoToTextPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-gray-50 border rounded-xl p-6">
+                            <div className="bg-[#091328]/50 border rounded-xl p-6">
                                 <div className="flex items-start gap-3">
-                                    <FileText className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                    <FileText className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                     <div>
                                         <h3 className="font-semibold mb-1">Need text from a PDF?</h3>
-                                        <p className="text-gray-600">
+                                        <p className="text-on-surface-variant">
                                             Use{" "}
-                                            <a href="/pdf-to-text/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/pdf-to-text/" className="text-primary-700 underline hover:text-primary-900">
                                                 PDF to Text
                                             </a>{" "}
                                             or{" "}
-                                            <a href="/ocr-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/ocr-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                                 OCR PDF
                                             </a>
                                             .
                                         </p>
                                         <a
                                             href="/pdf-to-text/"
-                                            className="inline-flex items-center gap-2 mt-3 text-sm font-semibold text-blue-700 hover:text-blue-900"
+                                            className="inline-flex items-center gap-2 mt-3 text-sm font-semibold text-primary-700 hover:text-primary-900"
                                         >
                                             Extract text from PDF <ArrowRight className="h-4 w-4" />
                                         </a>
@@ -426,22 +426,22 @@ function PhotoToTextPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-gray-50 border rounded-xl p-6">
+                            <div className="bg-[#091328]/50 border rounded-xl p-6">
                                 <div className="flex items-start gap-3">
-                                    <ScanText className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                    <ScanText className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                     <div>
                                         <h3 className="font-semibold mb-1">All images (JPG/PNG)</h3>
-                                        <p className="text-gray-600">
+                                        <p className="text-on-surface-variant">
                                             Use{" "}
-                                            <a href="/image-to-text/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/image-to-text/" className="text-primary-700 underline hover:text-primary-900">
                                                 Image to Text
                                             </a>{" "}
                                             for universal image OCR, plus{" "}
-                                            <a href="/jpg-to-text/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/jpg-to-text/" className="text-primary-700 underline hover:text-primary-900">
                                                 JPG to Text
                                             </a>{" "}
                                             and{" "}
-                                            <a href="/png-to-text/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/png-to-text/" className="text-primary-700 underline hover:text-primary-900">
                                                 PNG to Text
                                             </a>{" "}
                                             for format-specific pages.
@@ -450,14 +450,14 @@ function PhotoToTextPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-gray-50 border rounded-xl p-6">
+                            <div className="bg-[#091328]/50 border rounded-xl p-6">
                                 <div className="flex items-start gap-3">
-                                    <Layers className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                    <Layers className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                     <div>
                                         <h3 className="font-semibold mb-1">Page limit? Keep only what matters</h3>
-                                        <p className="text-gray-600">
+                                        <p className="text-on-surface-variant">
                                             If your document is long, use{" "}
-                                            <a href="/split-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/split-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                                 Split PDF
                                             </a>{" "}
                                             to extract only the pages you need, then run OCR on those pages.
@@ -470,28 +470,28 @@ function PhotoToTextPage() {
                 </section>
 
                 {/* Privacy */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">Security &amp; privacy</h2>
-                        <p className="text-gray-700 mb-4">
+                        <p className="text-on-surface-variant mb-4">
                             OCR requires processing the image to recognize text. If you’re testing, use sample photos or redact sensitive parts.
                         </p>
 
-                        <div className="bg-white border rounded-xl p-6">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6">
                             <div className="flex items-start gap-3">
-                                <ShieldCheck className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                <ShieldCheck className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                 <div>
-                                    <h3 className="font-semibold text-gray-900 mb-1">Privacy checklist</h3>
-                                    <ul className="list-disc ml-6 space-y-2 text-gray-600">
+                                    <h3 className="font-semibold text-on-surface font-headline mb-1">Privacy checklist</h3>
+                                    <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
                                         <li>Avoid uploading highly sensitive documents.</li>
                                         <li>Use trusted networks and keep your browser updated.</li>
                                         <li>
                                             Read{" "}
-                                            <a href="/privacy/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/privacy/" className="text-primary-700 underline hover:text-primary-900">
                                                 Privacy
                                             </a>{" "}
                                             and{" "}
-                                            <a href="/terms/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/terms/" className="text-primary-700 underline hover:text-primary-900">
                                                 Terms
                                             </a>
                                             .
@@ -504,14 +504,14 @@ function PhotoToTextPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-gray-50 p-4 rounded-lg shadow-sm border">
+                                <details key={i} className="bg-[#091328]/50 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)] border">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <p className="mt-2 text-gray-700">{item.a}</p>
+                                    <p className="mt-2 text-on-surface-variant">{item.a}</p>
                                 </details>
                             ))}
                         </div>
@@ -519,37 +519,37 @@ function PhotoToTextPage() {
                 </section>
 
                 {/* Related tools */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" />
                             Related tools
                         </h2>
 
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/image-to-text/" className="underline hover:text-blue-900">Image to Text</a></li>
-                            <li><a href="/jpg-to-text/" className="underline hover:text-blue-900">JPG to Text</a></li>
-                            <li><a href="/png-to-text/" className="underline hover:text-blue-900">PNG to Text</a></li>
-                            <li><a href="/ocr-pdf/" className="underline hover:text-blue-900">OCR PDF</a></li>
-                            <li><a href="/make-pdf-searchable/" className="underline hover:text-blue-900">Make PDF searchable</a></li>
-                            <li><a href="/pdf-to-text/" className="underline hover:text-blue-900">PDF to Text</a></li>
-                            <li><a href="/image-to-pdf/" className="underline hover:text-blue-900">Image to PDF</a></li>
-                            <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split PDF</a></li>
-                            <li><a href="/tools/" className="underline hover:text-blue-900">All tools</a></li>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/image-to-text/" className="underline hover:text-primary-900">Image to Text</a></li>
+                            <li><a href="/jpg-to-text/" className="underline hover:text-primary-900">JPG to Text</a></li>
+                            <li><a href="/png-to-text/" className="underline hover:text-primary-900">PNG to Text</a></li>
+                            <li><a href="/ocr-pdf/" className="underline hover:text-primary-900">OCR PDF</a></li>
+                            <li><a href="/make-pdf-searchable/" className="underline hover:text-primary-900">Make PDF searchable</a></li>
+                            <li><a href="/pdf-to-text/" className="underline hover:text-primary-900">PDF to Text</a></li>
+                            <li><a href="/image-to-pdf/" className="underline hover:text-primary-900">Image to PDF</a></li>
+                            <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split PDF</a></li>
+                            <li><a href="/tools/" className="underline hover:text-primary-900">All tools</a></li>
                         </ul>
                     </div>
                 </section>
 
                 {/* CTA */}
-                <section className="py-16 bg-blue-600 text-center">
+                <section className="py-16 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-center">
                     <div className="max-w-3xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-white mb-2">Scan photo text now</h2>
-                        <p className="text-blue-100 mb-6">
+                        <h2 className="text-3xl font-bold text-on-primary mb-2">Scan photo text now</h2>
+                        <p className="text-primary-100 mb-6">
                             Upload a photo, choose language, run OCR, and copy the text instantly.
                         </p>
                         <a
                             href="#upload"
-                            className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold shadow hover:bg-gray-100 inline-flex items-center gap-2"
+                            className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:bg-gray-100 inline-flex items-center gap-2"
                         >
                             <Camera className="h-5 w-5" />
                             Upload Photo
@@ -559,29 +559,29 @@ function PhotoToTextPage() {
             
 
         {/* SMART LINKING MAP */}
-        <section className="py-12 bg-white border-t border-gray-200">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5-t border-white/5">
             <div className="max-w-6xl mx-auto px-6">
                  <div className="grid md:grid-cols-2 gap-8">
                     {/* SIBLINGS */}
                     <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-3">Related Tools</h3>
+                        <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Related Tools</h3>
                         <ul className="space-y-2">
                             
                             <li>
-                                <a href="/ocr-german/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                <a href="/ocr-german/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                     OCR German
                                 </a>
                             </li>
                             <li>
-                                <a href="/ocr-spanish/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                <a href="/ocr-spanish/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                     OCR Spanish
                                 </a>
                             </li>
                             <li>
-                                <a href="/image-to-text/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                <a href="/image-to-text/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                     Image to Text
                                 </a>
                             </li>
@@ -590,18 +590,18 @@ function PhotoToTextPage() {
                     
                     {/* NEXT STEPS */}
                     <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-3">Next Steps</h3>
+                        <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Next Steps</h3>
                         <ul className="space-y-2">
                             
                             <li>
-                                <a href="/pdf-to-word-ocr/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                    <span className="font-semibold text-gray-700 group-hover:text-blue-700">Convert to Word</span>
+                                <a href="/pdf-to-word-ocr/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                    <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Convert to Word</span>
                                     <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/edit-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                    <span className="font-semibold text-gray-700 group-hover:text-blue-700">Edit Text</span>
+                                <a href="/edit-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                    <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Edit Text</span>
                                     <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                 </a>
                             </li>
@@ -610,8 +610,8 @@ function PhotoToTextPage() {
                  </div>
                  
                  {/* PARENT */}
-                 <div className="mt-8 pt-8 border-t border-gray-100 text-center">
-                    <a href="/ocr/" className="text-sm font-semibold text-gray-500 hover:text-blue-600 uppercase tracking-wide">
+                 <div className="mt-8 pt-8 border-t border-white/5 text-center">
+                    <a href="/ocr/" className="text-sm font-semibold text-outline hover:text-primary-600 uppercase tracking-wide">
                         View OCR Home
                     </a>
                  </div>
@@ -623,10 +623,10 @@ function PhotoToTextPage() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center mt-auto">
                 <p>© {new Date().getFullYear()} PDF Free Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

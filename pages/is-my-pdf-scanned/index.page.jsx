@@ -157,34 +157,34 @@ function IsMyPDFScannedPage() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
             <Helmet>
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
             </Helmet>
             <SiteNav />
 
             {/* HERO */}
-            <section className="bg-gradient-to-br from-indigo-50 to-blue-50 py-14 lg:py-20">
+            <section className="digital-obsidian text-on-surface py-14 lg:py-20">
                 <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                             Is My PDF Scanned?
                             <br />
-                            <span className="text-blue-600">How to tell in 10 seconds (and fix it)</span>
+                            <span className="text-primary-600">How to tell in 10 seconds (and fix it)</span>
                         </h1>
 
-                        <p className="text-lg text-gray-600 mb-5">
+                        <p className="text-lg text-on-surface-variant mb-5">
                             If <strong>Ctrl+F doesn’t work</strong>, you can’t select a single word, or copy/paste is broken,
                             your PDF is probably a <strong>scanned image-only PDF</strong>. This page shows quick tests and the
                             fastest way to convert it into a searchable PDF.
                         </p>
 
-                        <div className="bg-white border rounded-2xl p-5 shadow-sm mb-6">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)] mb-6">
                             <h2 className="text-lg font-bold mb-3 flex items-center gap-2">
                                 <AlertTriangle className="h-5 w-5 text-amber-600" />
                                 Common reasons people land here
                             </h2>
-                            <ul className="space-y-2 text-gray-700">
+                            <ul className="space-y-2 text-on-surface-variant">
                                 {pains.map((b, i) => (
                                     <li key={i} className="flex items-start gap-3">
                                         <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -196,12 +196,12 @@ function IsMyPDFScannedPage() {
 
                         <div className="grid md:grid-cols-2 gap-4 mb-6">
                             {quickTruthCards.map((x) => (
-                                <div key={x.title} className="bg-white border rounded-xl p-5 shadow-sm text-left">
+                                <div key={x.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)] text-left">
                                     <div className="flex items-start gap-3">
-                                        <x.icon className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                        <x.icon className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                         <div>
                                             <h2 className="text-lg font-bold mb-1">{x.title}</h2>
-                                            <p className="text-gray-600">{x.text}</p>
+                                            <p className="text-on-surface-variant">{x.text}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -211,27 +211,27 @@ function IsMyPDFScannedPage() {
                         <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
                             <a
                                 href="#fix"
-                                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:bg-blue-700"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                             >
                                 <ScanText className="h-5 w-5" />
                                 Make my PDF searchable
                             </a>
                             <a
                                 href="#tests"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                             >
                                 <Search className="h-5 w-5" />
                                 Run quick tests
                             </a>
                         </div>
 
-                        <p className="text-sm text-gray-600 mt-5">
+                        <p className="text-sm text-on-surface-variant mt-5">
                             Related:{" "}
-                            <a className="text-blue-700 underline hover:text-blue-900" href="/cant-search-text-in-pdf/">
+                            <a className="text-primary-700 underline hover:text-primary-900" href="/cant-search-text-in-pdf/">
                                 Ctrl+F doesn’t work in PDF
                             </a>{" "}
                             •{" "}
-                            <a className="text-blue-700 underline hover:text-blue-900" href="/searchable-vs-non-searchable-pdf/">
+                            <a className="text-primary-700 underline hover:text-primary-900" href="/searchable-vs-non-searchable-pdf/">
                                 Searchable vs non-searchable PDF
                             </a>
                             .
@@ -240,29 +240,29 @@ function IsMyPDFScannedPage() {
 
                     {/* OCR TOOL */}
                     <aside id="fix" className="lg:sticky lg:top-6">
-                        <div className="bg-white border rounded-2xl shadow p-4">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl shadow-[0_0_25px_rgba(139,92,246,0.2)] p-4">
                             <div className="flex items-center gap-2 mb-3">
-                                <ScanText className="h-5 w-5 text-blue-600" />
+                                <ScanText className="h-5 w-5 text-primary-600" />
                                 <p className="font-semibold">Fix it now: upload and OCR</p>
                             </div>
 
                             <OCRTool minimal={true} />
 
-                            <div className="mt-4 bg-gray-50 border rounded-xl p-4">
-                                <p className="font-semibold text-gray-900 mb-1">Long PDF or page cap?</p>
-                                <p className="text-sm text-gray-600">
+                            <div className="mt-4 bg-[#091328]/50 border rounded-xl p-4">
+                                <p className="font-semibold text-on-surface font-headline mb-1">Long PDF or page cap?</p>
+                                <p className="text-sm text-on-surface-variant">
                                     Split first and OCR only the pages you need:
                                     {" "}
-                                    <a href="/split-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                                    <a href="/split-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                         Split PDF
                                     </a>
                                     .
                                 </p>
                             </div>
 
-                            <div className="mt-3 text-xs text-gray-500">
+                            <div className="mt-3 text-xs text-outline">
                                 OCR requires uploading the file for processing. For sensitive documents, review{" "}
-                                <a href="/privacy/" className="underline hover:text-gray-700">
+                                <a href="/privacy/" className="underline hover:text-on-surface-variant">
                                     Privacy Policy
                                 </a>
                                 .
@@ -274,21 +274,21 @@ function IsMyPDFScannedPage() {
 
             <main className="flex-1">
                 {/* TESTS */}
-                <section id="tests" className="py-12 bg-gray-50">
+                <section id="tests" className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">How to tell if a PDF is scanned (quick tests)</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             You don’t need special software. These tests work in most PDF viewers.
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                             {tests.map((t) => (
-                                <div key={t.id} className="bg-white border rounded-xl p-5 shadow-sm">
+                                <div key={t.id} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                     <div className="flex items-start gap-3">
-                                        <t.icon className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                        <t.icon className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-2">{t.title}</h3>
-                                            <p className="text-gray-600">{t.text}</p>
+                                            <h3 className="font-semibold text-on-surface font-headline mb-2">{t.title}</h3>
+                                            <p className="text-on-surface-variant">{t.text}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -299,8 +299,8 @@ function IsMyPDFScannedPage() {
                             <div className="flex items-start gap-3">
                                 <AlertTriangle className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" />
                                 <div>
-                                    <h3 className="font-semibold text-gray-900 mb-1">Most reliable signal</h3>
-                                    <p className="text-gray-700">
+                                    <h3 className="font-semibold text-on-surface font-headline mb-1">Most reliable signal</h3>
+                                    <p className="text-on-surface-variant">
                                         If you can’t select a single word, your PDF is almost certainly scanned (image-only). OCR is the fix.
                                     </p>
                                 </div>
@@ -310,22 +310,22 @@ function IsMyPDFScannedPage() {
                 </section>
 
                 {/* CAUSES + FIXES */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">Why PDFs become “image-only” (and what to do)</h2>
 
                         <div className="space-y-4">
                             {causes.map((c) => (
-                                <details key={c.title} className="bg-gray-50 border rounded-xl p-5">
+                                <details key={c.title} className="bg-[#091328]/50 border rounded-xl p-5">
                                     <summary className="font-semibold cursor-pointer flex items-center gap-2">
-                                        <c.icon className="h-5 w-5 text-blue-600" />
+                                        <c.icon className="h-5 w-5 text-primary-600" />
                                         {c.title}
                                     </summary>
 
                                     <div className="mt-4 grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <p className="font-semibold text-gray-900 mb-2">What you’ll notice</p>
-                                            <ul className="list-disc ml-6 space-y-1 text-gray-600">
+                                            <p className="font-semibold text-on-surface font-headline mb-2">What you’ll notice</p>
+                                            <ul className="list-disc ml-6 space-y-1 text-on-surface-variant">
                                                 {c.bullets.map((b) => (
                                                     <li key={b}>{b}</li>
                                                 ))}
@@ -333,20 +333,20 @@ function IsMyPDFScannedPage() {
                                         </div>
 
                                         <div>
-                                            <p className="font-semibold text-gray-900 mb-2">{c.fixTitle}</p>
-                                            <p className="text-gray-600">{c.fixText}</p>
+                                            <p className="font-semibold text-on-surface font-headline mb-2">{c.fixTitle}</p>
+                                            <p className="text-on-surface-variant">{c.fixText}</p>
 
                                             <div className="flex flex-col sm:flex-row gap-2 mt-3">
                                                 <a
                                                     href={c.primaryCta.href}
-                                                    className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700"
+                                                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-5 py-2 rounded-full font-semibold hover:scale-105 active:scale-95 transition-all"
                                                 >
                                                     {c.primaryCta.text} <ArrowRight className="h-4 w-4" />
                                                 </a>
 
                                                 <a
                                                     href={c.secondaryCta.href}
-                                                    className="inline-flex items-center justify-center gap-2 bg-white border px-5 py-2 rounded-lg font-semibold text-blue-700 hover:bg-gray-50"
+                                                    className="inline-flex items-center justify-center gap-2 bg-[#091328]/50 backdrop-blur-xl border border-white/5 px-5 py-2 rounded-full font-semibold text-primary-700 hover:bg-[#091328]/50"
                                                 >
                                                     {c.secondaryCta.text}
                                                 </a>
@@ -357,25 +357,25 @@ function IsMyPDFScannedPage() {
                             ))}
                         </div>
 
-                        <div className="mt-8 bg-white border rounded-xl p-6 shadow-sm">
+                        <div className="mt-8 bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                             <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                                <ShieldCheck className="h-5 w-5 text-blue-600" />
+                                <ShieldCheck className="h-5 w-5 text-primary-600" />
                                 What OCR changes (and what it doesn’t)
                             </h3>
-                            <p className="text-gray-700 mb-3">
+                            <p className="text-on-surface-variant mb-3">
                                 In most cases, your scanned page image stays the same — OCR simply adds an{" "}
                                 <strong>invisible searchable text layer</strong> underneath so Ctrl+F, selection, and copy work.
                             </p>
-                            <p className="text-gray-700">
+                            <p className="text-on-surface-variant">
                                 If you want editing (not just search), OCR first then convert:
                                 {" "}
-                                <a href="/pdf-to-word-ocr/" className="text-blue-700 underline hover:text-blue-900">
+                                <a href="/pdf-to-word-ocr/" className="text-primary-700 underline hover:text-primary-900">
                                     Scanned PDF to Word (OCR)
                                 </a>
                                 {" "}
                                 or
                                 {" "}
-                                <a href="/pdf-to-excel-ocr/" className="text-blue-700 underline hover:text-blue-900">
+                                <a href="/pdf-to-excel-ocr/" className="text-primary-700 underline hover:text-primary-900">
                                     Scanned PDF to Excel (OCR)
                                 </a>
                                 .
@@ -385,22 +385,22 @@ function IsMyPDFScannedPage() {
                 </section>
 
                 {/* NEXT STEPS */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">Best next step (pick your goal)</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             The fastest workflow depends on what you’re trying to do.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-4">
                             {nextSteps.map((t) => (
-                                <div key={t.title} className="bg-white border rounded-xl p-5 shadow-sm">
+                                <div key={t.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                     <div className="flex items-start gap-3">
-                                        <t.icon className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                        <t.icon className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-2">{t.title}</h3>
-                                            <p className="text-gray-600 mb-3">{t.text}</p>
-                                            <a href={t.href} className="text-blue-700 underline hover:text-blue-900">
+                                            <h3 className="font-semibold text-on-surface font-headline mb-2">{t.title}</h3>
+                                            <p className="text-on-surface-variant mb-3">{t.text}</p>
+                                            <a href={t.href} className="text-primary-700 underline hover:text-primary-900">
                                                 Open tool
                                             </a>
                                         </div>
@@ -412,14 +412,14 @@ function IsMyPDFScannedPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-gray-50 p-4 rounded-lg shadow-sm border">
+                                <details key={i} className="bg-[#091328]/50 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)] border">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <p className="mt-2 text-gray-700">{item.a}</p>
+                                    <p className="mt-2 text-on-surface-variant">{item.a}</p>
                                 </details>
                             ))}
                         </div>
@@ -427,15 +427,15 @@ function IsMyPDFScannedPage() {
                 </section>
 
                 {/* CTA */}
-                <section className="py-16 bg-blue-600 text-center">
+                <section className="py-16 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-center">
                     <div className="max-w-3xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-white mb-2">Convert your scanned PDF into a searchable PDF</h2>
-                        <p className="text-blue-100 mb-6">
+                        <h2 className="text-3xl font-bold text-on-primary mb-2">Convert your scanned PDF into a searchable PDF</h2>
+                        <p className="text-primary-100 mb-6">
                             Upload, run OCR, and start searching and copying text instantly.
                         </p>
                         <a
                             href="#fix"
-                            className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold shadow hover:bg-gray-100 inline-flex items-center gap-2"
+                            className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:bg-gray-100 inline-flex items-center gap-2"
                         >
                             <ScanText className="h-5 w-5" />
                             Upload PDF
@@ -445,29 +445,29 @@ function IsMyPDFScannedPage() {
 
 
                 {/* SMART LINKING MAP */}
-                <section className="py-12 bg-white border-t border-gray-200">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5-t border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* SIBLINGS */}
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Related Tools</h3>
+                                <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Related Tools</h3>
                                 <ul className="space-y-2">
 
                                     <li>
-                                        <a href="/ocr-german/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/ocr-german/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             OCR German
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/ocr-spanish/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/ocr-spanish/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             OCR Spanish
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/image-to-text/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/image-to-text/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             Image to Text
                                         </a>
                                     </li>
@@ -476,18 +476,18 @@ function IsMyPDFScannedPage() {
 
                             {/* NEXT STEPS */}
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Next Steps</h3>
+                                <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Next Steps</h3>
                                 <ul className="space-y-2">
 
                                     <li>
-                                        <a href="/pdf-to-word-ocr/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Convert to Word</span>
+                                        <a href="/pdf-to-word-ocr/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Convert to Word</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/edit-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Edit Text</span>
+                                        <a href="/edit-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Edit Text</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
@@ -496,8 +496,8 @@ function IsMyPDFScannedPage() {
                         </div>
 
                         {/* PARENT */}
-                        <div className="mt-8 pt-8 border-t border-gray-100 text-center">
-                            <a href="/ocr/" className="text-sm font-semibold text-gray-500 hover:text-blue-600 uppercase tracking-wide">
+                        <div className="mt-8 pt-8 border-t border-white/5 text-center">
+                            <a href="/ocr/" className="text-sm font-semibold text-outline hover:text-primary-600 uppercase tracking-wide">
                                 View OCR Home
                             </a>
                         </div>
@@ -509,10 +509,10 @@ function IsMyPDFScannedPage() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center mt-auto">
                 <p>© {new Date().getFullYear()} PDF Free Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

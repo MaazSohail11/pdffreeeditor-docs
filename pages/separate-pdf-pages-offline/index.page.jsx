@@ -64,7 +64,7 @@ export default {
                         { q: "Are my PDFs uploaded anywhere?", a: "No. This page processes your PDF locally on your device." },
                         { q: "Does it work on mobile?", a: "Yes. It works in Safari (iOS) and Chrome (Android)." },
                         { q: "Can I extract a single page?", a: "Yes. Select one page and download the new PDF." },
-                        { q: "Can I remove pages too?", a: <>Yes. Select only the pages you want to keep. For a delete-focused intent page, use <a className="text-blue-600 hover:underline" href="/delete-pages-from-pdf-online/">Delete Pages from PDF</a>.</> },
+                        { q: "Can I remove pages too?", a: <>Yes. Select only the pages you want to keep. For a delete-focused intent page, use <a className="text-primary-600 hover:underline" href="/delete-pages-from-pdf-online/">Delete Pages from PDF</a>.</> },
                         { q: "Do you add a watermark?", a: "No. Downloads are clean and watermark-free." },
                     ]}
                     relatedTools={[

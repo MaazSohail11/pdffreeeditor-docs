@@ -65,7 +65,7 @@ export default {
                         { q: "Does this cut each page in half (down the middle)?", a: "No. This page splits by document pages (two files). Cutting a single page into two halves is a different operation." },
                         { q: "Is it free and watermark-free?", a: "Yes. No signup and no watermark on downloads." },
                         { q: "Is my file uploaded to a server?", a: "No. Splitting runs locally in your browser." },
-                        { q: "How do I split into more than two parts?", a: <>Use <a className="text-blue-600 hover:underline" href="/split-pdf-by-size/">Split PDF by Size</a> or manually select ranges and download multiple parts.</> },
+                        { q: "How do I split into more than two parts?", a: <>Use <a className="text-primary-600 hover:underline" href="/split-pdf-by-size/">Split PDF by Size</a> or manually select ranges and download multiple parts.</> },
                     ]}
                     relatedTools={[
                         { href: "/split-pdf-by-size/", label: "Split PDF by size (parts)" },

@@ -62,7 +62,7 @@ export default {
                     faqs={[
                         { q: "How do I split a PDF by file size?", a: "Upload the PDF, set a target MB per part, then select and download each chunk. Repeat for the next part." },
                         { q: "Is the split size exact?", a: "No. Output varies by page content (especially images). The helper is an estimate based on average page size." },
-                        { q: "How can I get closer to an exact limit?", a: <>Split first, then compress each downloaded part using <a className="text-blue-600 hover:underline" href="/compress-pdf/">Compress PDF</a>.</> },
+                        { q: "How can I get closer to an exact limit?", a: <>Split first, then compress each downloaded part using <a className="text-primary-600 hover:underline" href="/compress-pdf/">Compress PDF</a>.</> },
                         { q: "Can I target 10MB parts for email?", a: "Yes. Set 10MB and download each chunk. Many email providers cap attachments, so splitting can help." },
                         { q: "Is my PDF uploaded?", a: "No. Splitting runs locally in your browser." },
                         { q: "Does it work on mobile?", a: "Yes. Works on Safari (iOS) and Chrome (Android)." },

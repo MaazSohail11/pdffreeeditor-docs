@@ -58,7 +58,7 @@ function TypeOnPdfDocumentPage() {
                 <>
                     Yes — you can type on top of a scanned PDF. If you want the scanned text to become selectable/searchable,
                     use{" "}
-                    <a href="/ocr/" className="text-blue-600 hover:underline">OCR PDF</a>{" "}
+                    <a href="/ocr/" className="text-primary-600 hover:underline">OCR PDF</a>{" "}
                     first.
                 </>
             ),
@@ -85,7 +85,7 @@ function TypeOnPdfDocumentPage() {
             a: (
                 <>
                     Yes — after typing, you can{" "}
-                    <a href="/sign-pdf/" className="text-blue-600 hover:underline">sign the PDF</a>{" "}
+                    <a href="/sign-pdf/" className="text-primary-600 hover:underline">sign the PDF</a>{" "}
                     and download instantly.
                 </>
             ),
@@ -95,7 +95,7 @@ function TypeOnPdfDocumentPage() {
             a: (
                 <>
                     Some PDFs contain selectable text you can edit, but scanned PDFs are images. For scans, use{" "}
-                    <a href="/ocr/" className="text-blue-600 hover:underline">OCR</a>{" "}
+                    <a href="/ocr/" className="text-primary-600 hover:underline">OCR</a>{" "}
                     or type new text boxes on top.
                 </>
             ),
@@ -103,22 +103,22 @@ function TypeOnPdfDocumentPage() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
             <SiteNav />
 
-            <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 lg:py-24">
+            <section className="digital-obsidian text-on-surface py-16 lg:py-24">
                 <div className="max-w-7xl mx-auto px-6 grid items-center gap-10 lg:grid-cols-2">
                     <div>
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-on-surface font-headline">
                             Type on a PDF Document
                         </h1>
-                        <p className="text-lg md:text-xl font-semibold mt-3 text-blue-700">
+                        <p className="text-lg md:text-xl font-semibold mt-3 text-primary-700">
                             Free • No Signup • No Watermark • Private by default
                         </p>
-                        <p className="text-lg md:text-xl text-gray-700 mt-6 max-w-xl">
+                        <p className="text-lg md:text-xl text-on-surface-variant mt-6 max-w-xl">
                             Fill forms, add text boxes, and complete documents neatly — straight in your browser.
                             Upload a PDF, type where you need, then download instantly.
                         </p>
@@ -126,21 +126,21 @@ function TypeOnPdfDocumentPage() {
                         <div className="mt-8 flex flex-col sm:flex-row gap-4">
                             <a
                                 href="#start"
-                                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-4 rounded-lg inline-flex items-center justify-center gap-2 shadow-md transition"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none hover:scale-105 active:scale-95 transition-all text-on-primary font-semibold text-lg px-8 py-4 rounded-full inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(139,92,246,0.15)] transition"
                             >
                                 <Upload className="h-5 w-5" />
                                 <span>Start — Type on PDF</span>
                             </a>
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 border hover:shadow px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 border hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] px-8 py-4 rounded-full font-semibold inline-flex items-center justify-center gap-2 transition"
                             >
                                 <Type className="h-5 w-5" />
                                 <span>How it works</span>
                             </a>
                         </div>
 
-                        <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-gray-700">
+                        <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-on-surface-variant">
                             <span className="inline-flex items-center gap-2">
                                 <Lock className="h-4 w-4" /> Client-side editor (private by default)
                             </span>
@@ -148,11 +148,11 @@ function TypeOnPdfDocumentPage() {
                                 <CheckCircle2 className="h-4 w-4 text-green-600" /> No watermark downloads
                             </span>
                             <span className="inline-flex items-center gap-2">
-                                <Search className="h-4 w-4 text-blue-700" /> OCR available for scanned PDFs
+                                <Search className="h-4 w-4 text-primary-700" /> OCR available for scanned PDFs
                             </span>
                         </div>
 
-                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant">
                             {benefits.map((t) => (
                                 <li key={t} className="flex items-center gap-2">
                                     <CheckCircle2 className="h-4 w-4 text-green-500" aria-hidden="true" />
@@ -164,9 +164,9 @@ function TypeOnPdfDocumentPage() {
 
                     <div id="start">
                         <InlineDropBox className="w-full" minHeight={480} maxWidth={720} label="Choose PDF to type on" />
-                        <p className="text-xs text-gray-500 mt-3">
+                        <p className="text-xs text-outline mt-3">
                             If your PDF is a scan (image-only) and you want searchable text, run{" "}
-                            <a href="/ocr/" className="text-blue-600 hover:underline">OCR</a>{" "}
+                            <a href="/ocr/" className="text-primary-600 hover:underline">OCR</a>{" "}
                             first — then type or edit more easily.
                         </p>
                     </div>
@@ -175,21 +175,21 @@ function TypeOnPdfDocumentPage() {
 
             <main className="flex-1">
                 {/* Scenarios */}
-                <section className="py-14 bg-white">
+                <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline mb-4">
                             When people need to type on a PDF
                         </h2>
-                        <p className="text-gray-700 mb-8 max-w-3xl">
+                        <p className="text-on-surface-variant mb-8 max-w-3xl">
                             The intent behind “type on PDF document” is usually urgent: forms, applications, and signatures.
                             This page is built to get you from upload → typed PDF → download in minutes.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {scenarios.map((s) => (
-                                <div key={s.title} className="bg-gray-50 border rounded-xl p-5">
+                                <div key={s.title} className="bg-[#091328]/50 border rounded-xl p-5">
                                     <h3 className="font-semibold text-lg mb-2">{s.title}</h3>
-                                    <p className="text-gray-700 text-sm">{s.body}</p>
+                                    <p className="text-on-surface-variant text-sm">{s.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -197,12 +197,12 @@ function TypeOnPdfDocumentPage() {
                 </section>
 
                 {/* How-to */}
-                <section id="how-to" className="py-14 bg-gray-50">
+                <section id="how-to" className="py-14 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-3xl font-bold text-on-surface font-headline mb-6">
                             How to type on a PDF (3 steps)
                         </h2>
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-upload">
                                 <h3 className="font-semibold">1) Upload your PDF</h3>
                                 <p>Use the upload box to open your file inside the browser editor.</p>
@@ -222,21 +222,21 @@ function TypeOnPdfDocumentPage() {
                 </section>
 
                 {/* Fast guidance */}
-                <section className="py-14 bg-white">
+                <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">Scanned PDF vs editable PDF (don’t waste time)</h2>
+                        <h2 className="text-2xl font-bold text-on-surface font-headline mb-4">Scanned PDF vs editable PDF (don’t waste time)</h2>
                         <div className="grid md:grid-cols-2 gap-4">
-                            <div className="bg-gray-50 border rounded-xl p-5">
+                            <div className="bg-[#091328]/50 border rounded-xl p-5">
                                 <h3 className="font-semibold mb-2">If your PDF has selectable text</h3>
-                                <p className="text-gray-700 text-sm">
+                                <p className="text-on-surface-variant text-sm">
                                     You can usually click and edit or add new text cleanly. Great for digital PDFs created from Word/Google Docs.
                                 </p>
                             </div>
-                            <div className="bg-gray-50 border rounded-xl p-5">
+                            <div className="bg-[#091328]/50 border rounded-xl p-5">
                                 <h3 className="font-semibold mb-2">If your PDF is scanned (image-only)</h3>
-                                <p className="text-gray-700 text-sm">
+                                <p className="text-on-surface-variant text-sm">
                                     You can still type on top, but the original text won’t become editable unless you run{" "}
-                                    <a href="/ocr/" className="text-blue-700 underline hover:text-blue-900">OCR</a>.
+                                    <a href="/ocr/" className="text-primary-700 underline hover:text-primary-900">OCR</a>.
                                 </p>
                             </div>
                         </div>
@@ -244,14 +244,14 @@ function TypeOnPdfDocumentPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-14 bg-gray-50">
+                <section className="py-14 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6">Type on PDF — FAQs</h2>
+                        <h2 className="text-3xl font-bold text-on-surface font-headline mb-6">Type on PDF — FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-white p-5 rounded-xl border border-gray-200">
+                                <details key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-5 rounded-2xl border border-white/5">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <div className="mt-2 text-gray-700">{item.a}</div>
+                                    <div className="mt-2 text-on-surface-variant">{item.a}</div>
                                 </details>
                             ))}
                         </div>
@@ -259,23 +259,23 @@ function TypeOnPdfDocumentPage() {
                 </section>
 
                 {/* Related */}
-                <section className="py-14 bg-white">
+                <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" /> Related tools
                         </h2>
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/edit-pdf/" className="underline hover:text-blue-900">Edit PDF text</a></li>
-                            <li><a href="/ocr/" className="underline hover:text-blue-900">OCR PDF (scanned PDFs)</a></li>
-                            <li><a href="/sign-pdf/" className="underline hover:text-blue-900">Sign PDF</a></li>
-                            <li><a href="/annotate-pdf/" className="underline hover:text-blue-900">Annotate / highlight</a></li>
-                            <li><a href="/insert-photo-into-pdf-file/" className="underline hover:text-blue-900">Insert photo into PDF</a></li>
-                            <li><a href="/add-logo-to-pdf-online/" className="underline hover:text-blue-900">Add logo to PDF</a></li>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/edit-pdf/" className="underline hover:text-primary-900">Edit PDF text</a></li>
+                            <li><a href="/ocr/" className="underline hover:text-primary-900">OCR PDF (scanned PDFs)</a></li>
+                            <li><a href="/sign-pdf/" className="underline hover:text-primary-900">Sign PDF</a></li>
+                            <li><a href="/annotate-pdf/" className="underline hover:text-primary-900">Annotate / highlight</a></li>
+                            <li><a href="/insert-photo-into-pdf-file/" className="underline hover:text-primary-900">Insert photo into PDF</a></li>
+                            <li><a href="/add-logo-to-pdf-online/" className="underline hover:text-primary-900">Add logo to PDF</a></li>
                         </ul>
 
-                        <div className="mt-6 text-sm text-gray-600">
+                        <div className="mt-6 text-sm text-on-surface-variant">
                             Need to sign after typing? Use{" "}
-                            <a href="/sign-pdf/" className="text-blue-700 underline hover:text-blue-900">Sign PDF</a>{" "}
+                            <a href="/sign-pdf/" className="text-primary-700 underline hover:text-primary-900">Sign PDF</a>{" "}
                             for a clean, professional finish.
                         </div>
                     </div>
@@ -285,10 +285,10 @@ function TypeOnPdfDocumentPage() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center">
                 <p>© {new Date().getFullYear()} PDF Free Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

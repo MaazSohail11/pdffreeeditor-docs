@@ -167,7 +167,7 @@ function MergeDropZone() {
   const canMerge = queuedFiles.length > 0 && !isMerging;
 
   return (
-    <div id="merge-box" className="bg-white border rounded-2xl p-6 shadow-lg space-y-4">
+    <div id="merge-box" className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.2)] space-y-4">
       <Helmet>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
       </Helmet>
@@ -175,7 +175,7 @@ function MergeDropZone() {
         {...getRootProps()}
         className={[
           "relative w-full border-2 border-dashed rounded-xl transition-colors cursor-pointer",
-          isDragActive ? "border-blue-500 bg-blue-50/70" : "border-gray-300 bg-gray-50 hover:border-blue-400 hover:bg-blue-50/40",
+          isDragActive ? "border-primary-500 bg-primary-50/70" : "border-white/5 bg-[#091328]/50 hover:border-primary-400 hover:bg-primary-50/40",
           isMerging ? "opacity-70" : "",
           "p-6 text-center",
         ].join(" ")}
@@ -183,14 +183,14 @@ function MergeDropZone() {
       >
         <input {...getInputProps()} />
         <div className="flex flex-col items-center gap-3">
-          <div className="h-14 w-14 rounded-2xl bg-blue-600/10 text-blue-600 flex items-center justify-center">
+          <div className="h-14 w-14 rounded-2xl bg-primary-600/10 text-primary-600 flex items-center justify-center">
             <Upload className="h-7 w-7" />
           </div>
-          <p className="text-xl font-semibold text-gray-900">Drop PDF files here or click to choose</p>
-          <p className="text-sm text-gray-600">
+          <p className="text-xl font-semibold text-on-surface font-headline">Drop PDF files here or click to choose</p>
+          <p className="text-sm text-on-surface-variant">
             Select two or more PDFs to combine into a single document. You can add more files after the first upload.
           </p>
-          <p className="text-xs text-gray-500 inline-flex items-center gap-1 justify-center">
+          <p className="text-xs text-outline inline-flex items-center gap-1 justify-center">
             <Lock className="h-4 w-4" />
             Merging happens in your browser. Your PDFs stay on this device.
           </p>
@@ -198,8 +198,8 @@ function MergeDropZone() {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2 text-sm text-gray-700">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-700 font-semibold">
+        <div className="flex items-center gap-2 text-sm text-on-surface-variant">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary-50 text-primary-700 font-semibold">
             {queuedFiles.length}
           </span>
           <span>file{queuedFiles.length === 1 ? "" : "s"} ready to merge</span>
@@ -210,7 +210,7 @@ function MergeDropZone() {
             e.stopPropagation();
             open();
           }}
-          className="inline-flex items-center gap-2 rounded-lg bg-blue-600 text-white px-4 py-2 font-semibold hover:bg-blue-700 transition"
+          className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-4 py-2 font-semibold hover:scale-105 active:scale-95 transition-all transition"
           disabled={isMerging}
         >
           <FolderPlus className="h-4 w-4" />
@@ -220,12 +220,12 @@ function MergeDropZone() {
 
       {queuedFiles.length > 0 && (
         <div className="space-y-2">
-          <p className="text-sm text-gray-600">Drag the handle or use the arrows to reorder before merging.</p>
-          <ul className="divide-y divide-gray-200 border border-gray-200 rounded-xl bg-white">
+          <p className="text-sm text-on-surface-variant">Drag the handle or use the arrows to reorder before merging.</p>
+          <ul className="divide-y divide-gray-200 border border-white/5 rounded-xl bg-[#091328]/50 backdrop-blur-xl border border-white/5">
             {queuedFiles.map((item, index) => (
               <li
                 key={item.id}
-                className={`flex items-center gap-3 px-3 py-2 ${draggingId === item.id ? "bg-blue-50" : ""}`}
+                className={`flex items-center gap-3 px-3 py-2 ${draggingId === item.id ? "bg-primary-50" : ""}`}
                 draggable
                 onDragStart={() => setDraggingId(item.id)}
                 onDragEnd={() => setDraggingId(null)}
@@ -238,15 +238,15 @@ function MergeDropZone() {
               >
                 <GripVertical className="h-5 w-5 text-gray-400 flex-shrink-0 cursor-grab" />
                 <div className="flex-1 min-w-0">
-                  <p className="font-medium text-gray-900 truncate">{item.name}</p>
-                  <p className="text-xs text-gray-500">{formatBytes(item.size)}</p>
+                  <p className="font-medium text-on-surface font-headline truncate">{item.name}</p>
+                  <p className="text-xs text-outline">{formatBytes(item.size)}</p>
                 </div>
                 <div className="flex items-center gap-1">
                   <button
                     type="button"
                     onClick={() => moveIndex(index, index - 1)}
                     disabled={isMerging || index === 0}
-                    className="p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-blue-50 disabled:opacity-40"
+                    className="p-2 rounded-md text-outline hover:text-primary-600 hover:bg-primary-50 disabled:opacity-40"
                     aria-label="Move up"
                   >
                     <ArrowUp className="h-4 w-4" />
@@ -255,7 +255,7 @@ function MergeDropZone() {
                     type="button"
                     onClick={() => moveIndex(index, index + 1)}
                     disabled={isMerging || index === queuedFiles.length - 1}
-                    className="p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-blue-50 disabled:opacity-40"
+                    className="p-2 rounded-md text-outline hover:text-primary-600 hover:bg-primary-50 disabled:opacity-40"
                     aria-label="Move down"
                   >
                     <ArrowDown className="h-4 w-4" />
@@ -264,7 +264,7 @@ function MergeDropZone() {
                     type="button"
                     onClick={() => removeFile(item.id)}
                     disabled={isMerging}
-                    className="p-2 rounded-md text-gray-500 hover:text-red-600 hover:bg-red-50 disabled:opacity-40"
+                    className="p-2 rounded-md text-outline hover:text-red-600 hover:bg-red-50 disabled:opacity-40"
                     aria-label="Remove file"
                   >
                     <Trash2 className="h-4 w-4" />
@@ -282,14 +282,14 @@ function MergeDropZone() {
           onClick={handleMerge}
           disabled={!canMerge}
           className={[
-            "inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold shadow",
-            canMerge ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-gray-200 text-gray-500 cursor-not-allowed",
+            "inline-flex items-center gap-2 px-5 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)]",
+            canMerge ? "bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all" : "bg-gray-200 text-outline cursor-not-allowed",
           ].join(" ")}
         >
           <Download className="h-5 w-5" />
           {isMerging ? "Merging..." : "Merge & Download"}
         </button>
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-on-surface-variant">
           {status || "We will combine the PDFs and download the merged file automatically."}
         </div>
       </div>
@@ -310,42 +310,42 @@ function MergePDF() {
   ];
 
   return (
-    <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
       </Helmet>
       <SiteNav />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24">
+      <section className="digital-obsidian text-on-surface py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-start">
           <div className="text-center md:text-left">
-            <p className="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full bg-white/80 border text-xs font-semibold text-blue-700">
+            <p className="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full bg-[#091328]/50 backdrop-blur-xl border border-white/5/80 border text-xs font-semibold text-primary-700">
               <Layers className="h-4 w-4" />
               Free online PDF merger — no signup
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
               Merge PDF Online Free
               <br />
-              <span className="text-blue-600">
+              <span className="text-primary-600">
                 Combine PDF files into one — no watermark
               </span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-on-surface-variant mb-8">
               Use this free online PDF merger to combine multiple PDF files into a single document.
               Merging happens in your browser, so your PDFs never leave your device.
             </p>
             <div className="flex flex-col gap-3 md:items-start items-center">
               <a
                 href="#merge-box"
-                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center space-x-2 shadow-lg hover:bg-blue-700"
+                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
               >
                 <FolderPlus className="h-5 w-5" />
                 <span>Start Merging — Free</span>
               </a>
               <a
                 href="#how-to"
-                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center space-x-2 border shadow-sm hover:shadow-md"
+                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
               >
                 <FileText className="h-5 w-5" />
                 <span>How it works (3 steps)</span>
@@ -359,7 +359,7 @@ function MergePDF() {
       </section>
 
       {/* Why use our Merger? */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">Why use our PDF Merger?</h2>
@@ -372,15 +372,15 @@ function MergePDF() {
               ))}
             </ul>
           </div>
-          <div className="bg-white border rounded-xl p-6 text-center shadow">
-            <Layers className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Combine files in seconds</h2>
-            <p className="text-gray-600 mb-6">
+          <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6 text-center shadow-[0_0_25px_rgba(139,92,246,0.2)]">
+            <Layers className="h-16 w-16 text-primary-600 mx-auto mb-4" />
+            <h2 className="text-2xl font-bold text-on-surface font-headline mb-3">Combine files in seconds</h2>
+            <p className="text-on-surface-variant mb-6">
               Add PDFs, drag to reorder, and click merge. Get a clean combined PDF with the same fonts and layout.
             </p>
             <a
               href="#merge-box"
-              className="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold shadow inline-flex items-center space-x-2 transition"
+              className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all px-6 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] inline-flex items-center space-x-2 transition"
             >
               <Download className="h-5 w-5" />
               <span>Open PDF Merger</span>
@@ -390,11 +390,11 @@ function MergePDF() {
       </section>
 
       {/* Keyword-targeted / intent sections */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-[#091328]/50">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
           <div>
             <h2 className="text-2xl font-bold mb-3">Merge multiple PDF files into one document</h2>
-            <p className="text-gray-700">
+            <p className="text-on-surface-variant">
               Stop sending five attachments when you only need one. Merge contracts, reports, invoices, or lecture notes
               into a single PDF that&apos;s easier to share, upload, and archive. The order you choose in the list is the
               order your pages appear in the merged file.
@@ -402,7 +402,7 @@ function MergePDF() {
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-3">Merge PDF online free — no signup, no watermark</h2>
-            <p className="text-gray-700">
+            <p className="text-on-surface-variant">
               Many PDF combiner tools add watermarks or force you to create an account. This merger is different:
               it&apos;s 100% free, doesn&apos;t add logos, and does not require email or registration. Just open the page,
               merge your PDFs, and download the combined file.
@@ -412,25 +412,25 @@ function MergePDF() {
       </section>
 
       {/* Common use cases */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-4">Popular ways to use the PDF merger</h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-gray-50 rounded-xl p-4 shadow-sm">
+            <div className="bg-[#091328]/50 rounded-xl p-4 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
               <h3 className="font-semibold mb-2">Combine scanned pages</h3>
-              <p className="text-gray-700 text-sm">
+              <p className="text-on-surface-variant text-sm">
                 Scan documents as separate PDFs and then merge them into one clean, ordered file for clients, HR, or school.
               </p>
             </div>
-            <div className="bg-gray-50 rounded-xl p-4 shadow-sm">
+            <div className="bg-[#091328]/50 rounded-xl p-4 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
               <h3 className="font-semibold mb-2">Bundle reports and invoices</h3>
-              <p className="text-gray-700 text-sm">
+              <p className="text-on-surface-variant text-sm">
                 Combine monthly invoices, statements, or project reports into a single PDF before you send or upload them.
               </p>
             </div>
-            <div className="bg-gray-50 rounded-xl p-4 shadow-sm">
+            <div className="bg-[#091328]/50 rounded-xl p-4 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
               <h3 className="font-semibold mb-2">Merge PDFs on phone or tablet</h3>
-              <p className="text-gray-700 text-sm">
+              <p className="text-on-surface-variant text-sm">
                 Use Safari or Chrome on iOS and Android to merge PDFs on the go, without installing extra apps.
               </p>
             </div>
@@ -439,25 +439,25 @@ function MergePDF() {
       </section>
 
       {/* How To */}
-      <section id="how-to" className="py-12 bg-gray-50">
+      <section id="how-to" className="py-12 bg-[#091328]/50">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-6">How to merge your PDFs online (3 steps)</h2>
-          <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+          <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
             <li id="step-upload">
               <h3 className="font-semibold">1) Upload your PDFs</h3>
-              <p className="text-gray-600">
+              <p className="text-on-surface-variant">
                 Click <em>Start Merging</em> or drag &amp; drop your files into the merger. Add as many PDFs as you need.
               </p>
             </li>
             <li id="step-reorder">
               <h3 className="font-semibold">2) Reorder the files</h3>
-              <p className="text-gray-600">
+              <p className="text-on-surface-variant">
                 Drag to arrange the file order before merging. For page-level edits, you can use{" "}
-                <a href="/split-pdf/" className="text-blue-600 hover:underline">
+                <a href="/split-pdf/" className="text-primary-600 hover:underline">
                   Split PDF
                 </a>{" "}
                 or{" "}
-                <a href="/edit-pdf/" className="text-blue-600 hover:underline">
+                <a href="/edit-pdf/" className="text-primary-600 hover:underline">
                   Edit PDF
                 </a>{" "}
                 first.
@@ -465,7 +465,7 @@ function MergePDF() {
             </li>
             <li id="step-download">
               <h3 className="font-semibold">3) Merge &amp; download</h3>
-              <p className="text-gray-600">
+              <p className="text-on-surface-variant">
                 Click <strong>Merge &amp; Download</strong> to create a single PDF. Your combined file downloads instantly —
                 no watermark, no signup required.
               </p>
@@ -475,14 +475,14 @@ function MergePDF() {
       </section>
 
       {/* Privacy & Trust */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-[#091328]/50">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-3">Security &amp; privacy</h2>
-          <p className="text-gray-700 mb-3">
+          <p className="text-on-surface-variant mb-3">
             TechRex is privacy-first. Merging happens <strong>entirely in your browser</strong> using client-side processing.
             Your PDFs are not uploaded to a remote server by default.
           </p>
-          <ul className="list-disc ml-6 space-y-2 text-gray-600">
+          <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
             <li>No signup, no watermark, no hidden limits</li>
             <li>Files stay on your device while merging</li>
             <li>TLS is used for any optional network requests</li>
@@ -492,7 +492,7 @@ function MergePDF() {
       </section>
 
       {/* FAQ (visible, matches schema) */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-6">Frequently asked questions</h2>
           <div className="space-y-4">
@@ -518,9 +518,9 @@ function MergePDF() {
                 a: "Yes. For page-level tweaks such as removing or rotating pages, open the Edit PDF or Split PDF tools first, then merge the cleaned-up files.",
               },
             ].map((item, i) => (
-              <details key={i} className="bg-gray-50 p-4 rounded-lg">
+              <details key={i} className="bg-[#091328]/50 p-4 rounded-lg">
                 <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                <p className="mt-2 text-gray-700">{item.a}</p>
+                <p className="mt-2 text-on-surface-variant">{item.a}</p>
               </details>
             ))}
           </div>
@@ -528,35 +528,35 @@ function MergePDF() {
       </section>
 
       {/* Related tools */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-[#091328]/50">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <LinkIcon className="h-5 w-5" />
             Related PDF tools
           </h2>
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
             <li>
-              <a href="/split-pdf/" className="underline hover:text-blue-900">
+              <a href="/split-pdf/" className="underline hover:text-primary-900">
                 Split PDF pages
               </a>
             </li>
             <li>
-              <a href="/compress-pdf/" className="underline hover:text-blue-900">
+              <a href="/compress-pdf/" className="underline hover:text-primary-900">
                 Compress PDF file size
               </a>
             </li>
             <li>
-              <a href="/edit-pdf/" className="underline hover:text-blue-900">
+              <a href="/edit-pdf/" className="underline hover:text-primary-900">
                 Edit PDF text and pages
               </a>
             </li>
             <li>
-              <a href="/add-image-pdf/" className="underline hover:text-blue-900">
+              <a href="/add-image-pdf/" className="underline hover:text-primary-900">
                 Add images to a PDF
               </a>
             </li>
             <li>
-              <a href="/sign-pdf/" className="underline hover:text-blue-900">
+              <a href="/sign-pdf/" className="underline hover:text-primary-900">
                 Sign a PDF online
               </a>
             </li>
@@ -565,13 +565,13 @@ function MergePDF() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-blue-600 text-center">
+      <section className="py-16 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-2">Ready to merge your PDFs?</h2>
-          <p className="text-blue-100 mb-6">Combine files now — free, private, and lightning-fast.</p>
+          <h2 className="text-3xl font-bold text-on-primary mb-2">Ready to merge your PDFs?</h2>
+          <p className="text-primary-100 mb-6">Combine files now — free, private, and lightning-fast.</p>
           <a
             href="#merge-box"
-            className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold shadow hover:bg-gray-100 inline-flex items-center space-x-2"
+            className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:bg-gray-100 inline-flex items-center space-x-2"
           >
             <Download className="h-5 w-5" />
             <span>Open PDF Merger</span>
@@ -583,13 +583,13 @@ function MergePDF() {
       <footer className="bg-gray-900 text-gray-400 py-8 text-center">
         <p>© {new Date().getFullYear()} Free PDF Editor by TechRex. All rights reserved.</p>
         <div className="mt-4 space-x-4">
-          <a href="/privacy/" className="hover:text-white">
+          <a href="/privacy/" className="hover:text-on-primary">
             Privacy Policy
           </a>
-          <a href="/terms/" className="hover:text-white">
+          <a href="/terms/" className="hover:text-on-primary">
             Terms
           </a>
-          <a href="/contact/" className="hover:text-white">
+          <a href="/contact/" className="hover:text-on-primary">
             Contact
           </a>
         </div>

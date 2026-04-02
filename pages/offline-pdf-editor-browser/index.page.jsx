@@ -80,7 +80,7 @@ function OfflinePdfEditorBrowser() {
                 <>
                     Yes. If your PDF contains selectable text, you can edit it directly.
                     If the PDF is scanned (image-only), you’ll need{" "}
-                    <a href="/ocr/" className="text-blue-600 hover:underline">
+                    <a href="/ocr/" className="text-primary-600 hover:underline">
                         OCR
                     </a>{" "}
                     to make the text searchable/selectable.
@@ -118,7 +118,7 @@ function OfflinePdfEditorBrowser() {
                 <>
                     There are no “fake” limits from us. Real-world limits depend on your device memory/CPU and the PDF size/complexity.
                     If a PDF is huge, try splitting it first using{" "}
-                    <a href="/split-pdf/" className="text-blue-600 hover:underline">
+                    <a href="/split-pdf/" className="text-primary-600 hover:underline">
                         Split PDF
                     </a>.
                 </>
@@ -129,7 +129,7 @@ function OfflinePdfEditorBrowser() {
             a: (
                 <>
                     You can sign, annotate, merge/split pages, and more. Browse all tools here:{" "}
-                    <a href="/tools/" className="text-blue-600 hover:underline">
+                    <a href="/tools/" className="text-primary-600 hover:underline">
                         Tools
                     </a>.
                 </>
@@ -138,25 +138,25 @@ function OfflinePdfEditorBrowser() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
             <SiteNav />
 
             {/* HERO */}
-            <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-16 lg:py-24">
+            <section className="relative digital-obsidian text-on-surface py-16 lg:py-24">
                 <div className="max-w-7xl mx-auto px-6 grid items-start gap-10 lg:grid-cols-2">
                     {/* LEFT */}
                     <div className="text-center lg:text-left">
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-on-surface font-headline leading-tight">
                             Offline PDF Editor in Your Browser
                         </h1>
-                        <p className="text-lg md:text-xl font-semibold mt-3 text-blue-700">
+                        <p className="text-lg md:text-xl font-semibold mt-3 text-primary-700">
                             Edit locally • No signup • No watermark • Privacy-first
                         </p>
 
-                        <p className="text-lg md:text-xl text-gray-700 mt-6 max-w-xl mx-auto lg:mx-0">
+                        <p className="text-lg md:text-xl text-on-surface-variant mt-6 max-w-xl mx-auto lg:mx-0">
                             Open your PDF and edit it directly in the browser. Your document stays on your device by default —
                             ideal when you want an “offline-style” workflow without uploading sensitive files.
                         </p>
@@ -164,7 +164,7 @@ function OfflinePdfEditorBrowser() {
                         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a
                                 href="#start"
-                                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg px-8 py-4 rounded-lg inline-flex items-center justify-center gap-2 shadow-md transition"
+                                className="bg-gradient-to-r from-primary-600 to-primary-600 hover:from-primary-700 hover:to-primary-700 text-on-primary font-semibold text-lg px-8 py-4 rounded-full inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(139,92,246,0.15)] transition"
                             >
                                 <Upload className="h-5 w-5" />
                                 <span>Start Editing</span>
@@ -172,14 +172,14 @@ function OfflinePdfEditorBrowser() {
 
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 border hover:shadow px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 border hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] px-8 py-4 rounded-full font-semibold inline-flex items-center justify-center gap-2 transition"
                             >
                                 <FileText className="h-5 w-5" />
                                 <span>How it works</span>
                             </a>
                         </div>
 
-                        <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700 max-w-xl mx-auto lg:mx-0">
+                        <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant max-w-xl mx-auto lg:mx-0">
                             {[
                                 "Local-first editing (no upload by default)",
                                 "Great for unstable internet connections",
@@ -193,7 +193,7 @@ function OfflinePdfEditorBrowser() {
                             ))}
                         </ul>
 
-                        <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-600">
+                        <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-on-surface-variant">
                             <span className="inline-flex items-center gap-2">
                                 <Lock className="h-4 w-4" /> Files stay on device
                             </span>
@@ -219,17 +219,17 @@ function OfflinePdfEditorBrowser() {
             </section>
 
             {/* WHAT IT MEANS */}
-            <section className="py-14 bg-white">
+            <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                 <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
                     <div>
                         <h2 className="text-3xl font-bold mb-4">What “offline PDF editor” usually means</h2>
-                        <p className="text-gray-700 mb-4">
+                        <p className="text-on-surface-variant mb-4">
                             Most people searching “offline PDF editor in browser” want a tool that does not require uploading their PDF.
                             This page is built for that intent: the editor runs locally, so you can edit and export without sending your file anywhere by default.
                         </p>
-                        <div className="bg-gray-50 border rounded-xl p-5">
-                            <p className="text-gray-800 font-semibold mb-2">Reality check (important):</p>
-                            <p className="text-gray-700 text-sm">
+                        <div className="bg-[#091328]/50 border rounded-xl p-5">
+                            <p className="text-on-surface font-semibold mb-2">Reality check (important):</p>
+                            <p className="text-on-surface-variant text-sm">
                                 A website still needs to load in your browser. After it loads, local processing keeps working even if your connection drops.
                                 If you need “works after refresh with no internet,” the site must cache its app assets via a service worker/PWA setup.
                             </p>
@@ -238,14 +238,14 @@ function OfflinePdfEditorBrowser() {
 
                     <div className="grid sm:grid-cols-2 gap-4">
                         {useCases.map((c) => (
-                            <div key={c.title} className="bg-white border rounded-2xl p-5 shadow-sm">
-                                <div className="flex items-center gap-2 text-blue-700 mb-2">
-                                    <div className="h-9 w-9 rounded-xl bg-blue-50 flex items-center justify-center">
+                            <div key={c.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                                <div className="flex items-center gap-2 text-primary-700 mb-2">
+                                    <div className="h-9 w-9 rounded-xl bg-primary-50 flex items-center justify-center">
                                         {c.icon}
                                     </div>
-                                    <h3 className="font-bold text-gray-900">{c.title}</h3>
+                                    <h3 className="font-bold text-on-surface font-headline">{c.title}</h3>
                                 </div>
-                                <p className="text-gray-700 text-sm leading-relaxed">{c.body}</p>
+                                <p className="text-on-surface-variant text-sm leading-relaxed">{c.body}</p>
                             </div>
                         ))}
                     </div>
@@ -253,10 +253,10 @@ function OfflinePdfEditorBrowser() {
             </section>
 
             {/* CAPABILITIES */}
-            <section className="py-14 bg-gray-50">
+            <section className="py-14 bg-[#091328]/50">
                 <div className="max-w-6xl mx-auto px-6">
                     <h2 className="text-3xl font-bold mb-4 text-center">Do more than “just open a PDF”</h2>
-                    <p className="text-gray-700 max-w-3xl mx-auto text-center mb-10">
+                    <p className="text-on-surface-variant max-w-3xl mx-auto text-center mb-10">
                         This isn’t a viewer. It’s a full browser-based PDF workspace — built to help you finish real document tasks quickly.
                     </p>
 
@@ -305,13 +305,13 @@ function OfflinePdfEditorBrowser() {
                                 linkText: "Split PDF",
                             },
                         ].map((x) => (
-                            <div key={x.title} className="bg-white rounded-2xl border p-6 shadow-sm">
+                            <div key={x.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl border p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className="p-2.5 bg-blue-50 rounded-xl text-blue-700">{x.icon}</div>
-                                    <h3 className="text-lg font-bold text-gray-900">{x.title}</h3>
+                                    <div className="p-2.5 bg-primary-50 rounded-xl text-primary-700">{x.icon}</div>
+                                    <h3 className="text-lg font-bold text-on-surface font-headline">{x.title}</h3>
                                 </div>
-                                <p className="text-gray-700 text-sm leading-relaxed mb-4">{x.desc}</p>
-                                <a href={x.link} className="text-blue-700 font-semibold hover:underline">
+                                <p className="text-on-surface-variant text-sm leading-relaxed mb-4">{x.desc}</p>
+                                <a href={x.link} className="text-primary-700 font-semibold hover:underline">
                                     {x.linkText} →
                                 </a>
                             </div>
@@ -321,28 +321,28 @@ function OfflinePdfEditorBrowser() {
             </section>
 
             {/* HOW TO */}
-            <section id="how-to" className="py-14 bg-white">
+            <section id="how-to" className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                 <div className="max-w-4xl mx-auto px-6">
                     <h2 className="text-3xl font-bold mb-6 text-center">
                         How to edit a PDF locally in your browser (3 steps)
                     </h2>
 
-                    <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                    <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                         <li id="step-open">
-                            <h3 className="font-semibold text-gray-900">1) Open the editor</h3>
-                            <p className="text-gray-700">
+                            <h3 className="font-semibold text-on-surface font-headline">1) Open the editor</h3>
+                            <p className="text-on-surface-variant">
                                 Use the dropbox above to choose a PDF from your device. The editor loads in your browser.
                             </p>
                         </li>
                         <li id="step-edit">
-                            <h3 className="font-semibold text-gray-900">2) Make changes locally</h3>
-                            <p className="text-gray-700">
+                            <h3 className="font-semibold text-on-surface font-headline">2) Make changes locally</h3>
+                            <p className="text-on-surface-variant">
                                 Edit text, add a signature, annotate, redact, or organize pages. Your PDF stays on your device by default.
                             </p>
                         </li>
                         <li id="step-export">
-                            <h3 className="font-semibold text-gray-900">3) Export & download</h3>
-                            <p className="text-gray-700">
+                            <h3 className="font-semibold text-on-surface font-headline">3) Export & download</h3>
+                            <p className="text-on-surface-variant">
                                 Download the updated PDF instantly — no watermark and no account required.
                             </p>
                         </li>
@@ -351,7 +351,7 @@ function OfflinePdfEditorBrowser() {
                     <div className="mt-10 text-center">
                         <a
                             href="#start"
-                            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3 rounded-lg shadow transition"
+                            className="inline-flex items-center gap-2 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none hover:scale-105 active:scale-95 transition-all text-on-primary font-semibold px-7 py-3 rounded-full shadow-[0_0_25px_rgba(139,92,246,0.2)] transition"
                         >
                             <Upload className="h-5 w-5" />
                             Open Offline-Style Editor
@@ -361,18 +361,18 @@ function OfflinePdfEditorBrowser() {
             </section>
 
             {/* FAQ */}
-            <section className="py-14 bg-gray-50">
+            <section className="py-14 bg-[#091328]/50">
                 <div className="max-w-4xl mx-auto px-6">
                     <h2 className="text-3xl font-bold mb-6 text-center">Offline PDF Editor — FAQs</h2>
 
                     <div className="space-y-4">
                         {faq.map((item, i) => (
-                            <details key={i} className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 open:shadow-md transition">
+                            <details key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl border border-white/5 shadow-[0_0_15px_rgba(139,92,246,0.1)] p-5 open:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition">
                                 <summary className="cursor-pointer list-none flex items-center justify-between gap-4">
-                                    <span className="text-lg font-semibold text-gray-900">{item.q}</span>
+                                    <span className="text-lg font-semibold text-on-surface font-headline">{item.q}</span>
                                     <span className="text-gray-400 group-open:rotate-45 transition-transform">+</span>
                                 </summary>
-                                <div className="mt-3 text-gray-700 leading-relaxed text-sm">{item.a}</div>
+                                <div className="mt-3 text-on-surface-variant leading-relaxed text-sm">{item.a}</div>
                             </details>
                         ))}
                     </div>
@@ -380,22 +380,22 @@ function OfflinePdfEditorBrowser() {
             </section>
 
             {/* RELATED TOOLS */}
-            <section className="py-14 bg-white">
+            <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                 <div className="max-w-5xl mx-auto px-6">
                     <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <LinkIcon className="h-5 w-5" />
                         Related tools
                     </h2>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-on-surface-variant mb-4">
                         Need a specific workflow? These pages may be a better fit:
                     </p>
-                    <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                        <li><a href="/edit-pdf/" className="underline hover:text-blue-900">Edit PDF text</a></li>
-                        <li><a href="/sign-pdf/" className="underline hover:text-blue-900">Sign PDF</a></li>
-                        <li><a href="/annotate-pdf/" className="underline hover:text-blue-900">Annotate PDF</a></li>
-                        <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split / extract pages</a></li>
-                        <li><a href="/merge-pdf/" className="underline hover:text-blue-900">Merge PDFs</a></li>
-                        <li><a href="/compress-pdf/" className="underline hover:text-blue-900">Compress PDF</a></li>
+                    <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                        <li><a href="/edit-pdf/" className="underline hover:text-primary-900">Edit PDF text</a></li>
+                        <li><a href="/sign-pdf/" className="underline hover:text-primary-900">Sign PDF</a></li>
+                        <li><a href="/annotate-pdf/" className="underline hover:text-primary-900">Annotate PDF</a></li>
+                        <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split / extract pages</a></li>
+                        <li><a href="/merge-pdf/" className="underline hover:text-primary-900">Merge PDFs</a></li>
+                        <li><a href="/compress-pdf/" className="underline hover:text-primary-900">Compress PDF</a></li>
                     </ul>
                 </div>
             </section>
@@ -404,10 +404,10 @@ function OfflinePdfEditorBrowser() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center">
                 <p>© {new Date().getFullYear()} Free PDF Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

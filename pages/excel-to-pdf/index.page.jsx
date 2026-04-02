@@ -39,7 +39,7 @@ function ExcelToPDF() {
   ];
 
   return (
-    <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
@@ -47,26 +47,26 @@ function ExcelToPDF() {
 
       <main className="flex-1">
         {/* HERO */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-20">
+        <section className="digital-obsidian text-on-surface py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
             {/* LEFT: headline & value prop */}
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-5xl font-extrabold mb-3">
                 Excel &amp; CSV to PDF Converter — Free Online
               </h1>
-              <p className="text-lg text-gray-800 mb-3">
+              <p className="text-lg text-on-surface mb-3">
                 Convert <strong>Excel spreadsheets (XLS, XLSX)</strong> and{" "}
                 <strong>CSV files</strong> to clean, shareable PDFs in seconds. No login, no
                 watermark, and no limits.
               </p>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-on-surface-variant mb-4">
                 Ideal for <strong>reports, invoices, statements, timesheets,</strong> and{" "}
                 <strong>data exports</strong> that must look the same on every device.
               </p>
 
-              <div className="mt-4 flex flex-col gap-2 md:items-start items-center text-sm text-gray-700">
+              <div className="mt-4 flex flex-col gap-2 md:items-start items-center text-sm text-on-surface-variant">
                 <span className="inline-flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-blue-600" />
+                  <Sparkles className="h-4 w-4 text-primary-600" />
                   100% free — no signup, no watermark, no usage caps
                 </span>
                 <span className="inline-flex items-center gap-2">
@@ -74,7 +74,7 @@ function ExcelToPDF() {
                   Private by design — conversion runs in your browser where possible
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <MonitorSmartphone className="h-4 w-4 text-indigo-600" />
+                  <MonitorSmartphone className="h-4 w-4 text-primary-600" />
                   Works on Windows, Mac, Linux, iPhone, iPad, and Android
                 </span>
               </div>
@@ -82,14 +82,14 @@ function ExcelToPDF() {
               <div className="mt-6 flex flex-col gap-3 md:items-start items-center">
                 <a
                   href="#excel-to-pdf-converter"
-                  className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-xl inline-flex items-center gap-2 font-semibold shadow-lg"
+                  className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all px-8 py-3 rounded-full inline-flex items-center gap-2 font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)]"
                 >
                   <Upload className="h-5 w-5" />
                   <span>Choose Excel / CSV — Convert to PDF</span>
                 </a>
                 <a
                   href="/editor/"
-                  className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline text-sm"
+                  className="inline-flex items-center gap-2 text-primary-700 font-semibold hover:underline text-sm"
                 >
                   <Table className="h-4 w-4" />
                   <span>Open full PDF editor (annotate or merge after converting)</span>
@@ -104,7 +104,7 @@ function ExcelToPDF() {
                 formatOptions={[{ value: "pdf", label: "PDF (.pdf)" }]}
                 showEditInstead={false}
               />
-              <p className="mt-3 text-xs text-gray-500 text-center">
+              <p className="mt-3 text-xs text-outline text-center">
                 Upload Excel (XLS/XLSX) or CSV files and download a ready-to-share PDF instantly.
               </p>
             </aside>
@@ -116,14 +116,14 @@ function ExcelToPDF() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Why convert Excel or CSV to PDF?
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-on-surface-variant mb-4">
             Excel and CSV are perfect for editing and analysis, but not everyone has spreadsheet
             software installed — and layouts can break when viewed on different devices. Converting
             to <strong>PDF</strong> gives you a fixed, read-only version that looks the same
             everywhere.
           </p>
 
-          <ul className="space-y-3 text-gray-800">
+          <ul className="space-y-3 text-on-surface">
             <li className="flex items-start gap-2">
               <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
               <span>
@@ -167,11 +167,11 @@ function ExcelToPDF() {
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Popular ways to use the Excel/CSV to PDF converter
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-on-surface-variant mb-4">
             People use this tool daily to convert spreadsheets into <strong>clean, professional
             PDFs</strong> for all kinds of workflows:
           </p>
-          <ul className="list-disc pl-5 text-gray-700 space-y-2">
+          <ul className="list-disc pl-5 text-on-surface-variant space-y-2">
             {useCases.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -183,13 +183,13 @@ function ExcelToPDF() {
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             How to convert XLS, XLSX, or CSV to PDF (step-by-step)
           </h2>
-          <p className="text-gray-700 mb-3">
+          <p className="text-on-surface-variant mb-3">
             You don’t need Excel installed to use this online converter. Just follow these steps:
           </p>
-          <ol className="list-decimal pl-5 text-gray-700 space-y-2">
+          <ol className="list-decimal pl-5 text-on-surface-variant space-y-2">
             <li id="step-upload">
               Open the{" "}
-              <a href="#excel-to-pdf-converter" className="text-blue-600 hover:underline">
+              <a href="#excel-to-pdf-converter" className="text-primary-600 hover:underline">
                 Excel/CSV to PDF converter
               </a>{" "}
               and upload your spreadsheet (XLS, XLSX) or CSV file.
@@ -204,7 +204,7 @@ function ExcelToPDF() {
             </li>
             <li>
               Need to add notes or combine with other documents? Open the PDF in the{" "}
-              <a href="/editor/" className="text-blue-600 hover:underline">
+              <a href="/editor/" className="text-primary-600 hover:underline">
                 Free PDF Editor
               </a>{" "}
               to annotate, merge, or rearrange pages.
@@ -217,17 +217,17 @@ function ExcelToPDF() {
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Tips for clean, printable tables in your PDF
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-on-surface-variant mb-4">
             Converting a spreadsheet to PDF is straightforward, but a few small tweaks can make
             your exported PDF much easier to read:
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="flex items-center gap-2 font-semibold mb-2">
-                <Table className="h-5 w-5 text-blue-600" />
+                <Table className="h-5 w-5 text-primary-600" />
                 Format the sheet before export
               </h3>
-              <ul className="list-disc pl-5 text-gray-700 space-y-1">
+              <ul className="list-disc pl-5 text-on-surface-variant space-y-1">
                 {tips.map((tip) => (
                   <li key={tip}>{tip}</li>
                 ))}
@@ -235,10 +235,10 @@ function ExcelToPDF() {
             </div>
             <div>
               <h3 className="flex items-center gap-2 font-semibold mb-2">
-                <BarChart3 className="h-5 w-5 text-blue-600" />
+                <BarChart3 className="h-5 w-5 text-primary-600" />
                 Make data easier to understand
               </h3>
-              <ul className="list-disc pl-5 text-gray-700 space-y-1">
+              <ul className="list-disc pl-5 text-on-surface-variant space-y-1">
                 <li>Add descriptive headers and freeze the top row before export.</li>
                 <li>Use number formatting for currency, percentages, and dates.</li>
                 <li>Highlight key rows (like totals) with bold text or a subtle background.</li>
@@ -246,7 +246,7 @@ function ExcelToPDF() {
               </ul>
             </div>
           </div>
-          <p className="text-gray-700 mt-4">
+          <p className="text-on-surface-variant mt-4">
             After converting, quickly scroll through the PDF to confirm everything looks right. If
             you see a clipped column or awkward break, adjust the spreadsheet and run the export
             again — it only takes a moment.
@@ -256,7 +256,7 @@ function ExcelToPDF() {
         {/* RELATED CONVERTERS */}
         <section className="max-w-5xl mx-auto px-6 pb-12">
           <h2 className="text-2xl font-bold mb-3">Other free document converters</h2>
-          <p className="text-gray-700 mb-4 text-sm">
+          <p className="text-on-surface-variant mb-4 text-sm">
             Need to move data the other way or convert different formats? These tools are also
             available:
           </p>
@@ -265,7 +265,7 @@ function ExcelToPDF() {
               <a
                 key={r.to}
                 href={r.to}
-                className="border rounded-lg p-3 hover:shadow transition flex items-center justify-between text-blue-700 text-sm"
+                className="border rounded-lg p-3 hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] transition flex items-center justify-between text-primary-700 text-sm"
               >
                 <span>{r.label}</span>
                 <ArrowRight className="h-4 w-4" />
@@ -280,44 +280,44 @@ function ExcelToPDF() {
             Excel/CSV to PDF Converter — Frequently Asked Questions
           </h2>
           <div className="space-y-3 text-sm">
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Is the Excel/CSV to PDF converter really free?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Yes — the <strong>Excel to PDF converter</strong> is 100% free. There is no
                 login, no trial period, and no watermark added to your tables, invoices, or
                 reports.
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 What formats do you support (XLS, XLSX, CSV)?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 You can upload <strong>XLS</strong>, <strong>XLSX</strong>, and{" "}
                 <strong>CSV</strong> files. All of them can be converted to standard PDF files
                 that open on any device.
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Will my sheet layout and page breaks be preserved?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 The converter aims to keep your <strong>columns, headers, and page breaks</strong>{" "}
                 as close as possible to what you see when printing. For best results, review your
                 sheet’s print area and orientation before exporting and then check the PDF preview.
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Is it safe to convert spreadsheets with sensitive data?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Where possible, conversion runs locally in your browser so files stay on your
                 device. For any necessary network requests, data is transmitted over encrypted
                 connections (TLS). That said, you should always follow your organization’s data
@@ -325,24 +325,24 @@ function ExcelToPDF() {
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Does the Excel/CSV to PDF converter work on Mac, Windows, and mobile?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Yes. You can use it on <strong>Windows, macOS, Linux, iPhone, iPad, and
                 Android</strong>. Just open the tool in a modern browser like Chrome, Safari,
                 Edge, or Firefox.
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Can I edit the PDF after converting my spreadsheet?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Yes. After converting your Excel or CSV file to PDF, you can open it in the{" "}
-                <a href="/editor/" className="text-blue-600 hover:underline">
+                <a href="/editor/" className="text-primary-600 hover:underline">
                   Free PDF Editor
                 </a>{" "}
                 to annotate, sign, merge, or rearrange pages before sending it out.
@@ -356,16 +356,16 @@ function ExcelToPDF() {
       <footer className="bg-gray-900 text-gray-400 py-8 text-center">
         <p>© {new Date().getFullYear()} Free PDF Editor by TechRex. All rights reserved.</p>
         <div className="mt-4 space-x-4">
-          <a href="/tools/" className="hover:text-white">
+          <a href="/tools/" className="hover:text-on-primary">
             Tools
           </a>
-          <a href="/privacy/" className="hover:text-white">
+          <a href="/privacy/" className="hover:text-on-primary">
             Privacy
           </a>
-          <a href="/terms/" className="hover:text-white">
+          <a href="/terms/" className="hover:text-on-primary">
             Terms
           </a>
-          <a href="/contact/" className="hover:text-white">
+          <a href="/contact/" className="hover:text-on-primary">
             Contact
           </a>
         </div>

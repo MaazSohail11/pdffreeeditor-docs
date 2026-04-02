@@ -71,33 +71,33 @@ function MakePdfSearchablePage() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
             <Helmet>
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
             </Helmet>
             <SiteNav />
 
             {/* Hero */}
-            <section className="bg-gradient-to-br from-indigo-50 to-blue-50 py-14 lg:py-20">
+            <section className="digital-obsidian text-on-surface py-14 lg:py-20">
                 <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                             Make a Scanned PDF Searchable
                             <br />
-                            <span className="text-blue-600">
+                            <span className="text-primary-600">
                                 Fix Ctrl+F • Add Text Layer • Copy &amp; Select Text
                             </span>
                         </h1>
 
-                        <p className="text-lg text-gray-600 mb-3">
+                        <p className="text-lg text-on-surface-variant mb-3">
                             If Ctrl+F doesn’t work in your PDF, the file is usually a scan (image-only).
                             This tool uses OCR to add an invisible text layer so your PDF becomes searchable and selectable.
                         </p>
 
-                        <p className="text-base text-gray-600 mb-6">
+                        <p className="text-base text-on-surface-variant mb-6">
                             OCR is capped to the <strong>first 500 pages</strong> for fast processing.
                             For longer files,{" "}
-                            <a href="/split-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/split-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                 split the PDF
                             </a>{" "}
                             and OCR only the pages you need.
@@ -106,7 +106,7 @@ function MakePdfSearchablePage() {
                         <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
                             <a
                                 href="#upload"
-                                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:bg-blue-700"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                             >
                                 <ScanText className="h-5 w-5" />
                                 Upload PDF to Make Searchable
@@ -114,7 +114,7 @@ function MakePdfSearchablePage() {
 
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                             >
                                 <FileText className="h-5 w-5" />
                                 How it works (3 steps)
@@ -126,7 +126,7 @@ function MakePdfSearchablePage() {
                                 <CheckCircle className="h-5 w-5 text-green-600" />
                                 What this page solves
                             </h2>
-                            <ul className="space-y-2 text-gray-700">
+                            <ul className="space-y-2 text-on-surface-variant">
                                 {benefits.map((b, i) => (
                                     <li key={i} className="flex items-start gap-3">
                                         <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -139,7 +139,7 @@ function MakePdfSearchablePage() {
                                 {supportedLanguages.map((l) => (
                                     <span
                                         key={l}
-                                        className="text-xs font-semibold px-3 py-1 rounded-full bg-white border text-gray-700"
+                                        className="text-xs font-semibold px-3 py-1 rounded-full bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-on-surface-variant"
                                     >
                                         {l}
                                     </span>
@@ -150,18 +150,18 @@ function MakePdfSearchablePage() {
 
                     {/* Tool */}
                     <aside id="upload" className="lg:sticky lg:top-6">
-                        <div className="bg-white border rounded-2xl shadow p-4">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl shadow-[0_0_25px_rgba(139,92,246,0.2)] p-4">
                             <div className="flex items-center gap-2 mb-3">
-                                <Search className="h-5 w-5 text-blue-600" />
+                                <Search className="h-5 w-5 text-primary-600" />
                                 <p className="font-semibold">Make your PDF searchable now</p>
                             </div>
 
                             {/* Your actual tool UI */}
                             <OCRTool minimal={true} />
 
-                            <p className="text-xs text-gray-500 mt-3">
+                            <p className="text-xs text-outline mt-3">
                                 Long PDF? Use{" "}
-                                <a href="/split-pdf/" className="underline hover:text-gray-700">
+                                <a href="/split-pdf/" className="underline hover:text-on-surface-variant">
                                     Split PDF
                                 </a>{" "}
                                 to extract your required pages, then OCR the smaller file (faster + stays under the cap).
@@ -173,28 +173,28 @@ function MakePdfSearchablePage() {
 
             <main className="flex-1">
                 {/* Diagnosis section (high-intent long-tail) */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">
                             Why your PDF isn’t searchable (and how to fix it)
                         </h2>
-                        <p className="text-gray-700 mb-5">
+                        <p className="text-on-surface-variant mb-5">
                             Many PDFs from scanners, photos, or old documents are basically images inside a PDF.
                             Images don’t contain real characters — that’s why search and copy fail. OCR fixes this by recognizing text and adding a searchable layer.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-4">
                             {problemChecks.map((c) => (
-                                <div key={c.title} className="bg-gray-50 border rounded-xl p-5">
-                                    <h3 className="font-semibold text-gray-900 mb-2">{c.title}</h3>
-                                    <p className="text-gray-600">{c.text}</p>
+                                <div key={c.title} className="bg-[#091328]/50 border rounded-xl p-5">
+                                    <h3 className="font-semibold text-on-surface font-headline mb-2">{c.title}</h3>
+                                    <p className="text-on-surface-variant">{c.text}</p>
                                 </div>
                             ))}
                         </div>
 
-                        <p className="text-gray-700 mt-5">
+                        <p className="text-on-surface-variant mt-5">
                             Want the direct OCR page too? Use{" "}
-                            <a href="/ocr-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/ocr-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                 OCR PDF
                             </a>{" "}
                             (same engine — different intent).
@@ -203,25 +203,25 @@ function MakePdfSearchablePage() {
                 </section>
 
                 {/* Page cap workflow */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">
                             Fastest way to make a long scanned PDF searchable (500-page cap)
                         </h2>
-                        <p className="text-gray-700 mb-5">
+                        <p className="text-on-surface-variant mb-5">
                             Don’t OCR the entire document if you only need a chapter, invoice pages, or a few forms.
                             Extract the pages you need, then OCR the smaller file for faster results.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
-                            <div className="bg-white border rounded-xl p-6 shadow-sm">
+                            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                 <div className="flex items-start gap-3">
-                                    <Scissors className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                    <Scissors className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                     <div>
                                         <h3 className="font-semibold mb-1">Split to keep required pages</h3>
-                                        <p className="text-gray-600">
+                                        <p className="text-on-surface-variant">
                                             Use{" "}
-                                            <a href="/split-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/split-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                                 Split PDF
                                             </a>{" "}
                                             to extract only the pages you need, then upload that smaller PDF for OCR here.
@@ -230,14 +230,14 @@ function MakePdfSearchablePage() {
                                 </div>
                             </div>
 
-                            <div className="bg-white border rounded-xl p-6 shadow-sm">
+                            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                 <div className="flex items-start gap-3">
-                                    <Compress className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                    <Compress className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                     <div>
                                         <h3 className="font-semibold mb-1">Compress if the file is huge</h3>
-                                        <p className="text-gray-600">
+                                        <p className="text-on-surface-variant">
                                             If the scan is very large in MB, run{" "}
-                                            <a href="/compress-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/compress-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                                 Compress PDF
                                             </a>{" "}
                                             first to speed up uploads and processing.
@@ -247,9 +247,9 @@ function MakePdfSearchablePage() {
                             </div>
                         </div>
 
-                        <p className="text-gray-700 mt-5">
+                        <p className="text-on-surface-variant mt-5">
                             After OCR, for editing text-based PDFs, try{" "}
-                            <a href="/edit-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/edit-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                 Edit PDF
                             </a>
                             .
@@ -258,18 +258,18 @@ function MakePdfSearchablePage() {
                 </section>
 
                 {/* How-to */}
-                <section id="how-to" className="py-12 bg-white">
+                <section id="how-to" className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">
                             How to make a scanned PDF searchable (3 steps)
                         </h2>
 
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-upload">
                                 <h4 className="font-semibold">1) Upload your scanned PDF</h4>
-                                <p className="text-gray-600">
+                                <p className="text-on-surface-variant">
                                     Upload the PDF that isn’t searchable. If it’s longer than 500 pages,{" "}
-                                    <a href="/split-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                                    <a href="/split-pdf/" className="text-primary-700 underline hover:text-primary-900">
                                         split it
                                     </a>{" "}
                                     to keep only required pages (faster + stays under the cap).
@@ -278,21 +278,21 @@ function MakePdfSearchablePage() {
 
                             <li id="step-language">
                                 <h4 className="font-semibold">2) Select the language (recommended)</h4>
-                                <p className="text-gray-600">
+                                <p className="text-on-surface-variant">
                                     Choose the document language to improve accuracy—especially for accents (French/Spanish/Portuguese) and tricky characters.
                                 </p>
                             </li>
 
                             <li id="step-download">
                                 <h4 className="font-semibold">3) Download your searchable PDF</h4>
-                                <p className="text-gray-600">
+                                <p className="text-on-surface-variant">
                                     Download the PDF with an invisible text overlay. Ctrl+F now works, and you can copy and reuse text.
                                     For conversion workflows, use{" "}
-                                    <a href="/pdf-to-word/" className="text-blue-700 underline hover:text-blue-900">
+                                    <a href="/pdf-to-word/" className="text-primary-700 underline hover:text-primary-900">
                                         PDF to Word
                                     </a>{" "}
                                     or{" "}
-                                    <a href="/pdf-to-excel/" className="text-blue-700 underline hover:text-blue-900">
+                                    <a href="/pdf-to-excel/" className="text-primary-700 underline hover:text-primary-900">
                                         PDF to Excel
                                     </a>
                                     .
@@ -303,20 +303,20 @@ function MakePdfSearchablePage() {
                 </section>
 
                 {/* Accuracy + language tips */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">
                             OCR accuracy tips (so your searchable PDF is actually usable)
                         </h2>
-                        <ul className="list-disc ml-6 space-y-2 text-gray-700">
+                        <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
                             <li><strong>Select the correct language</strong> before OCR (biggest easy win).</li>
                             <li>Prefer clear scans: avoid blur, glare, and heavy shadows.</li>
                             <li>Keep pages straight (rotate/deskew if necessary).</li>
                             <li>If the text is tiny, a higher-quality scan usually beats digital zoom.</li>
                         </ul>
 
-                        <div className="mt-6 flex items-center gap-2 text-gray-700">
-                            <Languages className="h-5 w-5 text-blue-600" />
+                        <div className="mt-6 flex items-center gap-2 text-on-surface-variant">
+                            <Languages className="h-5 w-5 text-primary-600" />
                             <span>
                                 Supported on this tool:{" "}
                                 <strong>English, French, Spanish, Portuguese, German, Italian</strong>
@@ -326,29 +326,29 @@ function MakePdfSearchablePage() {
                 </section>
 
                 {/* Privacy */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-3">Security &amp; privacy</h2>
-                        <p className="text-gray-700 mb-4">
+                        <p className="text-on-surface-variant mb-4">
                             Making a PDF searchable requires processing the document to recognize text.
                             If you’re testing, use sample PDFs or redact sensitive data. Review policies for retention/deletion details.
                         </p>
 
-                        <div className="bg-gray-50 border rounded-xl p-6">
+                        <div className="bg-[#091328]/50 border rounded-xl p-6">
                             <div className="flex items-start gap-3">
-                                <ShieldCheck className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                                <ShieldCheck className="h-6 w-6 text-primary-600 mt-1 flex-shrink-0" />
                                 <div>
-                                    <h3 className="font-semibold text-gray-900 mb-1">Privacy checklist</h3>
-                                    <ul className="list-disc ml-6 space-y-2 text-gray-600">
+                                    <h3 className="font-semibold text-on-surface font-headline mb-1">Privacy checklist</h3>
+                                    <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
                                         <li>Avoid uploading extremely sensitive documents.</li>
                                         <li>Use trusted networks and keep your browser updated.</li>
                                         <li>
                                             Read{" "}
-                                            <a href="/privacy/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/privacy/" className="text-primary-700 underline hover:text-primary-900">
                                                 Privacy
                                             </a>{" "}
                                             and{" "}
-                                            <a href="/terms/" className="text-blue-700 underline hover:text-blue-900">
+                                            <a href="/terms/" className="text-primary-700 underline hover:text-primary-900">
                                                 Terms
                                             </a>
                                             .
@@ -361,14 +361,14 @@ function MakePdfSearchablePage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-white p-4 rounded-lg shadow-sm">
+                                <details key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <p className="mt-2 text-gray-700">{item.a}</p>
+                                    <p className="mt-2 text-on-surface-variant">{item.a}</p>
                                 </details>
                             ))}
                         </div>
@@ -376,42 +376,42 @@ function MakePdfSearchablePage() {
                 </section>
 
                 {/* Related tools */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" />
                             Related tools
                         </h2>
-                        <p className="text-gray-600 mb-3">
+                        <p className="text-on-surface-variant mb-3">
                             Prepare scanned PDFs, convert results, and continue editing with these tools:
                         </p>
 
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/ocr-pdf/" className="underline hover:text-blue-900">OCR PDF</a></li>
-                            <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split PDF pages</a></li>
-                            <li><a href="/compress-pdf/" className="underline hover:text-blue-900">Compress PDF</a></li>
-                            <li><a href="/pdf-to-word/" className="underline hover:text-blue-900">PDF to Word</a></li>
-                            <li><a href="/pdf-to-excel/" className="underline hover:text-blue-900">PDF to Excel</a></li>
-                            <li><a href="/pdf-to-image/" className="underline hover:text-blue-900">PDF to Image</a></li>
-                            <li><a href="/merge-pdf/" className="underline hover:text-blue-900">Merge PDF files</a></li>
-                            <li><a href="/edit-pdf/" className="underline hover:text-blue-900">Edit PDF text</a></li>
-                            <li><a href="/tools/" className="underline hover:text-blue-900">All tools</a></li>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/ocr-pdf/" className="underline hover:text-primary-900">OCR PDF</a></li>
+                            <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split PDF pages</a></li>
+                            <li><a href="/compress-pdf/" className="underline hover:text-primary-900">Compress PDF</a></li>
+                            <li><a href="/pdf-to-word/" className="underline hover:text-primary-900">PDF to Word</a></li>
+                            <li><a href="/pdf-to-excel/" className="underline hover:text-primary-900">PDF to Excel</a></li>
+                            <li><a href="/pdf-to-image/" className="underline hover:text-primary-900">PDF to Image</a></li>
+                            <li><a href="/merge-pdf/" className="underline hover:text-primary-900">Merge PDF files</a></li>
+                            <li><a href="/edit-pdf/" className="underline hover:text-primary-900">Edit PDF text</a></li>
+                            <li><a href="/tools/" className="underline hover:text-primary-900">All tools</a></li>
                         </ul>
                     </div>
                 </section>
 
                 {/* CTA */}
-                <section className="py-16 bg-blue-600 text-center">
+                <section className="py-16 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-center">
                     <div className="max-w-3xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-white mb-2">
+                        <h2 className="text-3xl font-bold text-on-primary mb-2">
                             Make your PDF searchable now
                         </h2>
-                        <p className="text-blue-100 mb-6">
+                        <p className="text-primary-100 mb-6">
                             Upload a scanned PDF and download a searchable version. If it’s long, split the pages first to stay under the cap.
                         </p>
                         <a
                             href="#upload"
-                            className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold shadow hover:bg-gray-100 inline-flex items-center gap-2"
+                            className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:bg-gray-100 inline-flex items-center gap-2"
                         >
                             <Download className="h-5 w-5" />
                             Upload PDF
@@ -421,29 +421,29 @@ function MakePdfSearchablePage() {
 
 
                 {/* SMART LINKING MAP */}
-                <section className="py-12 bg-white border-t border-gray-200">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5-t border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* SIBLINGS */}
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Related Tools</h3>
+                                <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Related Tools</h3>
                                 <ul className="space-y-2">
 
                                     <li>
-                                        <a href="/ocr-german/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/ocr-german/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             OCR German
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/ocr-spanish/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/ocr-spanish/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             OCR Spanish
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/image-to-text/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/image-to-text/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             Image to Text
                                         </a>
                                     </li>
@@ -452,18 +452,18 @@ function MakePdfSearchablePage() {
 
                             {/* NEXT STEPS */}
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Next Steps</h3>
+                                <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Next Steps</h3>
                                 <ul className="space-y-2">
 
                                     <li>
-                                        <a href="/pdf-to-word-ocr/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Convert to Word</span>
+                                        <a href="/pdf-to-word-ocr/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Convert to Word</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/edit-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Edit Text</span>
+                                        <a href="/edit-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Edit Text</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
@@ -472,8 +472,8 @@ function MakePdfSearchablePage() {
                         </div>
 
                         {/* PARENT */}
-                        <div className="mt-8 pt-8 border-t border-gray-100 text-center">
-                            <a href="/ocr/" className="text-sm font-semibold text-gray-500 hover:text-blue-600 uppercase tracking-wide">
+                        <div className="mt-8 pt-8 border-t border-white/5 text-center">
+                            <a href="/ocr/" className="text-sm font-semibold text-outline hover:text-primary-600 uppercase tracking-wide">
                                 View OCR Home
                             </a>
                         </div>
@@ -485,10 +485,10 @@ function MakePdfSearchablePage() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center mt-auto">
                 <p>© {new Date().getFullYear()} PDF Free Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

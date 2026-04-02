@@ -267,15 +267,15 @@ function SplitDropZone() {
   return (
     <div
       id="split-box"
-      className="bg-white border rounded-2xl p-6 shadow-lg space-y-4"
+      className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.2)] space-y-4"
     >
       <div
         {...getRootProps()}
         className={[
           "relative w-full border-2 border-dashed rounded-xl transition-colors cursor-pointer",
           isDragActive
-            ? "border-blue-500 bg-blue-50/70"
-            : "border-gray-300 bg-gray-50 hover:border-blue-400 hover:bg-blue-50/40",
+            ? "border-primary-500 bg-primary-50/70"
+            : "border-white/5 bg-[#091328]/50 hover:border-primary-400 hover:bg-primary-50/40",
           isSplitting ? "opacity-70" : "",
           "p-6 text-center",
         ].join(" ")}
@@ -283,17 +283,17 @@ function SplitDropZone() {
       >
         <input {...getInputProps()} />
         <div className="flex flex-col items-center gap-3">
-          <div className="h-14 w-14 rounded-2xl bg-blue-600/10 text-blue-600 flex items-center justify-center">
+          <div className="h-14 w-14 rounded-2xl bg-primary-600/10 text-primary-600 flex items-center justify-center">
             <Upload className="h-7 w-7" />
           </div>
-          <p className="text-xl font-semibold text-gray-900">
+          <p className="text-xl font-semibold text-on-surface font-headline">
             Drop your PDF here or click to choose
           </p>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-on-surface-variant">
             Split a PDF, extract specific pages or remove pages you do not need.
             Use page numbers or ranges like 1,3,5-8.
           </p>
-          <p className="text-xs text-gray-500 inline-flex items-center gap-1 justify-center">
+          <p className="text-xs text-outline inline-flex items-center gap-1 justify-center">
             <Lock className="h-4 w-4" />
             Splitting runs in your browser — files stay on this device.
           </p>
@@ -301,7 +301,7 @@ function SplitDropZone() {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="text-sm text-gray-700">
+        <div className="text-sm text-on-surface-variant">
           {fileInfo
             ? `${fileInfo.name} • ${fileInfo.pages} pages • ${formatBytes(
               fileInfo.size
@@ -314,7 +314,7 @@ function SplitDropZone() {
             e.stopPropagation();
             open();
           }}
-          className="inline-flex items-center gap-2 rounded-lg bg-blue-600 text-white px-4 py-2 font-semibold hover:bg-blue-700 transition"
+          className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-4 py-2 font-semibold hover:scale-105 active:scale-95 transition-all transition"
           disabled={isSplitting}
         >
           <Upload className="h-4 w-4" />
@@ -324,7 +324,7 @@ function SplitDropZone() {
 
       <div className="space-y-3">
         <label
-          className="block text-sm font-semibold text-gray-800"
+          className="block text-sm font-semibold text-on-surface"
           htmlFor="page-range-input"
         >
           Pick pages to keep (click buttons or enter ranges)
@@ -336,14 +336,14 @@ function SplitDropZone() {
           onChange={(e) => updateFromRangeText(e.target.value)}
           placeholder={fileInfo ? "e.g. 1,3,5-8 or all" : "Upload a PDF first"}
           disabled={!fileInfo || isSplitting}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
+          className="w-full rounded-lg border border-white/5 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:bg-gray-100"
         />
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
             onClick={selectAll}
             disabled={!fileInfo || isSplitting}
-            className="px-3 py-2 text-sm rounded-lg border border-blue-600 text-blue-700 hover:bg-blue-50 disabled:opacity-50"
+            className="px-3 py-2 text-sm rounded-lg border border-primary-600 text-primary-700 hover:bg-primary-50 disabled:opacity-50"
           >
             Select all pages
           </button>
@@ -351,16 +351,16 @@ function SplitDropZone() {
             type="button"
             onClick={clearSelection}
             disabled={!fileInfo || isSplitting}
-            className="px-3 py-2 text-sm rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 disabled:opacity-50"
+            className="px-3 py-2 text-sm rounded-lg border border-white/5 text-on-surface-variant hover:bg-gray-100 disabled:opacity-50"
           >
             Clear selection
           </button>
           {fileInfo && (
-            <div className="text-sm text-gray-600 flex items-center gap-2">
-              <span className="inline-flex h-7 px-2 items-center rounded-full bg-blue-50 text-blue-700 font-semibold">
+            <div className="text-sm text-on-surface-variant flex items-center gap-2">
+              <span className="inline-flex h-7 px-2 items-center rounded-full bg-primary-50 text-primary-700 font-semibold">
                 {selectedPages.length} / {fileInfo.pages} selected
               </span>
-              {status && <span className="text-gray-500">{status}</span>}
+              {status && <span className="text-outline">{status}</span>}
             </div>
           )}
         </div>
@@ -368,7 +368,7 @@ function SplitDropZone() {
 
       {fileInfo && (
         <div className="space-y-2">
-          <p className="text-sm text-gray-600">Quick-select pages:</p>
+          <p className="text-sm text-on-surface-variant">Quick-select pages:</p>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 max-h-64 overflow-y-auto pr-1">
             {pageNumbers.map((num) => {
               const active = selectedPages.includes(num);
@@ -381,8 +381,8 @@ function SplitDropZone() {
                   className={[
                     "text-sm px-2 py-2 rounded-md border transition",
                     active
-                      ? "bg-blue-600 text-white border-blue-600"
-                      : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100",
+                      ? "bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary border-primary-600"
+                      : "bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-on-surface-variant border-white/5 hover:bg-gray-100",
                   ].join(" ")}
                   aria-pressed={active}
                 >
@@ -400,16 +400,16 @@ function SplitDropZone() {
           onClick={handleSplit}
           disabled={isSplitting || !fileInfo || !selectedPages.length}
           className={[
-            "inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold shadow",
+            "inline-flex items-center gap-2 px-5 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)]",
             isSplitting || !fileInfo || !selectedPages.length
-              ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-              : "bg-blue-600 text-white hover:bg-blue-700",
+              ? "bg-gray-200 text-outline cursor-not-allowed"
+              : "bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all",
           ].join(" ")}
         >
           <Scissors className="h-5 w-5" />
           {isSplitting ? "Splitting..." : "Split & Download"}
         </button>
-        <div className="text-sm text-gray-600">
+        <div className="text-sm text-on-surface-variant">
           {status ||
             "We’ll create a new PDF with only the pages you keep and download it automatically."}
         </div>
@@ -450,29 +450,29 @@ function SplitPDF() {
   ];
 
   return (
-    <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
       </Helmet>
       <SiteNav />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24">
+      <section className="digital-obsidian text-on-surface py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-start">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
               Split PDF Online Free
               <br />
-              <span className="text-blue-600">
+              <span className="text-primary-600">
                 Extract &amp; remove pages — no signup, no watermark
               </span>
             </h1>
-            <p className="text-lg text-gray-600 mb-3">
+            <p className="text-lg text-on-surface-variant mb-3">
               Use this free online PDF splitter to separate PDF pages, extract
               specific page ranges or remove pages you don’t need. Everything
               runs in your browser for privacy.
             </p>
-            <p className="text-base text-gray-700 mb-8">
+            <p className="text-base text-on-surface-variant mb-8">
               Perfect when you just want to{" "}
               <strong>extract pages from a PDF</strong>,{" "}
               <strong>delete pages from a PDF</strong> or keep a few selected
@@ -482,14 +482,14 @@ function SplitPDF() {
             <div className="flex flex-col gap-3 md:items-start items-center">
               <a
                 href="#split-box"
-                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center space-x-2 shadow-lg hover:bg-blue-700"
+                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
               >
                 <Scissors className="h-5 w-5" />
                 <span>Start — Split PDF</span>
               </a>
               <a
                 href="#how-to"
-                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center space-x-2 border shadow-sm hover:shadow-md"
+                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
               >
                 <FileText className="h-5 w-5" />
                 <span>How it works (3 steps)</span>
@@ -505,13 +505,13 @@ function SplitPDF() {
       {/* Main */}
       <main className="flex-1">
         {/* Why use our splitter */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-4">
                 Why use this Split PDF tool?
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-on-surface-variant mb-4">
                 Many PDF splitter tools limit you to a few free uses or add
                 watermarks to your pages. This tool focuses on{" "}
                 <strong>simple, fast page extraction and removal</strong> with
@@ -526,22 +526,22 @@ function SplitPDF() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white border rounded-xl p-6 text-center shadow">
-              <ListOrdered className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6 text-center shadow-[0_0_25px_rgba(139,92,246,0.2)]">
+              <ListOrdered className="h-16 w-16 text-primary-600 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-on-surface font-headline mb-3">
                 Extract pages in seconds
               </h3>
-              <p className="text-gray-600 mb-3">
+              <p className="text-on-surface-variant mb-3">
                 Type page numbers or ranges (like 1–3, 7–10), or click the page
                 buttons to choose exactly what you want to keep.
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-on-surface-variant mb-6">
                 We create a new PDF with your selected pages, leaving the
                 original file unchanged.
               </p>
               <a
                 href="#split-box"
-                className="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold shadow inline-flex items-center space-x-2 transition"
+                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all px-6 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] inline-flex items-center space-x-2 transition"
               >
                 <Download className="h-5 w-5" />
                 <span>Open Splitter</span>
@@ -551,7 +551,7 @@ function SplitPDF() {
         </section>
 
         {/* Split & Extract Intents */}
-        <section className="py-12 bg-gray-50 border-b border-gray-200">
+        <section className="py-12 bg-[#091328]/50 border-b border-white/5">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-8 text-center">
               Specific Split &amp; Extract Tools
@@ -592,15 +592,15 @@ function SplitPDF() {
                 <a
                   key={card.href}
                   href={card.href}
-                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-200 transition group"
+                  className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-6 rounded-xl shadow-[0_0_15px_rgba(139,92,246,0.1)] border border-white/5 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:border-primary-200 transition group"
                 >
-                  <div className="h-10 w-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                  <div className="h-10 w-10 bg-primary-50 text-primary-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none group-hover:text-on-primary transition">
                     <card.icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600">
+                  <h3 className="font-bold text-on-surface font-headline mb-2 group-hover:text-primary-600">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-gray-600">{card.desc}</p>
+                  <p className="text-sm text-on-surface-variant">{card.desc}</p>
                 </a>
               ))}
             </div>
@@ -608,12 +608,12 @@ function SplitPDF() {
         </section>
 
         {/* Use cases */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-[#091328]/50">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-4">
               Split PDF or extract pages — common use cases
             </h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-on-surface-variant mb-4">
               People around the world use PDF splitting tools to separate PDF
               pages and focus on just the parts they need. Here are a few common
               scenarios:
@@ -622,12 +622,12 @@ function SplitPDF() {
               {useCases.map((item) => (
                 <details
                   key={item.title}
-                  className="bg-white p-4 rounded-lg border border-gray-200"
+                  className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg border border-white/5"
                 >
                   <summary className="font-semibold cursor-pointer">
                     {item.title}
                   </summary>
-                  <p className="mt-2 text-gray-700 text-sm">{item.body}</p>
+                  <p className="mt-2 text-on-surface-variant text-sm">{item.body}</p>
                 </details>
               ))}
             </div>
@@ -635,20 +635,20 @@ function SplitPDF() {
         </section>
 
         {/* Remove pages from PDF / Extract pages */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
             <div>
               <h2 className="text-2xl font-bold mb-3">
                 Remove pages from PDF quickly
               </h2>
-              <p className="text-gray-700 mb-2">
+              <p className="text-on-surface-variant mb-2">
                 Instead of editing the original document, create a cleaner
                 version by{" "}
                 <strong>removing pages from your PDF</strong>. Select only the
                 pages you want to keep and export a new file without the
                 unnecessary parts.
               </p>
-              <p className="text-gray-700 text-sm">
+              <p className="text-on-surface-variant text-sm">
                 This is useful when sending contracts, application forms or
                 scanned documents where you must hide internal notes, extra
                 pages or blank sheets.
@@ -658,13 +658,13 @@ function SplitPDF() {
               <h2 className="text-2xl font-bold mb-3">
                 Extract pages from a PDF as a new file
               </h2>
-              <p className="text-gray-700 mb-2">
+              <p className="text-on-surface-variant mb-2">
                 If you only need a few pages out of a long document,{" "}
                 <strong>extract pages from the PDF</strong> and save them into a
                 separate file. You can share that file without exposing the
                 rest of the original document.
               </p>
-              <p className="text-gray-700 text-sm">
+              <p className="text-on-surface-variant text-sm">
                 Use this when you want to send only a chapter, a specific report
                 section or a single signed page to someone else.
               </p>
@@ -673,15 +673,15 @@ function SplitPDF() {
         </section>
 
         {/* How-to */}
-        <section id="how-to" className="py-12 bg-gray-50">
+        <section id="how-to" className="py-12 bg-[#091328]/50">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-6">
               How to split a PDF online (3 steps)
             </h2>
-            <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+            <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
               <li id="step-upload">
                 <h3 className="font-semibold">1) Upload your PDF</h3>
-                <p className="text-gray-600">
+                <p className="text-on-surface-variant">
                   Drag &amp; drop your PDF into the splitter or click to choose
                   a file. Processing runs in your browser using client-side
                   code, so your document stays on your device.
@@ -689,7 +689,7 @@ function SplitPDF() {
               </li>
               <li id="step-select">
                 <h3 className="font-semibold">2) Choose pages or ranges</h3>
-                <p className="text-gray-600">
+                <p className="text-on-surface-variant">
                   Select individual pages or type ranges like 1-3, 7-10. Use the
                   grid of page buttons to quickly toggle pages on or off until
                   you have exactly what you need.
@@ -697,7 +697,7 @@ function SplitPDF() {
               </li>
               <li id="step-download">
                 <h3 className="font-semibold">3) Split &amp; download</h3>
-                <p className="text-gray-600">
+                <p className="text-on-surface-variant">
                   Click “Split &amp; Download” to create a new PDF with just
                   those pages. Your download starts instantly, with no
                   watermark, no signup and no change to your original file.
@@ -708,17 +708,17 @@ function SplitPDF() {
         </section>
 
         {/* Security & privacy */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-3">
               Security &amp; privacy for splitting PDFs
             </h2>
-            <p className="text-gray-700 mb-3">
+            <p className="text-on-surface-variant mb-3">
               Some PDF tools upload your files to a remote server. This Split
               PDF page uses a client-side library to handle pages directly in
               your browser:
             </p>
-            <ul className="list-disc ml-6 space-y-2 text-gray-700">
+            <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
               <li>
                 <strong>Local processing</strong> — page extraction runs inside
                 your browser using JavaScript.
@@ -740,7 +740,7 @@ function SplitPDF() {
         </section>
 
         {/* FAQ */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-[#091328]/50">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-6">Split PDF — FAQs</h2>
             <div className="space-y-4">
@@ -754,7 +754,7 @@ function SplitPDF() {
                   a: (
                     <>
                       Yes. Enter pages manually or use our dedicated{" "}
-                      <a href="/extract-pages-from-pdf/" className="text-blue-600 hover:underline">
+                      <a href="/extract-pages-from-pdf/" className="text-primary-600 hover:underline">
                         Extract Pages tool
                       </a>
                       . The output contains only the pages you selected.
@@ -766,7 +766,7 @@ function SplitPDF() {
                   a: (
                     <>
                       Yes. Select the pages you want to keep, and the others will be removed. Or use the{" "}
-                      <a href="/delete-pages-from-pdf-online/" className="text-blue-600 hover:underline">
+                      <a href="/delete-pages-from-pdf-online/" className="text-primary-600 hover:underline">
                         Delete Pages tool
                       </a>{" "}
                       if you prefer selecting what to delete.
@@ -778,7 +778,7 @@ function SplitPDF() {
                   a: (
                     <>
                       Yes. You can manually select the first half ranges, or use the{" "}
-                      <a href="/split-pdf-in-half/" className="text-blue-600 hover:underline">
+                      <a href="/split-pdf-in-half/" className="text-primary-600 hover:underline">
                         Split PDF in Half
                       </a>{" "}
                       tool for quick one-click splitting.
@@ -790,7 +790,7 @@ function SplitPDF() {
                   a: (
                     <>
                       Yes, you can use our{" "}
-                      <a href="/split-pdf-by-size/" className="text-blue-600 hover:underline">
+                      <a href="/split-pdf-by-size/" className="text-primary-600 hover:underline">
                         Split by Size
                       </a>{" "}
                       helper to estimate page chunks that fit your target file size (10MB, 5MB, etc.).
@@ -808,12 +808,12 @@ function SplitPDF() {
               ].map((item, i) => (
                 <details
                   key={i}
-                  className="bg-white p-4 rounded-lg border border-gray-200"
+                  className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg border border-white/5"
                 >
                   <summary className="font-semibold cursor-pointer">
                     {item.q}
                   </summary>
-                  <div className="mt-2 text-gray-700">{item.a}</div>
+                  <div className="mt-2 text-on-surface-variant">{item.a}</div>
                 </details>
               ))}
             </div>
@@ -821,44 +821,44 @@ function SplitPDF() {
         </section>
 
         {/* Related tools */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
               <LinkIcon className="h-5 w-5" />
               More free PDF tools
             </h2>
-            <p className="text-gray-700 mb-3">
+            <p className="text-on-surface-variant mb-3">
               After you split or extract pages from your PDF, you can keep
               editing it with these tools:
             </p>
-            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
               <li>
-                <a href="/merge-pdf/" className="underline hover:text-blue-900">
+                <a href="/merge-pdf/" className="underline hover:text-primary-900">
                   Merge PDF files
                 </a>
               </li>
               <li>
-                <a href="/compress-pdf/" className="underline hover:text-blue-900">
+                <a href="/compress-pdf/" className="underline hover:text-primary-900">
                   Compress PDF file size
                 </a>
               </li>
               <li>
-                <a href="/edit-pdf/" className="underline hover:text-blue-900">
+                <a href="/edit-pdf/" className="underline hover:text-primary-900">
                   Edit PDF text online
                 </a>
               </li>
               <li>
-                <a href="/annotate-pdf/" className="underline hover:text-blue-900">
+                <a href="/annotate-pdf/" className="underline hover:text-primary-900">
                   Annotate &amp; highlight PDF
                 </a>
               </li>
               <li>
-                <a href="/add-image-pdf/" className="underline hover:text-blue-900">
+                <a href="/add-image-pdf/" className="underline hover:text-primary-900">
                   Add image to PDF
                 </a>
               </li>
               <li>
-                <a href="/sign-pdf/" className="underline hover:text-blue-900">
+                <a href="/sign-pdf/" className="underline hover:text-primary-900">
                   Sign PDF online
                 </a>
               </li>
@@ -874,13 +874,13 @@ function SplitPDF() {
           reserved.
         </p>
         <div className="mt-4 space-x-4">
-          <a href="/privacy/" className="hover:text-white">
+          <a href="/privacy/" className="hover:text-on-primary">
             Privacy
           </a>
-          <a href="/terms/" className="hover:text-white">
+          <a href="/terms/" className="hover:text-on-primary">
             Terms
           </a>
-          <a href="/contact/" className="hover:text-white">
+          <a href="/contact/" className="hover:text-on-primary">
             Contact
           </a>
         </div>

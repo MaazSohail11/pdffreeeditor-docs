@@ -65,7 +65,7 @@ export default {
                         { q: "Can I extract multiple pages at once?", a: "Yes. Use commas and ranges like 1,3,5-8." },
                         { q: "Will extracted pages lose quality?", a: "No. Extracting copies the pages into a new PDF while keeping the original layout and quality." },
                         { q: "Is my PDF uploaded to a server?", a: "No. This page processes the PDF locally in your browser." },
-                        { q: "Can I use it offline?", a: <>Yes — after the page loads once. For an offline-focused version, use <a className="text-blue-600 hover:underline" href="/separate-pdf-pages-offline/">Separate PDF Pages Offline</a>.</> },
+                        { q: "Can I use it offline?", a: <>Yes — after the page loads once. For an offline-focused version, use <a className="text-primary-600 hover:underline" href="/separate-pdf-pages-offline/">Separate PDF Pages Offline</a>.</> },
                     ]}
                     relatedTools={[
                         { href: "/split-pdf/", label: "Split PDF pages" },

@@ -221,45 +221,45 @@ function OCRHome() {
   }, []);
 
   return (
-    <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       {/* AdSense script loaded via deferAdSense() for better TBT */}
       <SiteNav />
 
       {/* HERO + TOOL */}
-      <section className="bg-gradient-to-br from-indigo-50 to-blue-50 py-14 lg:py-20">
+      <section className="digital-obsidian text-on-surface py-14 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
               Free online OCR to extract text from scanned PDFs and images.
               <br />
-              <span className="text-blue-600">
+              <span className="text-primary-600">
                 Make documents searchable (Ctrl+F works), copy selectable text, and use unlimited OCR with no sign-up.
               </span>
             </h1>
 
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-on-surface-variant mb-4">
               Online OCR lets you extract real, selectable text from scanned PDFs and images that behave like pictures. If you can’t select words, copy text, or search using Ctrl+F, the file is image-based — and OCR is the only way to fix it.
             </p>
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-on-surface-variant mb-4">
               This free OCR tool works directly in your browser and supports scanned PDFs, photos, screenshots, and image files. It analyzes the visual content, recognizes characters, and creates a hidden text layer so your document becomes searchable, copyable, and reusable — without changing how it looks.
             </p>
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-on-surface-variant mb-4">
               Use OCR when dealing with scanned invoices, receipts, contracts, forms, certificates, books, study material, or archived documents. It’s especially useful when PDFs come from scanners, mobile cameras, or screenshots where text is not machine-readable.
             </p>
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-on-surface-variant mb-4">
               Unlike many online OCR tools, this page is free to use with no sign-up and no usage limits. Files are processed securely and automatically deleted after processing. You can choose the correct language for better accuracy or let the tool auto-detect it.
             </p>
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-on-surface-variant mb-4">
               Once OCR is complete, you can search text inside the document, copy paragraphs, or download a searchable PDF. For best results, use clear scans and select the correct language — especially for accented or non-English text.
             </p>
 
             {/* Pain point magnet */}
-            <div className="bg-white border rounded-2xl p-5 shadow-sm mb-6">
+            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)] mb-6">
               <h2 className="text-lg font-bold mb-3 flex items-center gap-2">
                 <AlertTriangle className="h-5 w-5 text-amber-600" />
                 If any of these are happening, OCR is the fix
               </h2>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-on-surface-variant">
                 {quickPain.map((p, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -271,34 +271,34 @@ function OCRHome() {
               <div className="mt-4 flex flex-wrap gap-3">
                 <a
                   href="#tool"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow hover:bg-blue-700"
+                  className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                 >
                   <ScanText className="h-5 w-5" />
                   Start OCR now
                 </a>
                 <a
                   href="#how-to"
-                  className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                  className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                 >
                   <ArrowRight className="h-5 w-5" />
                   How it works
                 </a>
                 <a
                   href="#tools"
-                  className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                  className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                 >
                   <LinkIcon className="h-5 w-5" />
                   All OCR pages
                 </a>
               </div>
 
-              <p className="text-sm text-gray-600 mt-4">
+              <p className="text-sm text-on-surface-variant mt-4">
                 Page cap? Split first → OCR only what you need:{" "}
-                <a href="/split-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                <a href="/split-pdf/" className="text-primary-700 underline hover:text-primary-900">
                   Split PDF
                 </a>
                 . Need faster uploads?{" "}
-                <a href="/compress-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                <a href="/compress-pdf/" className="text-primary-700 underline hover:text-primary-900">
                   Compress PDF
                 </a>
                 .
@@ -306,51 +306,51 @@ function OCRHome() {
             </div>
 
             {/* TOC */}
-            <div className="bg-white border rounded-2xl p-5 shadow-sm">
+            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
               <h3 className="font-bold mb-3">Jump to:</h3>
-              <ul className="grid sm:grid-cols-2 gap-2 text-blue-700">
-                <li><a className="underline hover:text-blue-900" href="#tool">Run OCR</a></li>
-                <li><a className="underline hover:text-blue-900" href="#how-to">How OCR works</a></li>
-                <li><a className="underline hover:text-blue-900" href="#accuracy">Accuracy playbook</a></li>
-                <li><a className="underline hover:text-blue-900" href="#use-cases">Use cases</a></li>
-                <li><a className="underline hover:text-blue-900" href="#tools">OCR pages directory</a></li>
-                <li><a className="underline hover:text-blue-900" href="#faq">FAQs</a></li>
+              <ul className="grid sm:grid-cols-2 gap-2 text-primary-700">
+                <li><a className="underline hover:text-primary-900" href="#tool">Run OCR</a></li>
+                <li><a className="underline hover:text-primary-900" href="#how-to">How OCR works</a></li>
+                <li><a className="underline hover:text-primary-900" href="#accuracy">Accuracy playbook</a></li>
+                <li><a className="underline hover:text-primary-900" href="#use-cases">Use cases</a></li>
+                <li><a className="underline hover:text-primary-900" href="#tools">OCR pages directory</a></li>
+                <li><a className="underline hover:text-primary-900" href="#faq">FAQs</a></li>
               </ul>
             </div>
           </div>
 
           {/* TOOL */}
           <aside id="tool" className="lg:sticky lg:top-6">
-            <div className="bg-white border rounded-2xl shadow p-4">
+            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl shadow-[0_0_25px_rgba(139,92,246,0.2)] p-4">
               <div className="flex items-center gap-2 mb-3">
-                <ScanText className="h-5 w-5 text-blue-600" />
+                <ScanText className="h-5 w-5 text-primary-600" />
                 <p className="font-semibold">Run OCR</p>
               </div>
 
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-on-surface-variant mb-4">
                 Upload your PDF or image below to extract text. Files are processed securely.
               </p>
 
               <OCRTool minimal={true} />
 
-              <div className="mt-4 bg-gray-50 border rounded-xl p-4">
-                <p className="font-semibold text-gray-900 mb-1">Best results checklist</p>
-                <p className="text-sm text-gray-600">
+              <div className="mt-4 bg-[#091328]/50 border rounded-xl p-4">
+                <p className="font-semibold text-on-surface font-headline mb-1">Best results checklist</p>
+                <p className="text-sm text-on-surface-variant">
                   Choose the correct language (accuracy boost) →{" "}
-                  <a href="/languages/" className="text-blue-700 underline hover:text-blue-900">
+                  <a href="/languages/" className="text-primary-700 underline hover:text-primary-900">
                     OCR languages
                   </a>
                   . Long PDF?{" "}
-                  <a href="/split-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                  <a href="/split-pdf/" className="text-primary-700 underline hover:text-primary-900">
                     Split PDF
                   </a>
                   .
                 </p>
               </div>
 
-              <div className="mt-3 text-xs text-gray-500">
+              <div className="mt-3 text-xs text-outline">
                 OCR requires uploading the file for processing. See{" "}
-                <a href="/privacy/" className="underline hover:text-gray-700">
+                <a href="/privacy/" className="underline hover:text-on-surface-variant">
                   Privacy Policy
                 </a>
                 .
@@ -362,57 +362,57 @@ function OCRHome() {
 
       <main className="flex-1">
         {/* HOW-TO */}
-        <section id="how-to" className="py-12 bg-white">
+        <section id="how-to" className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-6">How OCR works (3 steps)</h2>
 
             <ol className="space-y-4">
-              <li id="step-upload" className="bg-gray-50 border rounded-xl p-5">
-                <h3 className="font-semibold text-gray-900 mb-1">1) Upload a PDF or image</h3>
-                <p className="text-gray-700">
+              <li id="step-upload" className="bg-[#091328]/50 border rounded-xl p-5">
+                <h3 className="font-semibold text-on-surface font-headline mb-1">1) Upload a PDF or image</h3>
+                <p className="text-on-surface-variant">
                   Upload a scanned PDF, screenshot, photo, or image document. If the PDF is long, split it first so you OCR only the pages you need.
                 </p>
               </li>
-              <li id="step-language" className="bg-gray-50 border rounded-xl p-5">
-                <h3 className="font-semibold text-gray-900 mb-1">2) Choose language for accuracy</h3>
-                <p className="text-gray-700">
+              <li id="step-language" className="bg-[#091328]/50 border rounded-xl p-5">
+                <h3 className="font-semibold text-on-surface font-headline mb-1">2) Choose language for accuracy</h3>
+                <p className="text-on-surface-variant">
                   Picking the correct language often improves OCR accuracy—especially accents and special characters.
                 </p>
               </li>
-              <li id="step-download" className="bg-gray-50 border rounded-xl p-5">
-                <h3 className="font-semibold text-gray-900 mb-1">3) Get searchable output / copy text</h3>
-                <p className="text-gray-700">
+              <li id="step-download" className="bg-[#091328]/50 border rounded-xl p-5">
+                <h3 className="font-semibold text-on-surface font-headline mb-1">3) Get searchable output / copy text</h3>
+                <p className="text-on-surface-variant">
                   After OCR, your document becomes searchable/selectable. Download searchable PDF output or copy the extracted text.
                 </p>
               </li>
             </ol>
 
-            <div className="mt-6 bg-white border rounded-xl p-6 shadow-sm">
+            <div className="mt-6 bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
               <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                <ShieldCheck className="h-5 w-5 text-blue-600" />
+                <ShieldCheck className="h-5 w-5 text-primary-600" />
                 Quick checks (confirm OCR worked)
               </h3>
-              <ul className="grid md:grid-cols-2 gap-3 text-gray-700">
+              <ul className="grid md:grid-cols-2 gap-3 text-on-surface-variant">
                 {[
                   "Select a single word — if it highlights, OCR created real text.",
                   "Press Ctrl+F (Cmd+F on Mac) and search a visible word.",
                   "Copy a paragraph into Notes/TextEdit — it should paste readable text.",
                   "If it’s wrong: try a cleaner scan + correct language, then rerun OCR.",
                 ].map((x) => (
-                  <li key={x} className="flex items-start gap-3 bg-gray-50 border rounded-xl p-4">
+                  <li key={x} className="flex items-start gap-3 bg-[#091328]/50 border rounded-xl p-4">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     <span>{x}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="text-gray-700 mt-4">
+              <p className="text-on-surface-variant mt-4">
                 PDF-specific? Start with{" "}
-                <a href="/make-pdf-searchable/" className="text-blue-700 underline hover:text-blue-900">
+                <a href="/make-pdf-searchable/" className="text-primary-700 underline hover:text-primary-900">
                   Make PDF searchable
                 </a>{" "}
                 or{" "}
-                <a href="/ocr-pdf/" className="text-blue-700 underline hover:text-blue-900">
+                <a href="/ocr-pdf/" className="text-primary-700 underline hover:text-primary-900">
                   OCR PDF
                 </a>
                 .
@@ -422,34 +422,34 @@ function OCRHome() {
         </section>
 
         {/* ACCURACY PLAYBOOK */}
-        <section id="accuracy" className="py-12 bg-gray-50">
+        <section id="accuracy" className="py-12 bg-[#091328]/50">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-4">OCR accuracy playbook (this is what top users do)</h2>
-            <p className="text-gray-700 mb-6">
+            <p className="text-on-surface-variant mb-6">
               OCR is not magic—it's pattern recognition. These are the highest-impact changes that improve results fast.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4">
               {accuracyChecklist.map((a) => (
-                <div key={a.title} className="bg-white border rounded-xl p-5 shadow-sm">
-                  <h3 className="font-semibold text-gray-900 mb-1">{a.title}</h3>
-                  <p className="text-gray-700 mb-3">{a.text}</p>
-                  <a href={a.href} className="text-blue-700 underline hover:text-blue-900 font-semibold">
+                <div key={a.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                  <h3 className="font-semibold text-on-surface font-headline mb-1">{a.title}</h3>
+                  <p className="text-on-surface-variant mb-3">{a.text}</p>
+                  <a href={a.href} className="text-primary-700 underline hover:text-primary-900 font-semibold">
                     {a.linkText}
                   </a>
                 </div>
               ))}
             </div>
 
-            <div className="mt-6 bg-white border rounded-xl p-6 shadow-sm">
+            <div className="mt-6 bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
               <h3 className="text-xl font-bold mb-2">When OCR usually fails (so you don’t waste time)</h3>
-              <ul className="list-disc ml-6 space-y-2 text-gray-700">
+              <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
                 <li>Heavy handwriting (especially cursive) or very stylized fonts</li>
                 <li>Photos with glare/shadows, curved pages, or strong motion blur</li>
                 <li>Very low resolution scans (tiny text becomes unreadable)</li>
                 <li>Complex layouts where text overlaps background graphics</li>
               </ul>
-              <p className="text-gray-700 mt-3">
+              <p className="text-on-surface-variant mt-3">
                 If the scan itself is unreadable, OCR cannot “guess” correctly. Improve the scan first, then rerun.
               </p>
             </div>
@@ -457,25 +457,25 @@ function OCRHome() {
         </section>
 
         {/* USE CASES */}
-        <section id="use-cases" className="py-12 bg-white">
+        <section id="use-cases" className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-4">OCR use cases (why people come back daily)</h2>
-            <p className="text-gray-700 mb-6">
+            <p className="text-on-surface-variant mb-6">
               OCR is addictive once you realize how much time it saves—especially for scanned PDFs and images you deal with every day.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4">
               {useCases.map((u) => (
-                <div key={u.title} className="bg-gray-50 border rounded-xl p-5">
-                  <h3 className="font-semibold text-gray-900 mb-1">{u.title}</h3>
-                  <p className="text-gray-700">{u.text}</p>
+                <div key={u.title} className="bg-[#091328]/50 border rounded-xl p-5">
+                  <h3 className="font-semibold text-on-surface font-headline mb-1">{u.title}</h3>
+                  <p className="text-on-surface-variant">{u.text}</p>
                 </div>
               ))}
             </div>
 
-            <p className="text-gray-700 mt-6">
+            <p className="text-on-surface-variant mt-6">
               After OCR, need to edit the PDF? Use{" "}
-              <a href="/edit-pdf/" className="text-blue-700 underline hover:text-blue-900">
+              <a href="/edit-pdf/" className="text-primary-700 underline hover:text-primary-900">
                 Edit PDF
               </a>
               .
@@ -484,10 +484,10 @@ function OCRHome() {
         </section>
 
         {/* DIRECTORY */}
-        <section id="tools" className="py-12 bg-gray-50">
+        <section id="tools" className="py-12 bg-[#091328]/50">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-4">All OCR pages</h2>
-            <p className="text-gray-700 mb-8">
+            <p className="text-on-surface-variant mb-8">
               Pick the exact page that matches your goal (PDF OCR, extract text, screenshots, languages, Word/Excel output).
             </p>
 
@@ -495,24 +495,24 @@ function OCRHome() {
               {ocrPages.map((tool) => {
                 const Icon = tool.icon;
                 const card = (
-                  <div className="group bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex flex-col items-start h-full">
-                    <div className="p-3 rounded-lg bg-blue-100 text-blue-700 mb-4 group-hover:scale-110 transition-transform">
+                  <div className="group bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-7 rounded-2xl shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition-all border border-white/5 flex flex-col items-start h-full">
+                    <div className="p-3 rounded-lg bg-primary-100 text-primary-700 mb-4 group-hover:scale-110 transition-transform">
                       <Icon className="h-6 w-6" />
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-xl font-bold text-on-surface font-headline group-hover:text-primary-600 transition-colors">
                         {tool.title}
                       </h3>
                       {tool.badge ? (
-                        <span className="text-xs font-semibold px-2 py-1 rounded-full bg-gray-100 text-gray-700">
+                        <span className="text-xs font-semibold px-2 py-1 rounded-full bg-gray-100 text-on-surface-variant">
                           {tool.badge}
                         </span>
                       ) : null}
                     </div>
 
-                    <p className="text-gray-600 mb-6 flex-1">{tool.description}</p>
-                    <span className="text-sm font-semibold flex items-center gap-2 text-blue-600 group-hover:gap-3 transition-all">
+                    <p className="text-on-surface-variant mb-6 flex-1">{tool.description}</p>
+                    <span className="text-sm font-semibold flex items-center gap-2 text-primary-600 group-hover:gap-3 transition-all">
                       Open <ArrowRight className="h-4 w-4" />
                     </span>
                   </div>
@@ -527,36 +527,36 @@ function OCRHome() {
               })}
             </div>
 
-            <div className="mt-8 bg-white border rounded-2xl p-6">
+            <div className="mt-8 bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-6">
               <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
                 <LinkIcon className="h-5 w-5" />
                 Related PDF tools (support OCR workflow)
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-on-surface-variant mb-4">
                 These tools make OCR faster and more successful (split long PDFs, compress scans, convert formats).
               </p>
 
-              <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split PDF</a></li>
-                <li><a href="/compress-pdf/" className="underline hover:text-blue-900">Compress PDF</a></li>
-                <li><a href="/pdf-to-image/" className="underline hover:text-blue-900">PDF to Image</a></li>
-                <li><a href="/pdf-to-word/" className="underline hover:text-blue-900">PDF to Word</a></li>
-                <li><a href="/pdf-to-excel/" className="underline hover:text-blue-900">PDF to Excel</a></li>
-                <li><a href="/edit-pdf/" className="underline hover:text-blue-900">Edit PDF</a></li>
+              <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split PDF</a></li>
+                <li><a href="/compress-pdf/" className="underline hover:text-primary-900">Compress PDF</a></li>
+                <li><a href="/pdf-to-image/" className="underline hover:text-primary-900">PDF to Image</a></li>
+                <li><a href="/pdf-to-word/" className="underline hover:text-primary-900">PDF to Word</a></li>
+                <li><a href="/pdf-to-excel/" className="underline hover:text-primary-900">PDF to Excel</a></li>
+                <li><a href="/edit-pdf/" className="underline hover:text-primary-900">Edit PDF</a></li>
               </ul>
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="py-12 bg-white">
+        <section id="faq" className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-6">FAQs</h2>
             <div className="space-y-4">
               {faqs.map((item, i) => (
-                <details key={i} className="bg-gray-50 p-4 rounded-lg shadow-sm border">
+                <details key={i} className="bg-[#091328]/50 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)] border">
                   <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                  <p className="mt-2 text-gray-700">{item.a}</p>
+                  <p className="mt-2 text-on-surface-variant">{item.a}</p>
                 </details>
               ))}
             </div>
@@ -564,17 +564,17 @@ function OCRHome() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-blue-600 text-center">
+        <section className="py-16 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-white mb-2">
+            <h2 className="text-3xl font-bold text-on-primary mb-2">
               Ready to turn scans into searchable text?
             </h2>
-            <p className="text-blue-100 mb-6">
+            <p className="text-primary-100 mb-6">
               Upload your PDF/image, choose language for accuracy, and get searchable output you can copy and reuse.
             </p>
             <a
               href="#tool"
-              className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold shadow hover:bg-gray-100 inline-flex items-center gap-2"
+              className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:bg-gray-100 inline-flex items-center gap-2"
             >
               <ScanText className="h-5 w-5" />
               Start OCR
@@ -586,10 +586,10 @@ function OCRHome() {
       <footer className="bg-gray-900 text-gray-400 py-8 text-center mt-auto">
         <p>© {new Date().getFullYear()} PDF Free Editor by TechRex. All rights reserved.</p>
         <div className="mt-4 space-x-4">
-          <a href="/tools/" className="hover:text-white">Tools</a>
-          <a href="/privacy/" className="hover:text-white">Privacy</a>
-          <a href="/terms/" className="hover:text-white">Terms</a>
-          <a href="/contact/" className="hover:text-white">Contact</a>
+          <a href="/tools/" className="hover:text-on-primary">Tools</a>
+          <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+          <a href="/terms/" className="hover:text-on-primary">Terms</a>
+          <a href="/contact/" className="hover:text-on-primary">Contact</a>
         </div>
       </footer>
     </div>

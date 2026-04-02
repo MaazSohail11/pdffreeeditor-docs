@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumina PDF | All PDF Tools</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#40485d",
+                        "primary-container": "#ae8dff",
+                        "on-tertiary-fixed-variant": "#6c6d6e",
+                        "surface-variant": "#192540",
+                        "surface-dim": "#060e20",
+                        "inverse-on-surface": "#4d556b",
+                        "on-surface": "#dee5ff",
+                        "primary-fixed-dim": "#a27cff",
+                        "on-background": "#dee5ff",
+                        "tertiary-dim": "#ebebeb",
+                        "on-secondary-fixed": "#373f54",
+                        "on-error-container": "#ffb2b9",
+                        "on-tertiary-fixed": "#4f5051",
+                        "primary": "#ba9eff",
+                        "secondary-fixed": "#dae2fd",
+                        "background": "#060e20",
+                        "tertiary-container": "#ebebeb",
+                        "inverse-primary": "#6e3bd7",
+                        "surface-container-highest": "#192540",
+                        "on-error": "#490013",
+                        "error-container": "#a70138",
+                        "error-dim": "#d73357",
+                        "tertiary": "#f9f9f9",
+                        "on-tertiary-container": "#555757",
+                        "surface": "#060e20",
+                        "surface-bright": "#1f2b49",
+                        "on-secondary": "#4a5167",
+                        "primary-fixed": "#ae8dff",
+                        "secondary-fixed-dim": "#ccd4ee",
+                        "surface-container": "#0f1930",
+                        "error": "#ff6e84",
+                        "surface-container-high": "#141f38",
+                        "secondary-container": "#3f465c",
+                        "inverse-surface": "#faf8ff",
+                        "on-secondary-fixed-variant": "#535b71",
+                        "on-primary-container": "#2b006e",
+                        "on-primary-fixed": "#000000",
+                        "tertiary-fixed": "#ffffff",
+                        "primary-dim": "#8455ef",
+                        "on-surface-variant": "#a3aac4",
+                        "surface-tint": "#ba9eff",
+                        "secondary": "#dae2fd",
+                        "on-secondary-container": "#c8d0ea",
+                        "surface-container-low": "#091328",
+                        "on-primary-fixed-variant": "#370086",
+                        "outline": "#6d758c",
+                        "on-tertiary": "#5e5f60",
+                        "surface-container-lowest": "#000000",
+                        "tertiary-fixed-dim": "#f0f1f1",
+                        "secondary-dim": "#ccd4ee",
+                        "on-primary": "#39008c"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .digital-obsidian {
+            background: radial-gradient(circle at 50% 0%, #192540 0%, #060e20 70%);
+        }
+        .glass-card {
+            background: rgba(25, 37, 64, 0.4);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(25, 37, 64, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+            border-left: 2px solid #ba9eff;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary min-h-screen digital-obsidian">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-xl flex justify-between items-center px-12 py-6 max-w-full shadow-[0_0_20px_rgba(139,92,246,0.2)]">
+<div class="text-xl font-bold tracking-tighter text-slate-100 font-headline">Lumina PDF</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-violet-400 border-b-2 border-violet-500 pb-1 font-headline hover:text-violet-300 transition-colors duration-300" href="#">Tools</a>
+<a class="text-slate-400 font-headline hover:text-violet-300 transition-colors duration-300" href="#">Compress</a>
+<a class="text-slate-400 font-headline hover:text-violet-300 transition-colors duration-300" href="#">Split</a>
+<a class="text-slate-400 font-headline hover:text-violet-300 transition-colors duration-300" href="#">Merge</a>
+</div>
+<button class="rounded-full py-3 px-8 bg-gradient-to-br from-primary to-primary-dim text-on-primary font-bold shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all">
+            Open Editor
+        </button>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="text-center mb-24 max-w-3xl mx-auto">
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-6 bg-gradient-to-r from-primary via-white to-primary-container bg-clip-text text-transparent">
+                All PDF Tools
+            </h1>
+<p class="text-on-surface-variant text-lg md:text-xl font-medium">
+                Choose a tool below to transform, secure, or modify your document. Experience the future of document editorial craft.
+            </p>
+</header>
+<!-- Tool Grid Sections -->
+<div class="space-y-20">
+<!-- Organize PDF -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<h2 class="text-2xl font-headline text-slate-100">Organize PDF</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Tool Cards -->
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="merge_type">merge_type</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Merge</h3>
+<p class="text-sm text-on-surface-variant">Combine multiple PDFs into one document.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="call_split">call_split</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Split</h3>
+<p class="text-sm text-on-surface-variant">Extract separate pages or sets of pages.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="delete_sweep">delete_sweep</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Remove Pages</h3>
+<p class="text-sm text-on-surface-variant">Delete unnecessary pages from your file.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="content_copy">content_copy</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Extract Pages</h3>
+<p class="text-sm text-on-surface-variant">Save specific pages as a new PDF.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Optimize PDF -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<h2 class="text-2xl font-headline text-slate-100">Optimize PDF</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="compress">compress</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Compress</h3>
+<p class="text-sm text-on-surface-variant">Reduce file size while keeping quality.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="build">build</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Repair</h3>
+<p class="text-sm text-on-surface-variant">Recover data from corrupted documents.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="document_scanner">document_scanner</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">OCR</h3>
+<p class="text-sm text-on-surface-variant">Make scanned PDFs searchable and editable.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Edit & Sign -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<h2 class="text-2xl font-headline text-slate-100">Edit &amp; Sign</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="edit_note">edit_note</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Edit PDF</h3>
+<p class="text-sm text-on-surface-variant">Directly edit text and elements in PDF.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="add_photo_alternate">add_photo_alternate</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Add Image</h3>
+<p class="text-sm text-on-surface-variant">Insert visuals and brand assets.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="draw">draw</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Sign</h3>
+<p class="text-sm text-on-surface-variant">Digitally sign and request signatures.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="comment">comment</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Annotate</h3>
+<p class="text-sm text-on-surface-variant">Add notes, highlights, and feedback.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Convert to PDF -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<h2 class="text-2xl font-headline text-slate-100">Convert to PDF</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="description">description</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Word to PDF</h3>
+<p class="text-sm text-on-surface-variant">Convert DOCX files with precision.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="image">image</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">JPG to PDF</h3>
+<p class="text-sm text-on-surface-variant">Turn images into professional documents.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="table_chart">table_chart</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">Excel to PDF</h3>
+<p class="text-sm text-on-surface-variant">Format spreadsheets for sharing.</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-start gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="slideshow">slideshow</span>
+<div>
+<h3 class="text-lg font-bold text-on-surface mb-1">PPT to PDF</h3>
+<p class="text-sm text-on-surface-variant">Save slides for high-quality viewing.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#000000] w-full py-12 flex flex-col md:flex-row justify-between items-center px-12 mx-auto max-w-7xl">
+<div class="mb-6 md:mb-0">
+<div class="text-lg font-bold text-slate-100 font-headline mb-2">Lumina PDF Editor</div>
+<p class="text-slate-500 text-sm font-body">© 2024 Lumina PDF Editor</p>
+</div>
+<div class="flex gap-8 items-center text-sm font-body">
+<a class="text-slate-500 hover:text-slate-100 transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-slate-500 hover:text-slate-100 transition-all opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="text-slate-500 hover:text-slate-100 transition-all opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<div class="mt-8 md:mt-0 text-violet-500 text-sm font-body font-bold">
+            Editorial Craftsmanship
+        </div>
+</footer>
+</body></html>

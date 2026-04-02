@@ -90,7 +90,7 @@ function ConvertorPage() {
   }, [pdfFile]);
 
   return (
-    <div className="convertor-page font-sans flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="convertor-page font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
@@ -99,7 +99,7 @@ function ConvertorPage() {
       {/* Main */}
       <main className="flex-1 font-ui">
         {/* HERO */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50 py-20">
+        <section className="relative overflow-hidden digital-obsidian text-on-surface py-20">
           <div className="orb orb-blue w-[420px] h-[420px] -top-16 -left-24" />
           <div className="orb orb-indigo w-[460px] h-[460px] -bottom-24 -right-20" />
 
@@ -108,12 +108,12 @@ function ConvertorPage() {
             <div className="text-center md:text-left space-y-4">
               <h1 className="font-display gradient-title text-4xl md:text-6xl font-extrabold leading-tight">
                 Online Document Converter
-                <span className="block text-blue-700 mt-1 text-2xl md:text-3xl">
+                <span className="block text-primary-700 mt-1 text-2xl md:text-3xl">
                   Convert to PDF, Word, PowerPoint, or Excel — Free
                 </span>
               </h1>
 
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-on-surface-variant">
                 Upload{" "}
                 <strong>
                   Word, Excel, PowerPoint, Images, or PDF files
@@ -124,17 +124,17 @@ function ConvertorPage() {
                 as possible — with no watermark and no signup.
               </p>
 
-              <div className="mt-3 flex flex-col gap-1.5 md:items-start items-center text-sm text-gray-800">
+              <div className="mt-3 flex flex-col gap-1.5 md:items-start items-center text-sm text-on-surface">
                 <div className="inline-flex items-center gap-2">
                   <Sparkles
-                    className="h-4 w-4 text-indigo-600"
+                    className="h-4 w-4 text-primary-600"
                     aria-hidden="true"
                   />
                   <span>100% free — no account, no watermark, no trial.</span>
                 </div>
                 <div className="inline-flex items-center gap-2">
                   <Wand2
-                    className="h-4 w-4 text-indigo-600"
+                    className="h-4 w-4 text-primary-600"
                     aria-hidden="true"
                   />
                   <span>
@@ -178,13 +178,13 @@ function ConvertorPage() {
                   <div className="flex-1">
                     <label
                       htmlFor="format"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium text-on-surface-variant"
                     >
                       Choose output format
                     </label>
                     <select
                       id="format"
-                      className="mt-1 w-full md:max-w-xs border rounded-md px-3 py-2 text-gray-900 bg-white/80"
+                      className="mt-1 w-full md:max-w-xs border rounded-md px-3 py-2 text-on-surface font-headline bg-[#091328]/50 backdrop-blur-xl border border-white/5/80"
                       value={format}
                       onChange={(e) => setFormat(e.target.value)}
                       disabled={!pdfFile || isExporting}
@@ -194,7 +194,7 @@ function ConvertorPage() {
                       <option value="pptx">PowerPoint (.pptx)</option>
                       <option value="xlsx">Excel (.xlsx)</option>
                     </select>
-                    <p className="mt-1 text-xs text-gray-500">
+                    <p className="mt-1 text-xs text-outline">
                       {pdfFile
                         ? `Ready: ${pdfFile.name}`
                         : "Upload a document above to enable conversion."}
@@ -207,10 +207,10 @@ function ConvertorPage() {
                       type="button"
                       onClick={handleExport}
                       disabled={!pdfFile || isExporting}
-                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-white shadow-lg ${
+                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-on-primary shadow-[0_0_25px_rgba(139,92,246,0.2)] ${
                         !pdfFile || isExporting
                           ? "bg-emerald-600/60 cursor-not-allowed"
-                          : "bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-emerald-500/25"
+                          : "bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-[0_0_25px_rgba(139,92,246,0.2)]-emerald-500/25"
                       }`}
                     >
                       <Download
@@ -229,7 +229,7 @@ function ConvertorPage() {
                     type="button"
                     onClick={handleEditInstead}
                     disabled={!pdfFile || isExporting}
-                    className="text-blue-600 hover:text-blue-700 disabled:text-gray-400 underline decoration-transparent hover:decoration-blue-300 text-sm"
+                    className="text-primary-600 hover:text-primary-700 disabled:text-gray-400 underline decoration-transparent hover:decoration-primary-300 text-sm"
                   >
                     …or edit this PDF instead
                   </button>
@@ -250,21 +250,21 @@ function ConvertorPage() {
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
                 Convert between popular formats
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-on-surface-variant mb-4">
                 This online document converter is built for the everyday jobs
                 people actually search for:{" "}
                 <strong>Word ⇄ PDF, PDF ⇄ Word, PDF ⇄ Excel, PDF ⇄ PowerPoint</strong>{" "}
                 and <strong>image to PDF</strong>. You upload once, we handle
                 the heavy lifting, and you download the file you need.
               </p>
-              <p className="text-gray-700 mb-4">
+              <p className="text-on-surface-variant mb-4">
                 For best results, start from the highest-quality original file
                 you have. If you want to edit text heavily after conversion,
                 export to <strong>Word</strong> or <strong>Excel</strong>. If
                 you only need a final shareable copy, convert to{" "}
                 <strong>PDF</strong> and you’re done.
               </p>
-              <ul className="mt-2 space-y-2 text-sm text-gray-800">
+              <ul className="mt-2 space-y-2 text-sm text-on-surface">
                 {[
                   "Word to PDF converter — turn DOC/DOCX into shareable PDFs.",
                   "PDF to Word converter — make PDFs editable in Microsoft Word.",
@@ -285,11 +285,11 @@ function ConvertorPage() {
             </div>
 
             {/* Feature / trust block */}
-            <div className="border rounded-2xl p-6 bg-white shadow-sm space-y-3">
+            <div className="border rounded-2xl p-6 bg-[#091328]/50 backdrop-blur-xl border border-white/5 shadow-[0_0_15px_rgba(139,92,246,0.1)] space-y-3">
               <h3 className="text-xl font-semibold mb-1">
                 Why use this online document converter?
               </h3>
-              <ul className="space-y-2 text-sm text-gray-800">
+              <ul className="space-y-2 text-sm text-on-surface">
                 <li>
                   <strong>No signup or watermark.</strong> You get clean output
                   files that you can share, print, and re-use.
@@ -318,11 +318,11 @@ function ConvertorPage() {
         </section>
 
         {/* KEYWORD-TARGETED INTERNAL LINKS / HUB SECTION */}
-        <section className="max-w-7xl mx-auto px-6 py-12 bg-gray-50 rounded-3xl">
+        <section className="max-w-7xl mx-auto px-6 py-12 bg-[#091328]/50 rounded-3xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
             Quick tools: Word ⇄ PDF, PDF ⇄ Word, Excel, PowerPoint & images
           </h2>
-          <p className="text-gray-700 mb-6 max-w-3xl">
+          <p className="text-on-surface-variant mb-6 max-w-3xl">
             Need a single, focused tool instead of the all-in-one document
             converter? Use these dedicated converters for the most common
             workflows. They target the same jobs people search for like{" "}
@@ -334,13 +334,13 @@ function ConvertorPage() {
           <div className="grid md:grid-cols-3 gap-6">
             <a
               href="/word-to-pdf/"
-              className="group border rounded-xl p-5 hover:shadow-md transition bg-white"
+              className="group border rounded-xl p-5 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition bg-[#091328]/50 backdrop-blur-xl border border-white/5"
             >
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 Word to PDF converter
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition" />
               </h3>
-              <p className="text-gray-700 text-sm mt-1">
+              <p className="text-on-surface-variant text-sm mt-1">
                 Convert DOC/DOCX to PDF online while keeping layout, fonts, and
                 page breaks.
               </p>
@@ -348,13 +348,13 @@ function ConvertorPage() {
 
             <a
               href="/pdf-to-word/"
-              className="group border rounded-xl p-5 hover:shadow-md transition bg-white"
+              className="group border rounded-xl p-5 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition bg-[#091328]/50 backdrop-blur-xl border border-white/5"
             >
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 PDF to Word (DOCX)
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition" />
               </h3>
-              <p className="text-gray-700 text-sm mt-1">
+              <p className="text-on-surface-variant text-sm mt-1">
                 Export PDF to editable DOCX with no watermark — great for
                 resumes, contracts, and reports.
               </p>
@@ -362,13 +362,13 @@ function ConvertorPage() {
 
             <a
               href="/pptx-to-pdf/"
-              className="group border rounded-xl p-5 hover:shadow-md transition bg-white"
+              className="group border rounded-xl p-5 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition bg-[#091328]/50 backdrop-blur-xl border border-white/5"
             >
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 PowerPoint to PDF
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition" />
               </h3>
-              <p className="text-gray-700 text-sm mt-1">
+              <p className="text-on-surface-variant text-sm mt-1">
                 Turn PPT/PPTX slides into PDF — perfect for sharing decks
                 without breaking design.
               </p>
@@ -376,13 +376,13 @@ function ConvertorPage() {
 
             <a
               href="/excel-to-pdf/"
-              className="group border rounded-xl p-5 hover:shadow-md transition bg-white"
+              className="group border rounded-xl p-5 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition bg-[#091328]/50 backdrop-blur-xl border border-white/5"
             >
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 Excel / CSV to PDF
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition" />
               </h3>
-              <p className="text-gray-700 text-sm mt-1">
+              <p className="text-on-surface-variant text-sm mt-1">
                 Convert spreadsheets to PDFs with neat column widths and
                 print-ready layout.
               </p>
@@ -390,13 +390,13 @@ function ConvertorPage() {
 
             <a
               href="/image-to-pdf/"
-              className="group border rounded-xl p-5 hover:shadow-md transition bg-white"
+              className="group border rounded-xl p-5 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition bg-[#091328]/50 backdrop-blur-xl border border-white/5"
             >
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 Image to PDF (JPG / PNG)
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition" />
               </h3>
-              <p className="text-gray-700 text-sm mt-1">
+              <p className="text-on-surface-variant text-sm mt-1">
                 Combine multiple photos into one PDF. Reorder images and keep
                 high resolution.
               </p>
@@ -404,20 +404,20 @@ function ConvertorPage() {
 
             <a
               href="/pdf-to-excel/"
-              className="group border rounded-xl p-5 hover:shadow-md transition bg-white"
+              className="group border rounded-xl p-5 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition bg-[#091328]/50 backdrop-blur-xl border border-white/5"
             >
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 PDF to Excel (XLSX)
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition" />
               </h3>
-              <p className="text-gray-700 text-sm mt-1">
+              <p className="text-on-surface-variant text-sm mt-1">
                 Extract tables from PDF into Excel for analysis, sorting, and
                 charts.
               </p>
             </a>
           </div>
 
-          <ul className="mt-8 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
+          <ul className="mt-8 grid sm:grid-cols-2 gap-3 text-sm text-on-surface-variant">
             {[
               "Online document converter for PDF, Word, Excel, PowerPoint, and images.",
               "Word to PDF converter — send professional documents in a fixed layout.",
@@ -441,13 +441,13 @@ function ConvertorPage() {
           <h2 className="text-2xl font-bold mb-3">
             How to convert documents online (3 steps)
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-on-surface-variant mb-4">
             The workflow is the same whether you need a{" "}
             <strong>Word to PDF converter</strong>, a{" "}
             <strong>PDF to Word converter</strong>, or an{" "}
             <strong>image to PDF converter</strong>.
           </p>
-          <ol className="list-decimal pl-5 text-gray-700 space-y-4">
+          <ol className="list-decimal pl-5 text-on-surface-variant space-y-4">
             <li>
               <strong>Upload your file.</strong> Drag &amp; drop a document (or
               tap to browse) in the box above. We accept DOC/DOCX, PPT/PPTX,
@@ -465,7 +465,7 @@ function ConvertorPage() {
               you’d rather tweak the PDF instead, use the{" "}
               <button
                 type="button"
-                className="text-blue-600 underline decoration-transparent hover:decoration-blue-300"
+                className="text-primary-600 underline decoration-transparent hover:decoration-primary-300"
               >
                 “edit this PDF”
               </button>{" "}
@@ -479,12 +479,12 @@ function ConvertorPage() {
           <h2 className="text-2xl font-bold mb-3">
             Tips for better conversion results
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-on-surface-variant mb-4">
             Converters can’t magically fix a messy original file. These quick
             tips help your <strong>online document converter</strong> results
             look cleaner and more professional:
           </p>
-          <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-base">
+          <ul className="list-disc pl-5 space-y-2 text-on-surface-variant text-sm md:text-base">
             <li>
               <strong>Start from the source.</strong> If you have the original
               Word/Excel/PowerPoint file, convert that directly instead of
@@ -549,13 +549,13 @@ function ConvertorPage() {
             ].map((item, i) => (
               <details
                 key={item.q}
-                className="bg-gray-50 rounded-xl px-4 py-3"
+                className="bg-[#091328]/50 rounded-xl px-4 py-3"
                 defaultOpen={i === 0}
               >
                 <summary className="font-semibold cursor-pointer">
                   {item.q}
                 </summary>
-                <p className="mt-2 text-gray-700">{item.a}</p>
+                <p className="mt-2 text-on-surface-variant">{item.a}</p>
               </details>
             ))}
           </div>
@@ -569,16 +569,16 @@ function ConvertorPage() {
           reserved.
         </p>
         <div className="mt-4 space-x-4 text-sm">
-          <a href="/tools/" className="hover:text-white">
+          <a href="/tools/" className="hover:text-on-primary">
             Tools
           </a>
-          <a href="/privacy/" className="hover:text-white">
+          <a href="/privacy/" className="hover:text-on-primary">
             Privacy
           </a>
-          <a href="/terms/" className="hover:text-white">
+          <a href="/terms/" className="hover:text-on-primary">
             Terms
           </a>
-          <a href="/contact/" className="hover:text-white">
+          <a href="/contact/" className="hover:text-on-primary">
             Contact
           </a>
         </div>

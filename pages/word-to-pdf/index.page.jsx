@@ -38,7 +38,7 @@ function WordToPDF() {
   ];
 
   return (
-    <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
@@ -46,26 +46,26 @@ function WordToPDF() {
 
       <main className="flex-1">
         {/* HERO / PRIMARY INTENT */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-20">
+        <section className="digital-obsidian text-on-surface py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
             {/* LEFT: copy */}
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-5xl font-extrabold mb-3">
                 Word to PDF Converter — Free DOC/DOCX to PDF Online
               </h1>
-              <p className="text-lg text-gray-800 mb-3">
+              <p className="text-lg text-on-surface mb-3">
                 Convert <strong>Word documents (DOC &amp; DOCX) to PDF online</strong> in seconds.
                 No signup, no watermark, and no complicated settings — just upload, convert, and download.
               </p>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-on-surface-variant mb-4">
                 Perfect for <strong>resumes (CVs)</strong>, <strong>cover letters</strong>,{" "}
                 <strong>reports</strong>, <strong>assignments</strong>, and any document that
                 needs to look professional on every device.
               </p>
 
-              <div className="mt-4 flex flex-col gap-2 md:items-start items-center text-sm text-gray-700">
+              <div className="mt-4 flex flex-col gap-2 md:items-start items-center text-sm text-on-surface-variant">
                 <span className="inline-flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-blue-600" />
+                  <Sparkles className="h-4 w-4 text-primary-600" />
                   100% free — no signup, no watermark, unlimited conversions
                 </span>
                 <span className="inline-flex items-center gap-2">
@@ -73,7 +73,7 @@ function WordToPDF() {
                   Private by design — client-side processing where possible
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <MonitorSmartphone className="h-4 w-4 text-indigo-600" />
+                  <MonitorSmartphone className="h-4 w-4 text-primary-600" />
                   Works on Windows, Mac, Linux, iPhone, and Android
                 </span>
               </div>
@@ -81,14 +81,14 @@ function WordToPDF() {
               <div className="mt-6 flex flex-col gap-3 md:items-start items-center">
                 <a
                   href="#word-to-pdf-converter"
-                  className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-xl inline-flex items-center gap-2 font-semibold shadow-lg"
+                  className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all px-8 py-3 rounded-full inline-flex items-center gap-2 font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)]"
                 >
                   <Upload className="h-5 w-5" />
                   <span>Choose Word File — Convert to PDF</span>
                 </a>
                 <a
                   href="/editor/"
-                  className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline"
+                  className="inline-flex items-center gap-2 text-primary-700 font-semibold hover:underline"
                 >
                   <FileText className="h-4 w-4" />
                   <span>Open full PDF editor (edit after converting)</span>
@@ -103,7 +103,7 @@ function WordToPDF() {
                 formatOptions={[{ value: "pdf", label: "PDF (.pdf)" }]}
                 showEditInstead={false}
               />
-              <p className="mt-3 text-xs text-gray-500 text-center">
+              <p className="mt-3 text-xs text-outline text-center">
                 Upload a Word document and get a high-quality PDF download instantly.
               </p>
             </aside>
@@ -115,14 +115,14 @@ function WordToPDF() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Why convert Word to PDF with TechRex?
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-on-surface-variant mb-4">
             There are many “Word to PDF” tools online, but a lot of them hide limits behind
             signups, add watermarks to your documents, or upload your files to remote servers
             without making that clear. This converter is built to be{" "}
             <strong>simple, transparent, and privacy-first</strong>.
           </p>
 
-          <ul className="space-y-3 text-gray-800">
+          <ul className="space-y-3 text-on-surface">
             <li className="flex items-start gap-2">
               <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
               <span>
@@ -167,14 +167,14 @@ function WordToPDF() {
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             How to convert DOC or DOCX to PDF (step-by-step)
           </h2>
-          <p className="text-gray-700 mb-3">
+          <p className="text-on-surface-variant mb-3">
             You don’t need to install Microsoft Word or any extra software. Use this{" "}
             <strong>online Word to PDF converter</strong> on any device:
           </p>
-          <ol className="list-decimal pl-5 text-gray-700 space-y-2">
+          <ol className="list-decimal pl-5 text-on-surface-variant space-y-2">
             <li id="step-upload">
               Click{" "}
-              <a href="#word-to-pdf-converter" className="text-blue-600 hover:underline">
+              <a href="#word-to-pdf-converter" className="text-primary-600 hover:underline">
                 Choose Word File
               </a>{" "}
               and upload your <strong>DOC</strong> or <strong>DOCX</strong> document.
@@ -188,7 +188,7 @@ function WordToPDF() {
             </li>
             <li>
               Need changes after converting? Open the{" "}
-              <a href="/editor/" className="text-blue-600 hover:underline">
+              <a href="/editor/" className="text-primary-600 hover:underline">
                 Free PDF Editor
               </a>{" "}
               to edit, sign, or add images and then re-export.
@@ -201,13 +201,13 @@ function WordToPDF() {
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             When should you convert Word to PDF?
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-on-surface-variant mb-4">
             PDF is the safest way to send a document when you want it to look the same for
             everyone — regardless of what device or software they use. Common situations where
             people use this Word to PDF converter include:
           </p>
 
-          <ul className="list-disc pl-5 text-gray-700 space-y-2">
+          <ul className="list-disc pl-5 text-on-surface-variant space-y-2">
             {useCases.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -219,18 +219,18 @@ function WordToPDF() {
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             How to avoid formatting issues when converting Word to PDF
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-on-surface-variant mb-4">
             Converting from DOC or DOCX to PDF is usually very accurate, but a few small tweaks
             inside Word can help your PDFs look even better:
           </p>
 
-          <ul className="list-disc pl-5 text-gray-700 space-y-2">
+          <ul className="list-disc pl-5 text-on-surface-variant space-y-2">
             {tips.map((tip) => (
               <li key={tip}>{tip}</li>
             ))}
           </ul>
 
-          <p className="text-gray-700 mt-3">
+          <p className="text-on-surface-variant mt-3">
             After converting, skim the PDF for one minute to confirm that headings, bullet lists,
             and images look correct. If something seems off, adjust the Word file and convert
             again — it only takes a few seconds.
@@ -240,7 +240,7 @@ function WordToPDF() {
         {/* RELATED CONVERTERS (INTERNAL LINKS WITH SLASHES) */}
         <section className="max-w-5xl mx-auto px-6 pb-12">
           <h2 className="text-2xl font-bold mb-3">Other free document converters</h2>
-          <p className="text-gray-700 mb-4 text-sm">
+          <p className="text-on-surface-variant mb-4 text-sm">
             Need to go the other way, or work with PowerPoint, Excel, or images? Try these
             tools:
           </p>
@@ -249,7 +249,7 @@ function WordToPDF() {
               <a
                 key={r.to}
                 href={r.to}
-                className="border rounded-lg p-3 hover:shadow transition flex items-center justify-between text-blue-700 text-sm"
+                className="border rounded-lg p-3 hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] transition flex items-center justify-between text-primary-700 text-sm"
               >
                 <span>{r.label}</span>
                 <ArrowRight className="h-4 w-4" />
@@ -264,44 +264,44 @@ function WordToPDF() {
             Word to PDF Converter — Frequently Asked Questions
           </h2>
           <div className="space-y-3 text-sm">
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Is the Word to PDF converter really free?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Yes — it is <strong>100% free</strong> with no signup, no trial, and no
                 watermark. You can convert as many DOC and DOCX files to PDF as your device can
                 handle.
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Do you support both DOC and DOCX formats?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Yes. You can upload <strong>older DOC files</strong> and modern{" "}
                 <strong>DOCX files</strong>. Both are converted to standard PDF that works
                 everywhere.
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Will my fonts and layout look the same in the PDF?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 The converter aims to preserve your <strong>fonts, spacing, page breaks</strong>,
                 and overall layout. For best results, use common fonts in Word and double-check
                 the PDF preview before sending important documents like resumes and contracts.
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Is it safe to convert Word files online?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Where possible, the conversion runs directly in your browser so your files stay
                 on your device. For any server-side work, files are protected with TLS and not
                 stored permanently. As with any online tool, avoid uploading highly sensitive
@@ -309,24 +309,24 @@ function WordToPDF() {
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Does this work on Mac, Windows, and mobile phones?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Yes. You can use the Word to PDF converter on{" "}
                 <strong>Windows, macOS, Linux, iPhone, iPad, and Android</strong> — just open it
                 in a modern browser like Chrome, Safari, Edge, or Firefox.
               </p>
             </details>
 
-            <details className="bg-white border rounded p-4">
+            <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded p-4">
               <summary className="font-semibold cursor-pointer">
                 Can I edit the PDF after converting from Word?
               </summary>
-              <p className="mt-2 text-gray-700">
+              <p className="mt-2 text-on-surface-variant">
                 Yes. After converting, you can open the file in the{" "}
-                <a href="/editor/" className="text-blue-600 hover:underline">
+                <a href="/editor/" className="text-primary-600 hover:underline">
                   Free PDF Editor
                 </a>{" "}
                 to edit text, add images, sign, or annotate before exporting again.
@@ -340,16 +340,16 @@ function WordToPDF() {
       <footer className="bg-gray-900 text-gray-400 py-8 text-center">
         <p>© {new Date().getFullYear()} Free PDF Editor by TechRex. All rights reserved.</p>
         <div className="mt-4 space-x-4">
-          <a href="/tools/" className="hover:text-white">
+          <a href="/tools/" className="hover:text-on-primary">
             Tools
           </a>
-          <a href="/privacy/" className="hover:text-white">
+          <a href="/privacy/" className="hover:text-on-primary">
             Privacy
           </a>
-          <a href="/terms/" className="hover:text-white">
+          <a href="/terms/" className="hover:text-on-primary">
             Terms
           </a>
-          <a href="/contact/" className="hover:text-white">
+          <a href="/contact/" className="hover:text-on-primary">
             Contact
           </a>
         </div>

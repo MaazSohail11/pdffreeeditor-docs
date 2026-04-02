@@ -229,7 +229,7 @@ function CompressPdfTo1MbPage() {
     };
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
             <Helmet>
                 <title>{metaTitle}</title>
                 <meta name="description" content={metaDescription} />
@@ -268,25 +268,25 @@ function CompressPdfTo1MbPage() {
             <SiteNav />
 
             {/* HERO */}
-            <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24">
+            <section className="digital-obsidian text-on-surface py-16 md:py-24">
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-start">
                     <div className="text-center md:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                             Compress PDF to 1MB Online
                             <br />
-                            <span className="text-blue-600">Best balance of quality and size</span>
+                            <span className="text-primary-600">Best balance of quality and size</span>
                         </h1>
 
                         {/* Answer-first for SEO + users */}
-                        <p className="text-lg text-gray-700 mb-3">
+                        <p className="text-lg text-on-surface-variant mb-3">
                             Need to <strong>reduce PDF size to under 1MB</strong> without destroying readability?
                             Start with <strong>Compact</strong> for best quality, then use <strong>Rasterize</strong>{" "}
                             only if you still need a smaller file.
                         </p>
 
-                        <p className="text-base text-gray-700 mb-8">
+                        <p className="text-base text-on-surface-variant mb-8">
                             This page is the quality-first default. If you have a strict portal cap at 500KB, use{" "}
-                            <a href="/compress-pdf-to-500kb/" className="text-blue-700 underline hover:text-blue-900">
+                            <a href="/compress-pdf-to-500kb/" className="text-primary-700 underline hover:text-primary-900">
                                 Compress to 500KB
                             </a>
                             .
@@ -295,7 +295,7 @@ function CompressPdfTo1MbPage() {
                         <div className="flex flex-col gap-3 md:items-start items-center">
                             <a
                                 href="#compress"
-                                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:bg-blue-700"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                             >
                                 <Upload className="h-5 w-5" aria-hidden="true" />
                                 <span>Start — Compress to 1MB</span>
@@ -303,7 +303,7 @@ function CompressPdfTo1MbPage() {
 
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                             >
                                 <ArrowRight className="h-5 w-5" aria-hidden="true" />
                                 <span>How it works (3 steps)</span>
@@ -311,7 +311,7 @@ function CompressPdfTo1MbPage() {
                         </div>
 
                         {/* Trust bullets */}
-                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant">
                             {benefits.map((t) => (
                                 <li key={t} className="flex items-center gap-2">
                                     <CheckCircle2 className="h-4 w-4 text-green-500" aria-hidden="true" />
@@ -320,7 +320,7 @@ function CompressPdfTo1MbPage() {
                             ))}
                         </ul>
 
-                        <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-gray-600">
+                        <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-on-surface-variant">
                             <span className="inline-flex items-center gap-2">
                                 <ShieldCheck className="h-4 w-4" /> Watermark-free
                             </span>
@@ -335,23 +335,23 @@ function CompressPdfTo1MbPage() {
 
                     {/* Desktop dropzone */}
                     <aside className="hidden md:block" id="compress" aria-label="Compress PDF dropzone">
-                        <div className="bg-white border rounded-2xl shadow p-4">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl shadow-[0_0_25px_rgba(139,92,246,0.2)] p-4">
                             <div className="flex items-center gap-2 mb-3">
-                                <Gauge className="h-5 w-5 text-blue-600" aria-hidden="true" />
+                                <Gauge className="h-5 w-5 text-primary-600" aria-hidden="true" />
                                 <p className="font-semibold">Compress to ~1MB</p>
                             </div>
 
-                            <p className="text-sm text-gray-600 mb-4">
+                            <p className="text-sm text-on-surface-variant mb-4">
                                 Quality-first workflow: <strong>Compact</strong> first. Use <strong>Rasterize</strong> only if you still
                                 need a smaller file size.
                             </p>
 
                             <CompressDropBox />
 
-                            <div className="mt-3 text-xs text-gray-500">
+                            <div className="mt-3 text-xs text-outline">
                                 Tip: If your PDF is scanned/photo-based, you may need Rasterize sooner.
                                 If you must hit 500KB, use{" "}
-                                <a href="/compress-pdf-to-500kb/" className="underline hover:text-gray-700">
+                                <a href="/compress-pdf-to-500kb/" className="underline hover:text-on-surface-variant">
                                     the 500KB page
                                 </a>
                                 .
@@ -363,25 +363,25 @@ function CompressPdfTo1MbPage() {
 
             <main className="flex-1">
                 {/* QUALITY-FIRST WORKFLOW */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <h2 className="text-3xl font-bold mb-4">Fastest way to get a PDF under 1MB (without ruining quality)</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             There is no universal “1MB button” because PDFs vary. This workflow keeps the file usable and readable.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-4">
                             {workflow.map((item) => (
-                                <div key={item.title} className="bg-gray-50 rounded-2xl border p-5 shadow-sm">
+                                <div key={item.title} className="bg-[#091328]/50 rounded-2xl border p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                     <h3 className="font-semibold mb-2">{item.title}</h3>
-                                    <p className="text-gray-700 text-sm">{item.body}</p>
+                                    <p className="text-on-surface-variant text-sm">{item.body}</p>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="mt-8 bg-white border rounded-2xl p-6 shadow-sm">
+                        <div className="mt-8 bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-6 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                             <div className="font-semibold mb-2">If it’s still not under 1MB:</div>
-                            <ul className="list-disc ml-6 text-sm text-gray-700 space-y-1">
+                            <ul className="list-disc ml-6 text-sm text-on-surface-variant space-y-1">
                                 <li>Remove unnecessary pages and compress again.</li>
                                 <li>Split the PDF into parts under 1MB if your portal allows multiple files.</li>
                                 <li>If it’s scanned/photo-based, lower DPI/quality gradually in Rasterize.</li>
@@ -389,14 +389,14 @@ function CompressPdfTo1MbPage() {
                             <div className="mt-4 flex flex-wrap gap-3">
                                 <a
                                     href="/split-pdf/"
-                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border bg-white text-blue-700 font-semibold hover:shadow-sm"
+                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-700 font-semibold hover:shadow-[0_0_15px_rgba(139,92,246,0.1)]"
                                 >
                                     <LinkIcon className="h-4 w-4" />
                                     Split PDF
                                 </a>
                                 <a
                                     href="/compress-scanned-pdf-online/"
-                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border bg-white text-blue-700 font-semibold hover:shadow-sm"
+                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-700 font-semibold hover:shadow-[0_0_15px_rgba(139,92,246,0.1)]"
                                 >
                                     <LinkIcon className="h-4 w-4" />
                                     Compress scanned PDF
@@ -407,29 +407,29 @@ function CompressPdfTo1MbPage() {
                 </section>
 
                 {/* WHAT FITS IN ~1MB (unique block) */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-6xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4">What typically fits under 1MB?</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             1MB is a common limit because it usually keeps documents readable. Your outcome depends on page count and image density.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-4">
                             {typicalFits.map((x) => (
-                                <div key={x.title} className="bg-white rounded-2xl border p-5 shadow-sm">
-                                    <div className="flex items-center gap-2 mb-2 text-blue-700">
+                                <div key={x.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl border p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                                    <div className="flex items-center gap-2 mb-2 text-primary-700">
                                         {x.icon}
-                                        <h3 className="font-semibold text-gray-900">{x.title}</h3>
+                                        <h3 className="font-semibold text-on-surface font-headline">{x.title}</h3>
                                     </div>
-                                    <p className="text-gray-700 text-sm">{x.body}</p>
+                                    <p className="text-on-surface-variant text-sm">{x.body}</p>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="mt-8 bg-blue-50 border border-blue-100 rounded-2xl p-6">
-                            <p className="text-gray-800">
+                        <div className="mt-8 bg-primary-50 border border-primary-100 rounded-2xl p-6">
+                            <p className="text-on-surface">
                                 If your upload fails at 1MB, and the portal explicitly requires <strong>500KB</strong>, use the strict-limit page:{" "}
-                                <a href="/compress-pdf-to-500kb/" className="text-blue-700 underline hover:text-blue-900">
+                                <a href="/compress-pdf-to-500kb/" className="text-primary-700 underline hover:text-primary-900">
                                     Compress PDF to 500KB
                                 </a>
                                 .
@@ -439,22 +439,22 @@ function CompressPdfTo1MbPage() {
                 </section>
 
                 {/* USE CASES */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4">Why people compress PDFs to 1MB</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             “Compress PDF to 1MB” is usually a practical constraint: uploads, email, or mobile sharing.
                             This page is optimized for the quality-first version of that intent.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {useCases.map((c) => (
-                                <div key={c.title} className="bg-gray-50 rounded-2xl border p-5 shadow-sm">
+                                <div key={c.title} className="bg-[#091328]/50 rounded-2xl border p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                     <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-blue-700">{c.icon}</span>
+                                        <span className="text-primary-700">{c.icon}</span>
                                         <h3 className="font-semibold">{c.title}</h3>
                                     </div>
-                                    <p className="text-gray-700 text-sm">{c.body}</p>
+                                    <p className="text-on-surface-variant text-sm">{c.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -462,26 +462,26 @@ function CompressPdfTo1MbPage() {
                 </section>
 
                 {/* HOW-TO anchors for schema */}
-                <section id="how-to" className="py-12 bg-gray-50">
+                <section id="how-to" className="py-12 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">How to compress a PDF to under 1MB (3 steps)</h2>
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-upload">
                                 <h3 className="font-semibold">1) Upload your PDF</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Upload the PDF you want to reduce. The file is transferred over an encrypted TLS connection for processing.
                                 </p>
                             </li>
                             <li id="step-choose">
                                 <h3 className="font-semibold">2) Use Compact first (recommended)</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Start with <strong>Compact</strong> to keep text crisp. If you still need smaller output, switch to{" "}
                                     <strong>Rasterize</strong> and reduce quality/DPI gradually.
                                 </p>
                             </li>
                             <li id="step-download">
                                 <h3 className="font-semibold">3) Download and upload/email</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Download the compressed PDF and verify the file size before uploading. If the portal requires 500KB, switch targets.
                                 </p>
                             </li>
@@ -490,11 +490,11 @@ function CompressPdfTo1MbPage() {
                 </section>
 
                 {/* Mobile dropzone */}
-                <section className="py-12 bg-white md:hidden" id="compress-inline" aria-label="Compress PDF dropzone (mobile)">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5 md:hidden" id="compress-inline" aria-label="Compress PDF dropzone (mobile)">
                     <div className="max-w-4xl mx-auto px-6">
-                        <div id="compress" className="bg-white border rounded-2xl shadow p-4">
+                        <div id="compress" className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl shadow-[0_0_25px_rgba(139,92,246,0.2)] p-4">
                             <CompressDropBox />
-                            <div className="mt-3 text-xs text-gray-500">
+                            <div className="mt-3 text-xs text-outline">
                                 Compact first for quality. Use Rasterize only if you still need a smaller file.
                             </div>
                         </div>
@@ -502,14 +502,14 @@ function CompressPdfTo1MbPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">Compress PDF to 1MB — FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-gray-50 p-5 rounded-2xl border border-gray-200">
+                                <details key={i} className="bg-[#091328]/50 p-5 rounded-2xl border border-white/5">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <p className="mt-2 text-gray-700">{item.a}</p>
+                                    <p className="mt-2 text-on-surface-variant">{item.a}</p>
                                 </details>
                             ))}
                         </div>
@@ -517,73 +517,73 @@ function CompressPdfTo1MbPage() {
                 </section>
 
                 {/* RELATED LINKS (cleaned: no retired size pages) */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" />
                             Related compression tools
                         </h2>
-                        <p className="text-gray-700 mb-4">
+                        <p className="text-on-surface-variant mb-4">
                             Use the right page for your constraint. For strict limits use 500KB; for general compression use the hub.
                         </p>
 
-                        <div className="mb-8 grid md:grid-cols-3 gap-4 text-sm bg-blue-50 p-4 rounded-2xl border border-blue-100">
-                            <a href="/compress-pdf-for-email/" className="flex flex-col gap-1 hover:bg-white p-3 rounded-xl transition">
-                                <span className="font-bold text-blue-800">Email attachment too big?</span>
-                                <span className="text-blue-600 underline">Compress for email</span>
+                        <div className="mb-8 grid md:grid-cols-3 gap-4 text-sm bg-primary-50 p-4 rounded-2xl border border-primary-100">
+                            <a href="/compress-pdf-for-email/" className="flex flex-col gap-1 hover:bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-3 rounded-xl transition">
+                                <span className="font-bold text-primary-800">Email attachment too big?</span>
+                                <span className="text-primary-600 underline">Compress for email</span>
                             </a>
-                            <a href="/compress-pdf-for-portal-upload/" className="flex flex-col gap-1 hover:bg-white p-3 rounded-xl transition">
-                                <span className="font-bold text-blue-800">Portal upload failing?</span>
-                                <span className="text-blue-600 underline">Compress for portal upload</span>
+                            <a href="/compress-pdf-for-portal-upload/" className="flex flex-col gap-1 hover:bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-3 rounded-xl transition">
+                                <span className="font-bold text-primary-800">Portal upload failing?</span>
+                                <span className="text-primary-600 underline">Compress for portal upload</span>
                             </a>
-                            <a href="/compress-scanned-pdf-online/" className="flex flex-col gap-1 hover:bg-white p-3 rounded-xl transition">
-                                <span className="font-bold text-blue-800">Scanned document?</span>
-                                <span className="text-blue-600 underline">Compress scanned PDF</span>
+                            <a href="/compress-scanned-pdf-online/" className="flex flex-col gap-1 hover:bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-3 rounded-xl transition">
+                                <span className="font-bold text-primary-800">Scanned document?</span>
+                                <span className="text-primary-600 underline">Compress scanned PDF</span>
                             </a>
                         </div>
 
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/compress-pdf/" className="underline hover:text-blue-900">Compress PDF (hub)</a></li>
-                            <li><a href="/compress-pdf-to-500kb/" className="underline hover:text-blue-900">Compress PDF to 500KB (strict)</a></li>
-                            <li><a href="/compress-pdf-without-losing-quality/" className="underline hover:text-blue-900">Compress without losing quality</a></li>
-                            <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split PDF</a></li>
-                            <li><a href="/ocr/" className="underline hover:text-blue-900">OCR (make scans searchable)</a></li>
-                            <li><a href="/sign-pdf/" className="underline hover:text-blue-900">Sign PDF after compressing</a></li>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/compress-pdf/" className="underline hover:text-primary-900">Compress PDF (hub)</a></li>
+                            <li><a href="/compress-pdf-to-500kb/" className="underline hover:text-primary-900">Compress PDF to 500KB (strict)</a></li>
+                            <li><a href="/compress-pdf-without-losing-quality/" className="underline hover:text-primary-900">Compress without losing quality</a></li>
+                            <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split PDF</a></li>
+                            <li><a href="/ocr/" className="underline hover:text-primary-900">OCR (make scans searchable)</a></li>
+                            <li><a href="/sign-pdf/" className="underline hover:text-primary-900">Sign PDF after compressing</a></li>
                         </ul>
                     </div>
                 </section>
 
                 {/* NEXT STEPS (kept, but de-duplicated) */}
-                <section className="py-12 bg-white border-t border-gray-200">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5-t border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Related tools</h3>
+                                <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Related tools</h3>
                                 <ul className="space-y-2">
                                     <li>
                                         <a
                                             href="/compress-pdf/"
-                                            className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2"
+                                            className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2"
                                         >
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             Compress PDF (All options)
                                         </a>
                                     </li>
                                     <li>
                                         <a
                                             href="/compress-pdf-to-500kb/"
-                                            className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2"
+                                            className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2"
                                         >
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             Compress to 500KB (strict limit)
                                         </a>
                                     </li>
                                     <li>
                                         <a
                                             href="/compress-pdf-for-email/"
-                                            className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2"
+                                            className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2"
                                         >
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             Compress for email
                                         </a>
                                     </li>
@@ -591,32 +591,32 @@ function CompressPdfTo1MbPage() {
                             </div>
 
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Next steps</h3>
+                                <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Next steps</h3>
                                 <ul className="space-y-2">
                                     <li>
                                         <a
                                             href="/merge-pdf/"
-                                            className="group flex items-center justify-between p-3 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition"
+                                            className="group flex items-center justify-between p-3 rounded-2xl border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition"
                                         >
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Merge PDF</span>
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Merge PDF</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a
                                             href="/sign-pdf/"
-                                            className="group flex items-center justify-between p-3 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition"
+                                            className="group flex items-center justify-between p-3 rounded-2xl border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition"
                                         >
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Sign PDF</span>
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Sign PDF</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a
                                             href="/edit-pdf/"
-                                            className="group flex items-center justify-between p-3 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition"
+                                            className="group flex items-center justify-between p-3 rounded-2xl border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition"
                                         >
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Edit PDF</span>
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Edit PDF</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
@@ -624,10 +624,10 @@ function CompressPdfTo1MbPage() {
                             </div>
                         </div>
 
-                        <div className="mt-8 pt-8 border-t border-gray-100 text-center">
+                        <div className="mt-8 pt-8 border-t border-white/5 text-center">
                             <a
                                 href="/compress-pdf/"
-                                className="text-sm font-semibold text-gray-500 hover:text-blue-600 uppercase tracking-wide"
+                                className="text-sm font-semibold text-outline hover:text-primary-600 uppercase tracking-wide"
                             >
                                 View all compressors
                             </a>
@@ -639,9 +639,9 @@ function CompressPdfTo1MbPage() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center">
                 <p>© {new Date().getFullYear()} Free PDF Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

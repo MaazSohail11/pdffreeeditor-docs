@@ -83,30 +83,30 @@ function DrawOnPdfOnline() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
             <SiteNav />
 
             {/* Hero */}
-            <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24">
+            <section className="digital-obsidian text-on-surface py-16 md:py-24">
                 <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                             Draw on PDF Online Free
                             <br />
-                            <span className="text-blue-600">
+                            <span className="text-primary-600">
                                 Add handwriting, arrows & notes — no signup
                             </span>
                         </h1>
 
-                        <p className="text-lg text-gray-700 mb-3">
+                        <p className="text-lg text-on-surface-variant mb-3">
                             Need to scribble, circle, underline, or add quick handwritten notes on a PDF?
                             Upload your file and draw directly in your browser — then download instantly.
                         </p>
 
-                        <p className="text-base text-gray-700 mb-8">
+                        <p className="text-base text-on-surface-variant mb-8">
                             Built for speed and trust: <strong>no signup</strong>, <strong>no watermark</strong>,
                             and your file stays on your device by default.
                         </p>
@@ -114,7 +114,7 @@ function DrawOnPdfOnline() {
                         <div className="flex flex-col sm:flex-row gap-3 sm:justify-center lg:justify-start">
                             <a
                                 href="#start"
-                                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:bg-blue-700"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                             >
                                 <Upload className="h-5 w-5" />
                                 <span>Start — Draw on PDF</span>
@@ -122,14 +122,14 @@ function DrawOnPdfOnline() {
 
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                             >
                                 <FileText className="h-5 w-5" />
                                 <span>How it works (3 steps)</span>
                             </a>
                         </div>
 
-                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant">
                             {trustBullets.map((t) => (
                                 <li key={t} className="flex items-center gap-2">
                                     <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -137,7 +137,7 @@ function DrawOnPdfOnline() {
                                 </li>
                             ))}
                             <li className="flex items-center gap-2">
-                                <Lock className="h-4 w-4 text-gray-600" />
+                                <Lock className="h-4 w-4 text-on-surface-variant" />
                                 <span>Privacy-first editing experience</span>
                             </li>
                         </ul>
@@ -151,7 +151,7 @@ function DrawOnPdfOnline() {
                             maxWidth={720}
                             label="Choose PDF to Draw On"
                         />
-                        <p className="text-xs text-gray-500 mt-3 flex items-center gap-2 justify-center lg:justify-start">
+                        <p className="text-xs text-outline mt-3 flex items-center gap-2 justify-center lg:justify-start">
                             <Lock className="h-4 w-4" />
                             Your PDF stays on your device by default.
                         </p>
@@ -161,19 +161,19 @@ function DrawOnPdfOnline() {
 
             <main className="flex-1">
                 {/* Use cases */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <h2 className="text-3xl font-bold mb-4">What people draw on PDFs for</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             “Draw on PDF” searches are usually urgent: someone needs to mark something up and submit it today.
                             Here are the most common scenarios this page is built for.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {useCases.map((item) => (
-                                <div key={item.title} className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-                                    <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
-                                    <p className="text-gray-700 text-sm">{item.body}</p>
+                                <div key={item.title} className="bg-[#091328]/50 border border-white/5 rounded-xl p-5">
+                                    <h3 className="font-semibold text-on-surface font-headline mb-2">{item.title}</h3>
+                                    <p className="text-on-surface-variant text-sm">{item.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -181,37 +181,37 @@ function DrawOnPdfOnline() {
                 </section>
 
                 {/* Tips */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-4">
                         {tips.map((t) => (
-                            <div key={t.title} className="bg-white rounded-xl border border-gray-200 p-5">
+                            <div key={t.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl border border-white/5 p-5">
                                 <h3 className="font-semibold mb-2">{t.title}</h3>
-                                <p className="text-gray-700 text-sm">{t.body}</p>
+                                <p className="text-on-surface-variant text-sm">{t.body}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* How to (anchors for schema) */}
-                <section id="how-to" className="py-12 bg-white">
+                <section id="how-to" className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">How to draw on a PDF online (3 steps)</h2>
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-upload">
                                 <h3 className="font-semibold">1) Upload your PDF</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Drag &amp; drop your PDF into the box above. The editor opens with your document ready to mark up.
                                 </p>
                             </li>
                             <li id="step-draw">
                                 <h3 className="font-semibold">2) Choose the draw/pen tool</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Pick a pen color and thickness, then draw notes, arrows, circles, or handwriting directly on the page.
                                 </p>
                             </li>
                             <li id="step-download">
                                 <h3 className="font-semibold">3) Download instantly</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Export your updated PDF. You’ll get a clean file with your drawings included — no watermark.
                                 </p>
                             </li>
@@ -220,14 +220,14 @@ function DrawOnPdfOnline() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">Draw on PDF — FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-white p-4 rounded-lg border border-gray-200">
+                                <details key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg border border-white/5">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <p className="mt-2 text-gray-700">{item.a}</p>
+                                    <p className="mt-2 text-on-surface-variant">{item.a}</p>
                                 </details>
                             ))}
                         </div>
@@ -235,22 +235,22 @@ function DrawOnPdfOnline() {
                 </section>
 
                 {/* Related tools */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" />
                             Related PDF tools
                         </h2>
-                        <p className="text-gray-700 mb-3">
+                        <p className="text-on-surface-variant mb-3">
                             After you draw on your PDF, you might also need these:
                         </p>
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/highlight-text-in-pdf-free/" className="underline hover:text-blue-900">Highlight text in PDF</a></li>
-                            <li><a href="/add-image-to-pdf-no-watermark/" className="underline hover:text-blue-900">Add image/logo to PDF</a></li>
-                            <li><a href="/sign-pdf/" className="underline hover:text-blue-900">Sign PDF online</a></li>
-                            <li><a href="/annotate-pdf/" className="underline hover:text-blue-900">Annotate PDF</a></li>
-                            <li><a href="/merge-pdf/" className="underline hover:text-blue-900">Merge PDFs</a></li>
-                            <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split PDF pages</a></li>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/highlight-text-in-pdf-free/" className="underline hover:text-primary-900">Highlight text in PDF</a></li>
+                            <li><a href="/add-image-to-pdf-no-watermark/" className="underline hover:text-primary-900">Add image/logo to PDF</a></li>
+                            <li><a href="/sign-pdf/" className="underline hover:text-primary-900">Sign PDF online</a></li>
+                            <li><a href="/annotate-pdf/" className="underline hover:text-primary-900">Annotate PDF</a></li>
+                            <li><a href="/merge-pdf/" className="underline hover:text-primary-900">Merge PDFs</a></li>
+                            <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split PDF pages</a></li>
                         </ul>
                     </div>
                 </section>
@@ -259,10 +259,10 @@ function DrawOnPdfOnline() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center">
                 <p>© {new Date().getFullYear()} PDF Free Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

@@ -101,32 +101,32 @@ function CompressPdfWithoutLosingQuality() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
             <Helmet>
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
             </Helmet>
             <SiteNav />
 
             {/* HERO */}
-            <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24">
+            <section className="digital-obsidian text-on-surface py-16 md:py-24">
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-start">
                     <div className="text-center md:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
                             Compress PDF Without Losing Quality — Free
                             <br />
-                            <span className="text-blue-600">Keep text sharp, shrink file size</span>
+                            <span className="text-primary-600">Keep text sharp, shrink file size</span>
                         </h1>
 
-                        <p className="text-lg text-gray-700 mb-3">
+                        <p className="text-lg text-on-surface-variant mb-3">
                             Need to <strong>reduce PDF size without ruining quality</strong>?
                             Use <strong>Compact (retain-PDF)</strong> mode to shrink file size while
                             keeping text crisp and layout professional.
                         </p>
 
-                        <p className="text-base text-gray-700 mb-8">
+                        <p className="text-base text-on-surface-variant mb-8">
                             This page is for quality-first compression. If your PDF is a scanned
                             document and you need aggressive shrinking, use{" "}
-                            <a href="/compress-scanned-pdf-online/" className="text-blue-600 hover:underline">
+                            <a href="/compress-scanned-pdf-online/" className="text-primary-600 hover:underline">
                                 Compress Scanned PDF
                             </a>
                             .
@@ -135,7 +135,7 @@ function CompressPdfWithoutLosingQuality() {
                         <div className="flex flex-col gap-3 md:items-start items-center">
                             <a
                                 href="#compress"
-                                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg hover:bg-blue-700"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
                             >
                                 <Upload className="h-5 w-5" aria-hidden="true" />
                                 <span>Start — Quality Compression</span>
@@ -143,14 +143,14 @@ function CompressPdfWithoutLosingQuality() {
 
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center gap-2 border shadow-sm hover:shadow-md"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
                             >
                                 <FileText className="h-5 w-5" aria-hidden="true" />
                                 <span>How it works (3 steps)</span>
                             </a>
                         </div>
 
-                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant">
                             {[
                                 "Free • no signup • no watermark",
                                 "Compact mode = best quality-first results",
@@ -164,7 +164,7 @@ function CompressPdfWithoutLosingQuality() {
                             ))}
                         </ul>
 
-                        <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-gray-600">
+                        <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-on-surface-variant">
                             <span className="inline-flex items-center gap-2">
                                 <ShieldCheck className="h-4 w-4" /> Watermark-free
                             </span>
@@ -179,7 +179,7 @@ function CompressPdfWithoutLosingQuality() {
 
                     <aside className="hidden md:block" id="compress" aria-label="Compress PDF dropzone">
                         <CompressDropBox />
-                        <div className="mt-3 text-xs text-gray-500">
+                        <div className="mt-3 text-xs text-outline">
                             Pro tip: choose <strong>Compact</strong> for best clarity. Use Rasterize only if you must hit a strict size.
                         </div>
                     </aside>
@@ -188,48 +188,48 @@ function CompressPdfWithoutLosingQuality() {
 
             <main className="flex-1">
                 {/* QUALITY RULES */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <h2 className="text-3xl font-bold mb-4">Quality-first compression rules</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             Most “quality loss” comes from images. The goal here is smaller size with the same professional look.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-4">
                             {qualityRules.map((item) => (
-                                <div key={item.title} className="bg-gray-50 rounded-lg border p-4 shadow-sm">
+                                <div key={item.title} className="bg-[#091328]/50 rounded-lg border p-4 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                     <h3 className="font-semibold mb-2">{item.title}</h3>
-                                    <p className="text-gray-700 text-sm">{item.body}</p>
+                                    <p className="text-on-surface-variant text-sm">{item.body}</p>
                                 </div>
                             ))}
                         </div>
 
                         <div className="mt-6 grid md:grid-cols-2 gap-4">
-                            <div className="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
-                                <h3 className="font-bold text-lg mb-3 flex items-center gap-2 text-blue-800">
+                            <div className="bg-primary-50 border border-primary-100 rounded-xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                                <h3 className="font-bold text-lg mb-3 flex items-center gap-2 text-primary-800">
                                     <CheckCircle2 className="h-5 w-5" /> By Use Case
                                 </h3>
                                 <ul className="space-y-2 text-sm">
-                                    <li><a href="/compress-pdf-for-email/" className="block p-2 hover:bg-white rounded transition text-blue-700 font-medium">Compress for Email</a></li>
-                                    <li><a href="/compress-pdf-for-portal-upload/" className="block p-2 hover:bg-white rounded transition text-blue-700 font-medium">Compress for Portal Upload</a></li>
-                                    <li><a href="/compress-pdf-for-whatsapp/" className="block p-2 hover:bg-white rounded transition text-blue-700 font-medium">Compress for WhatsApp</a></li>
+                                    <li><a href="/compress-pdf-for-email/" className="block p-2 hover:bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded transition text-primary-700 font-medium">Compress for Email</a></li>
+                                    <li><a href="/compress-pdf-for-portal-upload/" className="block p-2 hover:bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded transition text-primary-700 font-medium">Compress for Portal Upload</a></li>
+                                    <li><a href="/compress-pdf-for-whatsapp/" className="block p-2 hover:bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded transition text-primary-700 font-medium">Compress for WhatsApp</a></li>
                                 </ul>
                             </div>
 
-                            <div className="bg-white border rounded-xl p-5 shadow-sm">
+                            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                 <div className="font-semibold mb-3">If you still need a strict limit:</div>
-                                <ul className="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                                <ul className="grid grid-cols-2 gap-2 text-sm text-on-surface-variant">
                                     <li>
-                                        <a href="/compress-pdf-to-10mb/" className="text-blue-700 underline hover:text-blue-900">Compress to 10MB</a>
+                                        <a href="/compress-pdf-to-10mb/" className="text-primary-700 underline hover:text-primary-900">Compress to 10MB</a>
                                     </li>
                                     <li>
-                                        <a href="/compress-pdf-to-5mb/" className="text-blue-700 underline hover:text-blue-900">Compress to 5MB</a>
+                                        <a href="/compress-pdf-to-5mb/" className="text-primary-700 underline hover:text-primary-900">Compress to 5MB</a>
                                     </li>
                                     <li>
-                                        <a href="/compress-pdf-to-2mb/" className="text-blue-700 underline hover:text-blue-900">Compress to 2MB</a>
+                                        <a href="/compress-pdf-to-2mb/" className="text-primary-700 underline hover:text-primary-900">Compress to 2MB</a>
                                     </li>
                                     <li>
-                                        <a href="/compress-pdf-to-1mb/" className="text-blue-700 underline hover:text-blue-900">Compress to 1MB</a>
+                                        <a href="/compress-pdf-to-1mb/" className="text-primary-700 underline hover:text-primary-900">Compress to 1MB</a>
                                     </li>
                                 </ul>
                             </div>
@@ -238,21 +238,21 @@ function CompressPdfWithoutLosingQuality() {
                 </section>
 
                 {/* USE CASES */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-6xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4">When this page is the right choice</h2>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-on-surface-variant mb-6">
                             Use this when your priority is clarity (sharp text, clean layout), not maximum shrinking.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {whenToUse.map((c) => (
-                                <div key={c.title} className="bg-white rounded-lg border p-4 shadow-sm">
+                                <div key={c.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-lg border p-4 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                                     <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-blue-700">{c.icon}</span>
+                                        <span className="text-primary-700">{c.icon}</span>
                                         <h3 className="font-semibold">{c.title}</h3>
                                     </div>
-                                    <p className="text-gray-700 text-sm">{c.body}</p>
+                                    <p className="text-on-surface-variant text-sm">{c.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -260,25 +260,25 @@ function CompressPdfWithoutLosingQuality() {
                 </section>
 
                 {/* HOW-TO anchors for schema */}
-                <section id="how-to" className="py-12 bg-gray-50">
+                <section id="how-to" className="py-12 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">How to compress a PDF without losing quality (3 steps)</h2>
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-upload">
                                 <h3 className="font-semibold">1) Upload your PDF</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Upload the PDF you want to shrink. The file is transferred over an encrypted TLS connection for processing.
                                 </p>
                             </li>
                             <li id="step-choose">
                                 <h3 className="font-semibold">2) Choose Compact (retain-PDF)</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Select <strong>Compact</strong> to preserve sharp text and layout. This is the recommended mode for professional documents.
                                 </p>
                             </li>
                             <li id="step-download">
                                 <h3 className="font-semibold">3) Download the smaller PDF</h3>
-                                <p className="text-gray-700">
+                                <p className="text-on-surface-variant">
                                     Download instantly. No signup and no watermark.
                                 </p>
                             </li>
@@ -287,21 +287,21 @@ function CompressPdfWithoutLosingQuality() {
                 </section>
 
                 {/* Mobile dropzone */}
-                <section className="py-12 bg-white md:hidden" id="compress-inline" aria-label="Compress PDF dropzone (mobile)">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5 md:hidden" id="compress-inline" aria-label="Compress PDF dropzone (mobile)">
                     <div className="max-w-4xl mx-auto px-6">
                         <CompressDropBox />
                     </div>
                 </section>
 
                 {/* FAQ */}
-                <section className="py-12 bg-white">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-6">Compress PDF without losing quality — FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <details key={i} className="bg-[#091328]/50 p-4 rounded-lg border border-white/5">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <p className="mt-2 text-gray-700">{item.a}</p>
+                                    <p className="mt-2 text-on-surface-variant">{item.a}</p>
                                 </details>
                             ))}
                         </div>
@@ -309,48 +309,48 @@ function CompressPdfWithoutLosingQuality() {
                 </section>
 
                 {/* Related tools */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-12 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" />
                             Related compression & PDF tools
                         </h2>
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/compress-pdf/" className="underline hover:text-blue-900">Compress PDF (main tool)</a></li>
-                            <li><a href="/compress-scanned-pdf-online/" className="underline hover:text-blue-900">Compress scanned PDF</a></li>
-                            <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split PDF (if limit is too strict)</a></li>
-                            <li><a href="/merge-pdf/" className="underline hover:text-blue-900">Merge PDF files</a></li>
-                            <li><a href="/sign-pdf/" className="underline hover:text-blue-900">Sign PDF</a></li>
-                            <li><a href="/edit-pdf/" className="underline hover:text-blue-900">Edit PDF</a></li>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/compress-pdf/" className="underline hover:text-primary-900">Compress PDF (main tool)</a></li>
+                            <li><a href="/compress-scanned-pdf-online/" className="underline hover:text-primary-900">Compress scanned PDF</a></li>
+                            <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split PDF (if limit is too strict)</a></li>
+                            <li><a href="/merge-pdf/" className="underline hover:text-primary-900">Merge PDF files</a></li>
+                            <li><a href="/sign-pdf/" className="underline hover:text-primary-900">Sign PDF</a></li>
+                            <li><a href="/edit-pdf/" className="underline hover:text-primary-900">Edit PDF</a></li>
                         </ul>
                     </div>
                 </section>
 
 
                 {/* SMART LINKING MAP */}
-                <section className="py-12 bg-white border-t border-gray-200">
+                <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5-t border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* SIBLINGS */}
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Related Tools</h3>
+                                <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Related Tools</h3>
                                 <ul className="space-y-2">
 
                                     <li>
-                                        <a href="/compress-pdf-to-100kb/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/compress-pdf-to-100kb/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             Compress to 100KB
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/compress-pdf-to-1mb/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/compress-pdf-to-1mb/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             Compress to 1MB
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/compress-pdf-for-email/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                        <a href="/compress-pdf-for-email/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                             Compress for Email
                                         </a>
                                     </li>
@@ -359,24 +359,24 @@ function CompressPdfWithoutLosingQuality() {
 
                             {/* NEXT STEPS */}
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Next Steps</h3>
+                                <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Next Steps</h3>
                                 <ul className="space-y-2">
 
                                     <li>
-                                        <a href="/merge-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Merge PDF</span>
+                                        <a href="/merge-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Merge PDF</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/sign-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Sign PDF</span>
+                                        <a href="/sign-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Sign PDF</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/edit-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                            <span className="font-semibold text-gray-700 group-hover:text-blue-700">Edit PDF</span>
+                                        <a href="/edit-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                            <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Edit PDF</span>
                                             <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                         </a>
                                     </li>
@@ -385,8 +385,8 @@ function CompressPdfWithoutLosingQuality() {
                         </div>
 
                         {/* PARENT */}
-                        <div className="mt-8 pt-8 border-t border-gray-100 text-center">
-                            <a href="/compress-pdf/" className="text-sm font-semibold text-gray-500 hover:text-blue-600 uppercase tracking-wide">
+                        <div className="mt-8 pt-8 border-t border-white/5 text-center">
+                            <a href="/compress-pdf/" className="text-sm font-semibold text-outline hover:text-primary-600 uppercase tracking-wide">
                                 View All Compressors
                             </a>
                         </div>
@@ -398,9 +398,9 @@ function CompressPdfWithoutLosingQuality() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center">
                 <p>© {new Date().getFullYear()} Free PDF Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

@@ -79,7 +79,7 @@ function NoSignupPdfEditor() {
                 <>
                     Yes for PDFs that contain selectable text. If your PDF is scanned (image-only),
                     run{" "}
-                    <a href="/ocr/" className="text-blue-600 hover:underline">
+                    <a href="/ocr/" className="text-primary-600 hover:underline">
                         OCR
                     </a>{" "}
                     first to make text searchable/selectable.
@@ -101,7 +101,7 @@ function NoSignupPdfEditor() {
                 <>
                     There are no artificial limits from us. Practical limits depend on your device memory/CPU and the PDF size/complexity.
                     If a PDF is huge, split it first using{" "}
-                    <a href="/split-pdf/" className="text-blue-600 hover:underline">
+                    <a href="/split-pdf/" className="text-primary-600 hover:underline">
                         Split PDF
                     </a>.
                 </>
@@ -110,25 +110,25 @@ function NoSignupPdfEditor() {
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
             <SiteNav />
 
             {/* HERO */}
-            <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-16 lg:py-24">
+            <section className="relative digital-obsidian text-on-surface py-16 lg:py-24">
                 <div className="max-w-7xl mx-auto px-6 grid items-start gap-10 lg:grid-cols-2">
                     {/* LEFT */}
                     <div className="text-center lg:text-left">
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-on-surface font-headline leading-tight">
                             No Signup PDF Editor
                         </h1>
-                        <p className="text-lg md:text-xl font-semibold mt-3 text-blue-700">
+                        <p className="text-lg md:text-xl font-semibold mt-3 text-primary-700">
                             Edit PDFs without login • No watermark • Privacy-first
                         </p>
 
-                        <p className="text-lg md:text-xl text-gray-700 mt-6 max-w-xl mx-auto lg:mx-0">
+                        <p className="text-lg md:text-xl text-on-surface-variant mt-6 max-w-xl mx-auto lg:mx-0">
                             Upload a PDF and start editing immediately — no account creation, no email capture, and no “download locked” screens.
                             By default, your PDF stays on your device while you work.
                         </p>
@@ -136,7 +136,7 @@ function NoSignupPdfEditor() {
                         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a
                                 href="#start"
-                                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg px-8 py-4 rounded-lg inline-flex items-center justify-center gap-2 shadow-md transition"
+                                className="bg-gradient-to-r from-primary-600 to-primary-600 hover:from-primary-700 hover:to-primary-700 text-on-primary font-semibold text-lg px-8 py-4 rounded-full inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(139,92,246,0.15)] transition"
                             >
                                 <Upload className="h-5 w-5" />
                                 <span>Start Editing</span>
@@ -144,14 +144,14 @@ function NoSignupPdfEditor() {
 
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 border hover:shadow px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 border hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] px-8 py-4 rounded-full font-semibold inline-flex items-center justify-center gap-2 transition"
                             >
                                 <FileText className="h-5 w-5" />
                                 <span>How it works</span>
                             </a>
                         </div>
 
-                        <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700 max-w-xl mx-auto lg:mx-0">
+                        <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant max-w-xl mx-auto lg:mx-0">
                             {[
                                 "No signup / no login required",
                                 "Watermark-free downloads",
@@ -165,7 +165,7 @@ function NoSignupPdfEditor() {
                             ))}
                         </ul>
 
-                        <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-600">
+                        <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-on-surface-variant">
                             <span className="inline-flex items-center gap-2">
                                 <UserX className="h-4 w-4" /> No account
                             </span>
@@ -190,18 +190,18 @@ function NoSignupPdfEditor() {
 
             <main className="flex-1">
                 {/* WHY / CONTENT */}
-                <section className="py-14 bg-white">
+                <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
                         <div>
                             <h2 className="text-3xl font-bold mb-4">Edit PDFs with no signup (and no friction)</h2>
-                            <p className="text-gray-700 mb-4">
+                            <p className="text-on-surface-variant mb-4">
                                 This page is built for high-intent searches like “PDF editor no signup” and “edit PDF without login.”
                                 The goal is simple: open a file, do the task, export — without accounts or delays.
                             </p>
 
-                            <div className="bg-gray-50 border rounded-xl p-5">
-                                <p className="text-gray-900 font-semibold mb-2">What “no signup” should mean</p>
-                                <p className="text-gray-700 text-sm">
+                            <div className="bg-[#091328]/50 border rounded-xl p-5">
+                                <p className="text-on-surface font-headline font-semibold mb-2">What “no signup” should mean</p>
+                                <p className="text-on-surface-variant text-sm">
                                     No forced registration, no email gates, and no “download requires login” surprise screens.
                                     You should be able to finish the job and leave.
                                 </p>
@@ -210,9 +210,9 @@ function NoSignupPdfEditor() {
 
                         <div className="grid sm:grid-cols-2 gap-4">
                             {sections.map((s) => (
-                                <div key={s.title} className="bg-white border rounded-2xl p-5 shadow-sm">
-                                    <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                                    <p className="text-gray-700 text-sm leading-relaxed">{s.body}</p>
+                                <div key={s.title} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-5 shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                                    <h3 className="font-bold text-on-surface font-headline mb-2">{s.title}</h3>
+                                    <p className="text-on-surface-variant text-sm leading-relaxed">{s.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -220,34 +220,34 @@ function NoSignupPdfEditor() {
                 </section>
 
                 {/* BENEFITS */}
-                <section className="py-14 bg-gray-50">
+                <section className="py-14 bg-[#091328]/50">
                     <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
                         <div>
                             <h2 className="text-3xl font-bold mb-4">What you can do (no login required)</h2>
-                            <p className="text-gray-700 mb-4">
+                            <p className="text-on-surface-variant mb-4">
                                 Use the main editor to handle common PDF jobs end-to-end — editing, signing, annotating, compressing, and more.
                             </p>
                             <ul className="space-y-3">
                                 {benefits.map((b, i) => (
                                     <li key={i} className="flex items-start gap-3">
-                                        <span className="h-5 w-5 text-blue-700 flex items-center justify-center" aria-hidden="true">
+                                        <span className="h-5 w-5 text-primary-700 flex items-center justify-center" aria-hidden="true">
                                             •
                                         </span>
-                                        <span className="text-gray-800">{b}</span>
+                                        <span className="text-on-surface">{b}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
-                        <div className="bg-white border rounded-2xl p-8 shadow text-center">
-                            <FileText className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                            <h3 className="text-2xl font-bold text-gray-900 mb-3">Start editing in seconds</h3>
-                            <p className="text-gray-700 mb-6">
+                        <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl p-8 shadow-[0_0_25px_rgba(139,92,246,0.2)] text-center">
+                            <FileText className="h-16 w-16 text-primary-600 mx-auto mb-4" />
+                            <h3 className="text-2xl font-bold text-on-surface font-headline mb-3">Start editing in seconds</h3>
+                            <p className="text-on-surface-variant mb-6">
                                 Upload your PDF, make changes, and download — no signup, no watermark.
                             </p>
                             <a
                                 href="#start"
-                                className="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold shadow inline-flex items-center gap-2 transition"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all px-6 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] inline-flex items-center gap-2 transition"
                             >
                                 <Upload className="h-5 w-5" />
                                 <span>Open Editor</span>
@@ -257,25 +257,25 @@ function NoSignupPdfEditor() {
                 </section>
 
                 {/* HOW TO */}
-                <section id="how-to" className="py-14 bg-white">
+                <section id="how-to" className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-3xl font-bold mb-6 text-center">How to edit a PDF with no signup (3 steps)</h2>
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-open">
-                                <h3 className="font-semibold text-gray-900">1) Upload your PDF</h3>
-                                <p className="text-gray-700">
+                                <h3 className="font-semibold text-on-surface font-headline">1) Upload your PDF</h3>
+                                <p className="text-on-surface-variant">
                                     Use the dropbox above to choose a PDF from your device and load it in the editor.
                                 </p>
                             </li>
                             <li id="step-edit">
-                                <h3 className="font-semibold text-gray-900">2) Make changes</h3>
-                                <p className="text-gray-700">
+                                <h3 className="font-semibold text-on-surface font-headline">2) Make changes</h3>
+                                <p className="text-on-surface-variant">
                                     Edit text, add a signature, annotate, organize pages, or compress for uploads — all without logging in.
                                 </p>
                             </li>
                             <li id="step-download">
-                                <h3 className="font-semibold text-gray-900">3) Download instantly</h3>
-                                <p className="text-gray-700">
+                                <h3 className="font-semibold text-on-surface font-headline">3) Download instantly</h3>
+                                <p className="text-on-surface-variant">
                                     Export a clean PDF with no watermark. No account creation is required.
                                 </p>
                             </li>
@@ -284,7 +284,7 @@ function NoSignupPdfEditor() {
                         <div className="mt-10 text-center">
                             <a
                                 href="#start"
-                                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3 rounded-lg shadow transition"
+                                className="inline-flex items-center gap-2 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none hover:scale-105 active:scale-95 transition-all text-on-primary font-semibold px-7 py-3 rounded-full shadow-[0_0_25px_rgba(139,92,246,0.2)] transition"
                             >
                                 <Upload className="h-5 w-5" />
                                 Edit a PDF Now
@@ -294,7 +294,7 @@ function NoSignupPdfEditor() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-14 bg-gray-50">
+                <section className="py-14 bg-[#091328]/50">
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-3xl font-bold mb-6 text-center">No Signup PDF Editor — FAQs</h2>
 
@@ -302,13 +302,13 @@ function NoSignupPdfEditor() {
                             {faqs.map((item, i) => (
                                 <details
                                     key={i}
-                                    className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 open:shadow-md transition"
+                                    className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-2xl border border-white/5 shadow-[0_0_15px_rgba(139,92,246,0.1)] p-5 open:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition"
                                 >
                                     <summary className="cursor-pointer list-none flex items-center justify-between gap-4">
-                                        <span className="text-lg font-semibold text-gray-900">{item.q}</span>
+                                        <span className="text-lg font-semibold text-on-surface font-headline">{item.q}</span>
                                         <span className="text-gray-400 group-open:rotate-45 transition-transform">+</span>
                                     </summary>
-                                    <div className="mt-3 text-gray-700 leading-relaxed text-sm">{item.a}</div>
+                                    <div className="mt-3 text-on-surface-variant leading-relaxed text-sm">{item.a}</div>
                                 </details>
                             ))}
                         </div>
@@ -316,20 +316,20 @@ function NoSignupPdfEditor() {
                 </section>
 
                 {/* RELATED */}
-                <section className="py-14 bg-white">
+                <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" />
                             Related pages
                         </h2>
-                        <p className="text-gray-700 mb-4">More “privacy / no friction” intent pages:</p>
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/offline-pdf-editor-browser/" className="underline hover:text-blue-900">Offline-style PDF editor</a></li>
-                            <li><a href="/edit-pdf-without-uploading-to-server/" className="underline hover:text-blue-900">Edit PDF without uploading</a></li>
-                            <li><a href="/sign-pdf-document-private/" className="underline hover:text-blue-900">Private PDF signing</a></li>
-                            <li><a href="/remove-watermark-from-pdf-free-no-login/" className="underline hover:text-blue-900">Remove watermark (no login)</a></li>
-                            <li><a href="/split-pdf/" className="underline hover:text-blue-900">Split / extract pages</a></li>
-                            <li><a href="/tools/" className="underline hover:text-blue-900">Browse all tools</a></li>
+                        <p className="text-on-surface-variant mb-4">More “privacy / no friction” intent pages:</p>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/offline-pdf-editor-browser/" className="underline hover:text-primary-900">Offline-style PDF editor</a></li>
+                            <li><a href="/edit-pdf-without-uploading-to-server/" className="underline hover:text-primary-900">Edit PDF without uploading</a></li>
+                            <li><a href="/sign-pdf-document-private/" className="underline hover:text-primary-900">Private PDF signing</a></li>
+                            <li><a href="/remove-watermark-from-pdf-free-no-login/" className="underline hover:text-primary-900">Remove watermark (no login)</a></li>
+                            <li><a href="/split-pdf/" className="underline hover:text-primary-900">Split / extract pages</a></li>
+                            <li><a href="/tools/" className="underline hover:text-primary-900">Browse all tools</a></li>
                         </ul>
                     </div>
                 </section>
@@ -338,10 +338,10 @@ function NoSignupPdfEditor() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center">
                 <p>© {new Date().getFullYear()} Free PDF Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

@@ -88,33 +88,33 @@ function InsertPhotoIntoPdfFilePage() {
             a: (
                 <>
                     Yes — after inserting a photo, you can{" "}
-                    <a href="/type-on-pdf-document/" className="text-blue-600 hover:underline">type on the PDF</a>,{" "}
-                    <a href="/sign-pdf/" className="text-blue-600 hover:underline">sign</a>, or{" "}
-                    <a href="/annotate-pdf/" className="text-blue-600 hover:underline">annotate</a>.
+                    <a href="/type-on-pdf-document/" className="text-primary-600 hover:underline">type on the PDF</a>,{" "}
+                    <a href="/sign-pdf/" className="text-primary-600 hover:underline">sign</a>, or{" "}
+                    <a href="/annotate-pdf/" className="text-primary-600 hover:underline">annotate</a>.
                 </>
             ),
         },
     ];
 
     return (
-        <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
 </Helmet>
             <SiteNav />
 
             {/* Hero */}
-            <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-16 lg:py-24">
+            <section className="relative digital-obsidian text-on-surface py-16 lg:py-24">
                 <div className="max-w-7xl mx-auto px-6 grid items-center gap-10 lg:grid-cols-2">
                     {/* Left copy */}
                     <div>
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-on-surface font-headline">
                             Insert Photo into a PDF File
                         </h1>
-                        <p className="text-lg md:text-xl font-semibold mt-3 text-blue-700">
+                        <p className="text-lg md:text-xl font-semibold mt-3 text-primary-700">
                             Free • No Signup • No Watermark • Private by default
                         </p>
-                        <p className="text-lg md:text-xl text-gray-700 mt-6 max-w-xl">
+                        <p className="text-lg md:text-xl text-on-surface-variant mt-6 max-w-xl">
                             Add a picture to any PDF page — ID photos, screenshots, receipts, logos, or scanned images.
                             Upload your PDF, insert the photo, position it precisely, and download instantly.
                         </p>
@@ -122,21 +122,21 @@ function InsertPhotoIntoPdfFilePage() {
                         <div className="mt-8 flex flex-col sm:flex-row gap-4">
                             <a
                                 href="#start"
-                                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-4 rounded-lg inline-flex items-center justify-center gap-2 shadow-md transition"
+                                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none hover:scale-105 active:scale-95 transition-all text-on-primary font-semibold text-lg px-8 py-4 rounded-full inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(139,92,246,0.15)] transition"
                             >
                                 <Upload className="h-5 w-5" />
                                 <span>Start — Insert Photo</span>
                             </a>
                             <a
                                 href="#how-to"
-                                className="bg-white text-blue-600 border hover:shadow px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition"
+                                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 border hover:shadow-[0_0_25px_rgba(139,92,246,0.2)] px-8 py-4 rounded-full font-semibold inline-flex items-center justify-center gap-2 transition"
                             >
                                 <ImageIcon className="h-5 w-5" />
                                 <span>How it works</span>
                             </a>
                         </div>
 
-                        <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-gray-700">
+                        <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-on-surface-variant">
                             <span className="inline-flex items-center gap-2">
                                 <Lock className="h-4 w-4" /> Client-side editor (private by default)
                             </span>
@@ -148,7 +148,7 @@ function InsertPhotoIntoPdfFilePage() {
                             </span>
                         </div>
 
-                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+                        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-on-surface-variant">
                             {benefits.map((t) => (
                                 <li key={t} className="flex items-center gap-2">
                                     <CheckCircle2 className="h-4 w-4 text-green-500" aria-hidden="true" />
@@ -161,9 +161,9 @@ function InsertPhotoIntoPdfFilePage() {
                     {/* Right: Dropbox */}
                     <div id="start">
                         <InlineDropBox className="w-full" minHeight={480} maxWidth={720} label="Choose PDF to insert a photo" />
-                        <p className="text-xs text-gray-500 mt-3">
+                        <p className="text-xs text-outline mt-3">
                             Tip: Use a clear PNG/JPG photo for best results. If your PDF is scanned and you need selectable text too, try{" "}
-                            <a href="/ocr/" className="text-blue-600 hover:underline">OCR PDF</a>.
+                            <a href="/ocr/" className="text-primary-600 hover:underline">OCR PDF</a>.
                         </p>
                     </div>
                 </div>
@@ -171,21 +171,21 @@ function InsertPhotoIntoPdfFilePage() {
 
             <main className="flex-1">
                 {/* Use cases */}
-                <section className="py-14 bg-white">
+                <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-6xl mx-auto px-6">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline mb-4">
                             Common reasons to insert a photo into a PDF
                         </h2>
-                        <p className="text-gray-700 mb-8 max-w-3xl">
+                        <p className="text-on-surface-variant mb-8 max-w-3xl">
                             People search “insert photo into PDF file” when they need the photo to appear inside the document itself (not as an email attachment).
                             These are the most common real-world situations:
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {useCases.map((u) => (
-                                <div key={u.title} className="bg-gray-50 border rounded-xl p-5">
+                                <div key={u.title} className="bg-[#091328]/50 border rounded-xl p-5">
                                     <h3 className="font-semibold text-lg mb-2">{u.title}</h3>
-                                    <p className="text-gray-700 text-sm">{u.body}</p>
+                                    <p className="text-on-surface-variant text-sm">{u.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -193,12 +193,12 @@ function InsertPhotoIntoPdfFilePage() {
                 </section>
 
                 {/* How-to */}
-                <section id="how-to" className="py-14 bg-gray-50">
+                <section id="how-to" className="py-14 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-3xl font-bold text-on-surface font-headline mb-6">
                             How to insert a photo into a PDF (3 steps)
                         </h2>
-                        <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+                        <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
                             <li id="step-upload">
                                 <h3 className="font-semibold">1) Upload your PDF</h3>
                                 <p>
@@ -223,14 +223,14 @@ function InsertPhotoIntoPdfFilePage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-14 bg-white">
+                <section className="py-14 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
                     <div className="max-w-4xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6">Insert Photo into PDF — FAQs</h2>
+                        <h2 className="text-3xl font-bold text-on-surface font-headline mb-6">Insert Photo into PDF — FAQs</h2>
                         <div className="space-y-4">
                             {faqs.map((item, i) => (
-                                <details key={i} className="bg-gray-50 p-5 rounded-xl border border-gray-200">
+                                <details key={i} className="bg-[#091328]/50 p-5 rounded-2xl border border-white/5">
                                     <summary className="font-semibold cursor-pointer">{item.q}</summary>
-                                    <div className="mt-2 text-gray-700">{item.a}</div>
+                                    <div className="mt-2 text-on-surface-variant">{item.a}</div>
                                 </details>
                             ))}
                         </div>
@@ -238,52 +238,52 @@ function InsertPhotoIntoPdfFilePage() {
                 </section>
 
                 {/* Related */}
-                <section className="py-14 bg-gray-50">
+                <section className="py-14 bg-[#091328]/50">
                     <div className="max-w-5xl mx-auto px-6">
                         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                             <LinkIcon className="h-5 w-5" /> More PDF tools
                         </h2>
-                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
-                            <li><a href="/add-image-pdf/" className="underline hover:text-blue-900">Add image/logo to PDF</a></li>
-                            <li><a href="/type-on-pdf-document/" className="underline hover:text-blue-900">Type on a PDF</a></li>
-                            <li><a href="/sign-pdf/" className="underline hover:text-blue-900">Sign PDF</a></li>
-                            <li><a href="/annotate-pdf/" className="underline hover:text-blue-900">Annotate / highlight PDF</a></li>
-                            <li><a href="/compress-pdf/" className="underline hover:text-blue-900">Compress PDF</a></li>
-                            <li><a href="/merge-pdf/" className="underline hover:text-blue-900">Merge PDF</a></li>
+                        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
+                            <li><a href="/add-image-pdf/" className="underline hover:text-primary-900">Add image/logo to PDF</a></li>
+                            <li><a href="/type-on-pdf-document/" className="underline hover:text-primary-900">Type on a PDF</a></li>
+                            <li><a href="/sign-pdf/" className="underline hover:text-primary-900">Sign PDF</a></li>
+                            <li><a href="/annotate-pdf/" className="underline hover:text-primary-900">Annotate / highlight PDF</a></li>
+                            <li><a href="/compress-pdf/" className="underline hover:text-primary-900">Compress PDF</a></li>
+                            <li><a href="/merge-pdf/" className="underline hover:text-primary-900">Merge PDF</a></li>
                         </ul>
 
-                        <div className="mt-6 text-sm text-gray-600">
+                        <div className="mt-6 text-sm text-on-surface-variant">
                             Need to add a company logo specifically? Use{" "}
-                            <a href="/add-logo-to-pdf-online/" className="text-blue-700 underline hover:text-blue-900">Add logo to PDF online</a>.
+                            <a href="/add-logo-to-pdf-online/" className="text-primary-700 underline hover:text-primary-900">Add logo to PDF online</a>.
                         </div>
                     </div>
                 </section>
             
 
         {/* SMART LINKING MAP */}
-        <section className="py-12 bg-white border-t border-gray-200">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5-t border-white/5">
             <div className="max-w-6xl mx-auto px-6">
                  <div className="grid md:grid-cols-2 gap-8">
                     {/* SIBLINGS */}
                     <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-3">Related Tools</h3>
+                        <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Related Tools</h3>
                         <ul className="space-y-2">
                             
                             <li>
-                                <a href="/excel-to-pdf/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                <a href="/excel-to-pdf/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                     Excel to PDF
                                 </a>
                             </li>
                             <li>
-                                <a href="/pptx-to-pdf/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                <a href="/pptx-to-pdf/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                     PPTX to PDF
                                 </a>
                             </li>
                             <li>
-                                <a href="/html-to-pdf/" className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
+                                <a href="/html-to-pdf/" className="text-primary-600 hover:text-primary-800 hover:underline flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none rounded-full"></span>
                                     HTML to PDF
                                 </a>
                             </li>
@@ -292,18 +292,18 @@ function InsertPhotoIntoPdfFilePage() {
                     
                     {/* NEXT STEPS */}
                     <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-3">Next Steps</h3>
+                        <h3 className="text-lg font-bold text-on-surface font-headline mb-3">Next Steps</h3>
                         <ul className="space-y-2">
                             
                             <li>
-                                <a href="/compress-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                    <span className="font-semibold text-gray-700 group-hover:text-blue-700">Compress PDF</span>
+                                <a href="/compress-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                    <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Compress PDF</span>
                                     <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/merge-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50 transition">
-                                    <span className="font-semibold text-gray-700 group-hover:text-blue-700">Merge PDF</span>
+                                <a href="/merge-pdf/" className="group flex items-center justify-between p-3 rounded-lg border border-white/5 hover:border-primary-200 hover:bg-primary-50 transition">
+                                    <span className="font-semibold text-on-surface-variant group-hover:text-primary-700">Merge PDF</span>
                                     <span className="text-gray-400 group-hover:translate-x-1 transition-transform">→</span>
                                 </a>
                             </li>
@@ -312,8 +312,8 @@ function InsertPhotoIntoPdfFilePage() {
                  </div>
                  
                  {/* PARENT */}
-                 <div className="mt-8 pt-8 border-t border-gray-100 text-center">
-                    <a href="/convertor/" className="text-sm font-semibold text-gray-500 hover:text-blue-600 uppercase tracking-wide">
+                 <div className="mt-8 pt-8 border-t border-white/5 text-center">
+                    <a href="/convertor/" className="text-sm font-semibold text-outline hover:text-primary-600 uppercase tracking-wide">
                         View Converter Home
                     </a>
                  </div>
@@ -325,10 +325,10 @@ function InsertPhotoIntoPdfFilePage() {
             <footer className="bg-gray-900 text-gray-400 py-8 text-center">
                 <p>© {new Date().getFullYear()} PDF Free Editor by TechRex. All rights reserved.</p>
                 <div className="mt-4 space-x-4">
-                    <a href="/tools/" className="hover:text-white">Tools</a>
-                    <a href="/privacy/" className="hover:text-white">Privacy</a>
-                    <a href="/terms/" className="hover:text-white">Terms</a>
-                    <a href="/contact/" className="hover:text-white">Contact</a>
+                    <a href="/tools/" className="hover:text-on-primary">Tools</a>
+                    <a href="/privacy/" className="hover:text-on-primary">Privacy</a>
+                    <a href="/terms/" className="hover:text-on-primary">Terms</a>
+                    <a href="/contact/" className="hover:text-on-primary">Contact</a>
                 </div>
             </footer>
         </div>

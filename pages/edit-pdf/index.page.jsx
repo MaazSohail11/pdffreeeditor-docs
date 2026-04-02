@@ -36,31 +36,31 @@ function EditPDF() {
   ];
 
   return (
-    <div className="font-sans flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="font-sans font-body flex flex-col min-h-screen digital-obsidian text-on-surface selection:bg-primary/30 selection:text-primary">
       <Helmet>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2161679270376605" crossOrigin="anonymous" />
       </Helmet>
       <SiteNav />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 lg:py-24">
+      <section className="digital-obsidian text-on-surface py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-start">
           {/* Primary page intent as the single H1 */}
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
               Edit PDF Text Online Free
               <br />
-              <span className="text-blue-600">
+              <span className="text-primary-600">
                 Same Font &amp; Layout • No Signup • No Watermark
               </span>
             </h1>
-            <p className="text-lg text-gray-600 mb-3">
+            <p className="text-lg text-on-surface-variant mb-3">
               Use this PDF text editor online free to fix typos, update names,
               change dates or replace whole sentences directly inside your PDF.
               The tool keeps your original fonts and layout wherever possible,
               so the document still looks the same.
             </p>
-            <p className="text-base text-gray-600 mb-8">
+            <p className="text-base text-on-surface-variant mb-8">
               Everything runs locally in your browser — no account, no trial
               and no watermark. Just upload your file, edit the text and
               download an updated PDF with the same background and design.
@@ -69,14 +69,14 @@ function EditPDF() {
             <div className="flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
               <a
                 href="/editor/"
-                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold inline-flex items-center space-x-2 shadow-lg hover:bg-blue-700"
+                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:scale-105 active:scale-95 transition-all"
               >
                 <Type className="h-5 w-5" />
                 <span>Edit PDF Text — Free</span>
               </a>
               <a
                 href="#how-to"
-                className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold inline-flex items-center space-x-2 border shadow-sm hover:shadow-md"
+                className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2 border shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
               >
                 <FileText className="h-5 w-5" />
                 <span>How it works (3 steps)</span>
@@ -92,13 +92,13 @@ function EditPDF() {
 
       <main className="flex-1">
         {/* Benefits */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-4">
                 PDF text editor online free (same font, no background change)
               </h2>
-              <p className="text-gray-600 mb-4">
+              <p className="text-on-surface-variant mb-4">
                 Unlike basic PDF viewers, this editor lets you work on the{" "}
                 <strong>actual text layer</strong> in your file. That means you
                 can edit text in a PDF online free while preserving fonts,
@@ -113,12 +113,12 @@ function EditPDF() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white border rounded-xl p-6 text-center shadow">
-              <Wand2 className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 rounded-xl p-6 text-center shadow-[0_0_25px_rgba(139,92,246,0.2)]">
+              <Wand2 className="h-16 w-16 text-primary-600 mx-auto mb-4" />
+              <h2 className="text-2xl font-bold text-on-surface font-headline mb-3">
                 Seamless text editing with matching fonts
               </h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-on-surface-variant mb-6">
                 Click any detected text to edit it directly or add a new text
                 box. The editor reads your PDF information and matches fonts and
                 alignment where possible, so the page keeps the same style and
@@ -126,7 +126,7 @@ function EditPDF() {
               </p>
               <a
                 href="/editor/"
-                className="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold shadow inline-flex items-center space-x-2 transition"
+                className="bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-on-primary hover:scale-105 active:scale-95 transition-all px-6 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] inline-flex items-center space-x-2 transition"
               >
                 <Download className="h-5 w-5" />
                 <span>Open PDF Text Editor</span>
@@ -136,15 +136,15 @@ function EditPDF() {
         </section>
 
         {/* How-to */}
-        <section id="how-to" className="py-12 bg-gray-50">
+        <section id="how-to" className="py-12 bg-[#091328]/50">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-6">
               How to edit PDF text online free (3 steps)
             </h2>
-            <ol className="space-y-6 list-decimal ml-6 text-gray-700">
+            <ol className="space-y-6 list-decimal ml-6 text-on-surface-variant">
               <li id="step-upload">
                 <h4 className="font-semibold">1) Open the editor &amp; upload</h4>
-                <p className="text-gray-600">
+                <p className="text-on-surface-variant">
                   Open the editor and drag &amp; drop your PDF, or pick it from
                   your device. Processing runs locally in your browser, so your
                   file is not uploaded to any server.
@@ -154,7 +154,7 @@ function EditPDF() {
                 <h4 className="font-semibold">
                   2) Click text to edit or add a text box
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-on-surface-variant">
                   Click any detected text to edit it directly, or insert a new
                   text box. Adjust font size, weight, alignment and colour. The
                   PDF text editor keeps your existing layout and background so
@@ -163,7 +163,7 @@ function EditPDF() {
               </li>
               <li id="step-download">
                 <h4 className="font-semibold">3) Download — no watermark</h4>
-                <p className="text-gray-600">
+                <p className="text-on-surface-variant">
                   When you are happy with the changes, export and download your
                   updated file. You get a clean PDF with your edited text, no
                   watermark, no signup and no limits.
@@ -174,71 +174,71 @@ function EditPDF() {
         </section>
 
         {/* Use cases */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-[#091328]/50">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-4">
               Popular ways to edit text in a PDF
             </h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-on-surface-variant mb-4">
               Here are some everyday ways people use this online PDF text
               editor. All of them benefit from keeping the original font and
               background intact:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
-              <details className="bg-white p-4 rounded-lg shadow-sm">
+              <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                 <summary className="font-semibold cursor-pointer">
                   Fix typos and update names
                 </summary>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-on-surface-variant">
                   Correct spelling mistakes, update contact details or change a
                   job title directly in the PDF — perfect when you only need a
                   quick change and want the document to look exactly the same.
                 </p>
               </details>
-              <details className="bg-white p-4 rounded-lg shadow-sm">
+              <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                 <summary className="font-semibold cursor-pointer">
                   Redact or white-out sensitive text
                 </summary>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-on-surface-variant">
                   Use subtle white-out to hide sensitive lines, then add
                   replacement text on top. The original layout and background
                   remain untouched so the page still looks professional.
                 </p>
               </details>
-              <details className="bg-white p-4 rounded-lg shadow-sm">
+              <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                 <summary className="font-semibold cursor-pointer">
                   Add notes and annotations
                 </summary>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-on-surface-variant">
                   Insert text boxes for comments, explanations or instructions.
                   Great for sending feedback on contracts, coursework, design
                   mockups and more.
                 </p>
               </details>
-              <details className="bg-white p-4 rounded-lg shadow-sm">
+              <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                 <summary className="font-semibold cursor-pointer">
                   Rebrand PDFs without redesigning
                 </summary>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-on-surface-variant">
                   Replace brand names, URLs or CTAs in your PDFs while keeping
                   your original fonts and colours. Ideal for quick rebranding
                   and campaign updates.
                 </p>
               </details>
-              <details className="bg-white p-4 rounded-lg shadow-sm">
+              <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                 <summary className="font-semibold cursor-pointer">
                   Localise small text blocks
                 </summary>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-on-surface-variant">
                   Translate headlines, key bullet points or calls to action into
                   another language without rebuilding the layout from scratch.
                 </p>
               </details>
-              <details className="bg-white p-4 rounded-lg shadow-sm">
+              <details className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                 <summary className="font-semibold cursor-pointer">
                   Fill &amp; tweak forms without Adobe
                 </summary>
-                <p className="mt-2 text-gray-600">
+                <p className="mt-2 text-on-surface-variant">
                   Edit text in form fields, add missing labels or correct
                   instructions directly in the PDF, then download and share —
                   no Adobe subscription needed.
@@ -249,19 +249,19 @@ function EditPDF() {
         </section>
 
         {/* How fonts & background are preserved */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-3">
               How this PDF text editor keeps fonts and background intact
             </h2>
-            <p className="text-gray-700 mb-3">
+            <p className="text-on-surface-variant mb-3">
               When you edit PDF text online, the biggest worry is usually:
               <em> “Will the formatting break?”</em> This editor focuses on the
               text layer only. The vector graphics, images and page background
               are left untouched, so the document looks the same before and
               after you edit.
             </p>
-            <ul className="list-disc ml-6 space-y-2 text-gray-600">
+            <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
               <li>
                 It reads font information from the PDF and matches it for
                 edited lines wherever possible.
@@ -283,17 +283,17 @@ function EditPDF() {
         </section>
 
         {/* Scanned PDFs / limitations */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-[#091328]/50">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-3">
               Editing scanned or image-only PDFs
             </h2>
-            <p className="text-gray-700 mb-3">
+            <p className="text-on-surface-variant mb-3">
               Some files are not true text PDFs but <strong>scanned images</strong>{" "}
               wrapped in a PDF. In those cases, there is no editable text layer
               to update. You still have a few options:
             </p>
-            <ul className="list-disc ml-6 space-y-2 text-gray-600">
+            <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
               <li>
                 Add new text boxes on top of the scanned content to correct or
                 replace small parts of the page.
@@ -307,7 +307,7 @@ function EditPDF() {
                 show.
               </li>
             </ul>
-            <p className="text-gray-700 mt-3">
+            <p className="text-on-surface-variant mt-3">
               This is the same behaviour you see in most PDF text editor online
               tools — it is limited by how much text information the original
               file contains.
@@ -316,15 +316,15 @@ function EditPDF() {
         </section>
 
         {/* Privacy & Trust */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#091328]/50 backdrop-blur-xl border border-white/5">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-3">Security &amp; privacy</h2>
-            <p className="text-gray-700 mb-3">
+            <p className="text-on-surface-variant mb-3">
               Editing runs <strong>entirely in your browser</strong>. We do not
               upload your PDF to a server by default, which makes this a good
               choice for contracts, invoices and other private documents.
             </p>
-            <ul className="list-disc ml-6 space-y-2 text-gray-600">
+            <ul className="list-disc ml-6 space-y-2 text-on-surface-variant">
               <li>No signup, no account, no email required.</li>
               <li>No watermark or forced upgrades — the editor is 100% free.</li>
               <li>
@@ -339,7 +339,7 @@ function EditPDF() {
         </section>
 
         {/* FAQ (visible) */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-[#091328]/50">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-6">FAQs</h2>
             <div className="space-y-4">
@@ -373,11 +373,11 @@ function EditPDF() {
                   a: "There are no watermarks, subscriptions or hidden trials. Very large files may depend on your device’s memory and browser performance.",
                 },
               ].map((item, i) => (
-                <details key={i} className="bg-white p-4 rounded-lg shadow-sm">
+                <details key={i} className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 p-4 rounded-lg shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                   <summary className="font-semibold cursor-pointer">
                     {item.q}
                   </summary>
-                  <p className="mt-2 text-gray-700">{item.a}</p>
+                  <p className="mt-2 text-on-surface-variant">{item.a}</p>
                 </details>
               ))}
             </div>
@@ -385,21 +385,21 @@ function EditPDF() {
         </section>
 
         {/* Related tools (exact-match anchors) */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-[#091328]/50">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
               <LinkIcon className="h-5 w-5" />
               Related tools
             </h2>
-            <p className="text-gray-600 mb-3">
+            <p className="text-on-surface-variant mb-3">
               Need to do more than just edit text in a PDF? Try these other
               free tools:
             </p>
-            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-blue-700">
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-primary-700">
               <li>
                 <a
                   href="/add-image-pdf/"
-                  className="underline hover:text-blue-900"
+                  className="underline hover:text-primary-900"
                 >
                   Add image to PDF
                 </a>
@@ -407,7 +407,7 @@ function EditPDF() {
               <li>
                 <a
                   href="/sign-pdf/"
-                  className="underline hover:text-blue-900"
+                  className="underline hover:text-primary-900"
                 >
                   Sign PDF online
                 </a>
@@ -415,7 +415,7 @@ function EditPDF() {
               <li>
                 <a
                   href="/merge-pdf/"
-                  className="underline hover:text-blue-900"
+                  className="underline hover:text-primary-900"
                 >
                   Merge PDF files
                 </a>
@@ -423,7 +423,7 @@ function EditPDF() {
               <li>
                 <a
                   href="/split-pdf/"
-                  className="underline hover:text-blue-900"
+                  className="underline hover:text-primary-900"
                 >
                   Split PDF pages
                 </a>
@@ -431,7 +431,7 @@ function EditPDF() {
               <li>
                 <a
                   href="/pdf-to-word/"
-                  className="underline hover:text-blue-900"
+                  className="underline hover:text-primary-900"
                 >
                   PDF to Word converter
                 </a>
@@ -441,18 +441,18 @@ function EditPDF() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-blue-600 text-center">
+        <section className="py-16 bg-gradient-to-br from-primary to-primary-dim shadow-[0_0_20px_rgba(139,92,246,0.2)] border-none text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-white mb-2">
+            <h2 className="text-3xl font-bold text-on-primary mb-2">
               Ready to edit your PDF text?
             </h2>
-            <p className="text-blue-100 mb-6">
+            <p className="text-primary-100 mb-6">
               Fix text while keeping your fonts, background and layout exactly
               how you designed them — free, online and with no signup.
             </p>
             <a
               href="/editor/"
-              className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold shadow hover:bg-gray-100 inline-flex items-center space-x-2"
+              className="bg-[#091328]/50 backdrop-blur-xl border border-white/5 text-primary-600 px-8 py-3 rounded-full font-semibold shadow-[0_0_25px_rgba(139,92,246,0.2)] hover:bg-gray-100 inline-flex items-center space-x-2"
             >
               <Download className="h-5 w-5" />
               <span>Open PDF Text Editor</span>
@@ -468,16 +468,16 @@ function EditPDF() {
           reserved.
         </p>
         <div className="mt-4 space-x-4">
-          <a href="/tools/" className="hover:text-white">
+          <a href="/tools/" className="hover:text-on-primary">
             Tools
           </a>
-          <a href="/privacy/" className="hover:text-white">
+          <a href="/privacy/" className="hover:text-on-primary">
             Privacy Policy
           </a>
-          <a href="/terms/" className="hover:text-white">
+          <a href="/terms/" className="hover:text-on-primary">
             Terms
           </a>
-          <a href="/contact/" className="hover:text-white">
+          <a href="/contact/" className="hover:text-on-primary">
             Contact
           </a>
         </div>
